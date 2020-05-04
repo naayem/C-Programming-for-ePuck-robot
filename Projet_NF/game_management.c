@@ -16,7 +16,7 @@
 #include <ir_thread.h>
 #include <motors_processing.h>
 #include <camera_processing.h>
-
+#include <letter_writing.h>
 
 
 
@@ -192,7 +192,20 @@ void management(etats* currentState){
 					break;
 
 		case ALPHABET:
-				   // do something in the stop state
+			lettre_M();
+			decalage_interlettre();
+			lettre_O();
+			decalage_interlettre();
+			lettre_N();
+			decalage_interlettre();
+			lettre_D();
+			decalage_interlettre();
+			lettre_A();
+			decalage_interlettre();
+			lettre_D();
+			decalage_interlettre();
+			lettre_A();
+
 				   break;
 
 		case BILLARD_INIT:

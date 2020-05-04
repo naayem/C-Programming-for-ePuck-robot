@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
   55 0018 B0F1016F 		cmp	r0, #135266304
   56              		.loc 1 44 0
   57 001c 0199     		ldr	r1, [sp, #4]
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 2
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 2
 
 
   58 001e 1268     		ldr	r2, [r2]
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  112              	.LFB1:
  113              		.loc 1 47 0
  114              		.cfi_startproc
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 3
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 3
 
 
  115              		@ args = 0, pretend = 0, frame = 8
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  169              		@ frame_needed = 0, uses_anonymous_args = 0
  170 0000 30B5     		push	{r4, r5, lr}
  171              		.cfi_def_cfa_offset 12
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 4
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 4
 
 
  172              		.cfi_offset 4, -12
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  226              		.global	flash_write
  227              		.syntax unified
  228              		.thumb
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 5
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 5
 
 
  229              		.thumb_func
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  283              	.LBE28:
  284              	.LBB36:
  285              	.LBB26:
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 6
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 6
 
 
  286              		.loc 1 64 0
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  340              	.L33:
  341              		.loc 1 102 0
  342 0042 084A     		ldr	r2, .L35+8
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 7
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 7
 
 
  343 0044 1368     		ldr	r3, [r2]
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  397 0006 2368     		ldr	r3, [r4]
  398              	.LBB43:
  399              	.LBB44:
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 8
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 8
 
 
  400              		.loc 1 69 0
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  454              	.LBB51:
  455              	.LBB50:
  456              		.loc 1 69 0
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 9
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 9
 
 
  457 0042 0B68     		ldr	r3, [r1]
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  511              	.LBB52:
  512              	.LBB53:
  513              		.loc 1 31 0
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 10
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 10
 
 
  514 000a 20F07F43 		bic	r3, r0, #-16777216
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  568              		.loc 1 35 0
  569 0040 0423     		movcc	r3, #4
  570              	.LVL37:
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 11
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 11
 
 
  571 0042 E9E7     		b	.L49
@@ -618,9 +618,9 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  585              		.size	flash_sector_erase, .-flash_sector_erase
  586              		.text
  587              	.Letext0:
- 588              		.file 2 "/Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017
- 589              		.file 3 "/Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017
- 590              		.file 4 "/Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017
+ 588              		.file 2 "c:\\users\\marc\\documents\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win
+ 589              		.file 3 "c:\\users\\marc\\documents\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win
+ 590              		.file 4 "c:\\users\\marc\\documents\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win
  591              		.section	.debug_info,"",%progbits
  592              	.Ldebug_info0:
  593 0000 37030000 		.4byte	0x337
@@ -628,17 +628,17 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  595 0006 00000000 		.4byte	.Ldebug_abbrev0
  596 000a 04       		.byte	0x4
  597 000b 01       		.uleb128 0x1
- 598 000c 3F010000 		.4byte	.LASF28
+ 598 000c 3D010000 		.4byte	.LASF28
  599 0010 0C       		.byte	0xc
  600 0011 22000000 		.4byte	.LASF29
- 601 0015 8B000000 		.4byte	.LASF30
+ 601 0015 C3000000 		.4byte	.LASF30
  602 0019 D8000000 		.4byte	.Ldebug_ranges0+0xd8
  603 001d 00000000 		.4byte	0
  604 0021 00000000 		.4byte	.Ldebug_line0
  605 0025 02       		.uleb128 0x2
  606 0026 01       		.byte	0x1
  607 0027 06       		.byte	0x6
- 608 0028 25030000 		.4byte	.LASF0
+ 608 0028 23030000 		.4byte	.LASF0
  609 002c 03       		.uleb128 0x3
  610 002d 00000000 		.4byte	.LASF5
  611 0031 02       		.byte	0x2
@@ -647,39 +647,39 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  614 0037 02       		.uleb128 0x2
  615 0038 01       		.byte	0x1
  616 0039 08       		.byte	0x8
- 617 003a C3000000 		.4byte	.LASF1
+ 617 003a A3000000 		.4byte	.LASF1
  618 003e 02       		.uleb128 0x2
  619 003f 02       		.byte	0x2
  620 0040 05       		.byte	0x5
- 621 0041 DD020000 		.4byte	.LASF2
+ 621 0041 DB020000 		.4byte	.LASF2
  622 0045 02       		.uleb128 0x2
  623 0046 02       		.byte	0x2
  624 0047 07       		.byte	0x7
- 625 0048 E3000000 		.4byte	.LASF3
+ 625 0048 6C000000 		.4byte	.LASF3
  626 004c 02       		.uleb128 0x2
  627 004d 04       		.byte	0x4
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 12
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 12
 
 
  628 004e 05       		.byte	0x5
- 629 004f 10030000 		.4byte	.LASF4
+ 629 004f 0E030000 		.4byte	.LASF4
  630 0053 03       		.uleb128 0x3
- 631 0054 34010000 		.4byte	.LASF6
+ 631 0054 32010000 		.4byte	.LASF6
  632 0058 02       		.byte	0x2
  633 0059 4F       		.byte	0x4f
  634 005a 5E000000 		.4byte	0x5e
  635 005e 02       		.uleb128 0x2
  636 005f 04       		.byte	0x4
  637 0060 07       		.byte	0x7
- 638 0061 D1000000 		.4byte	.LASF7
+ 638 0061 B1000000 		.4byte	.LASF7
  639 0065 02       		.uleb128 0x2
  640 0066 08       		.byte	0x8
  641 0067 05       		.byte	0x5
- 642 0068 C8020000 		.4byte	.LASF8
+ 642 0068 C6020000 		.4byte	.LASF8
  643 006c 02       		.uleb128 0x2
  644 006d 08       		.byte	0x8
  645 006e 07       		.byte	0x7
- 646 006f 90020000 		.4byte	.LASF9
+ 646 006f 8E020000 		.4byte	.LASF9
  647 0073 04       		.uleb128 0x4
  648 0074 04       		.byte	0x4
  649 0075 05       		.byte	0x5
@@ -687,14 +687,14 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  651 007a 02       		.uleb128 0x2
  652 007b 04       		.byte	0x4
  653 007c 07       		.byte	0x7
- 654 007d 83020000 		.4byte	.LASF10
+ 654 007d 81020000 		.4byte	.LASF10
  655 0081 03       		.uleb128 0x3
- 656 0082 A7020000 		.4byte	.LASF11
+ 656 0082 A5020000 		.4byte	.LASF11
  657 0086 03       		.byte	0x3
  658 0087 18       		.byte	0x18
  659 0088 2C000000 		.4byte	0x2c
  660 008c 03       		.uleb128 0x3
- 661 008d 07030000 		.4byte	.LASF12
+ 661 008d 05030000 		.4byte	.LASF12
  662 0091 03       		.byte	0x3
  663 0092 30       		.byte	0x30
  664 0093 53000000 		.4byte	0x53
@@ -706,9 +706,9 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  670 00a2 02       		.uleb128 0x2
  671 00a3 08       		.byte	0x8
  672 00a4 04       		.byte	0x4
- 673 00a5 19030000 		.4byte	.LASF14
+ 673 00a5 17030000 		.4byte	.LASF14
  674 00a9 05       		.uleb128 0x5
- 675 00aa ED020000 		.4byte	.LASF15
+ 675 00aa EB020000 		.4byte	.LASF15
  676 00ae 01       		.byte	0x1
  677 00af 70       		.byte	0x70
  678 00b0 00000000 		.4byte	.LFB8
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  682 00ba 04010000 		.4byte	0x104
  683 00be 06       		.uleb128 0x6
  684 00bf 52000000 		.4byte	.LASF17
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 13
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 13
 
 
  685 00c3 01       		.byte	0x1
@@ -757,7 +757,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  718 0114 9C       		.byte	0x9c
  719 0115 7C010000 		.4byte	0x17c
  720 0119 06       		.uleb128 0x6
- 721 011a 86000000 		.4byte	.LASF18
+ 721 011a 99000000 		.4byte	.LASF18
  722 011e 01       		.byte	0x1
  723 011f 69       		.byte	0x69
  724 0120 7C010000 		.4byte	0x17c
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  739 014a 0B       		.uleb128 0xb
  740 014b C5020000 		.4byte	0x2c5
  741 014f 83000000 		.4byte	.LLST14
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 14
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 14
 
 
  742 0153 0C       		.uleb128 0xc
@@ -801,7 +801,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  759 017c 0F       		.uleb128 0xf
  760 017d 04       		.byte	0x4
  761 017e 05       		.uleb128 0x5
- 762 017f 28010000 		.4byte	.LASF19
+ 762 017f 26010000 		.4byte	.LASF19
  763 0183 01       		.byte	0x1
  764 0184 54       		.byte	0x54
  765 0185 00000000 		.4byte	.LFB6
@@ -810,13 +810,13 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  768 018e 9C       		.byte	0x9c
  769 018f 37020000 		.4byte	0x237
  770 0193 06       		.uleb128 0x6
- 771 0194 86000000 		.4byte	.LASF18
+ 771 0194 99000000 		.4byte	.LASF18
  772 0198 01       		.byte	0x1
  773 0199 54       		.byte	0x54
  774 019a 7C010000 		.4byte	0x17c
  775 019e A1000000 		.4byte	.LLST4
  776 01a2 06       		.uleb128 0x6
- 777 01a3 BE000000 		.4byte	.LASF20
+ 777 01a3 9E000000 		.4byte	.LASF20
  778 01a7 01       		.byte	0x1
  779 01a8 54       		.byte	0x54
  780 01a9 37020000 		.4byte	0x237
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  796 01d0 01       		.byte	0x1
  797 01d1 5F       		.byte	0x5f
  798 01d2 3E020000 		.4byte	0x23e
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 15
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 15
 
 
  799 01d6 5C010000 		.4byte	.LLST8
@@ -892,13 +892,13 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  847 024b 01       		.byte	0x1
  848 024c 67020000 		.4byte	0x267
  849 0250 15       		.uleb128 0x15
- 850 0251 E7020000 		.4byte	.LASF21
+ 850 0251 E5020000 		.4byte	.LASF21
  851 0255 01       		.byte	0x1
  852 0256 4A       		.byte	0x4a
  853 0257 3E020000 		.4byte	0x23e
  854 025b 15       		.uleb128 0x15
- 855 025c 81000000 		.4byte	.LASF22
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 16
+ 855 025c 94000000 		.4byte	.LASF22
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 16
 
 
  856 0260 01       		.byte	0x1
@@ -906,17 +906,17 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  858 0262 81000000 		.4byte	0x81
  859 0266 00       		.byte	0
  860 0267 16       		.uleb128 0x16
- 861 0268 12010000 		.4byte	.LASF23
+ 861 0268 10010000 		.4byte	.LASF23
  862 026c 01       		.byte	0x1
  863 026d 43       		.byte	0x43
  864 026e 01       		.byte	0x1
  865 026f 16       		.uleb128 0x16
- 866 0270 AF020000 		.4byte	.LASF24
+ 866 0270 AD020000 		.4byte	.LASF24
  867 0274 01       		.byte	0x1
  868 0275 3D       		.byte	0x3d
  869 0276 01       		.byte	0x1
  870 0277 05       		.uleb128 0x5
- 871 0278 31030000 		.4byte	.LASF25
+ 871 0278 2F030000 		.4byte	.LASF25
  872 027c 01       		.byte	0x1
  873 027d 33       		.byte	0x33
  874 027e 00000000 		.4byte	.LFB2
@@ -929,7 +929,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  881 0291 31030000 		.4byte	0x331
  882 0295 00       		.byte	0
  883 0296 05       		.uleb128 0x5
- 884 0297 F6000000 		.4byte	.LASF26
+ 884 0297 F4000000 		.4byte	.LASF26
  885 029b 01       		.byte	0x1
  886 029c 2E       		.byte	0x2e
  887 029d 00000000 		.4byte	.LFB1
@@ -942,7 +942,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  894 02b0 31030000 		.4byte	0x331
  895 02b4 00       		.byte	0
  896 02b5 17       		.uleb128 0x17
- 897 02b6 6C000000 		.4byte	.LASF32
+ 897 02b6 7F000000 		.4byte	.LASF32
  898 02ba 01       		.byte	0x1
  899 02bb 1B       		.byte	0x1b
  900 02bc 81000000 		.4byte	0x81
@@ -954,11 +954,11 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  906 02c9 1B       		.byte	0x1b
  907 02ca 7C010000 		.4byte	0x17c
  908 02ce 19       		.uleb128 0x19
- 909 02cf 86000000 		.4byte	.LASF18
+ 909 02cf 99000000 		.4byte	.LASF18
  910 02d3 01       		.byte	0x1
  911 02d4 1D       		.byte	0x1d
  912 02d5 8C000000 		.4byte	0x8c
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 17
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 17
 
 
  913 02d9 19       		.uleb128 0x19
@@ -967,7 +967,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  916 02df 1E       		.byte	0x1e
  917 02e0 81000000 		.4byte	0x81
  918 02e4 19       		.uleb128 0x19
- 919 02e5 D6020000 		.4byte	.LASF27
+ 919 02e5 D4020000 		.4byte	.LASF27
  920 02e9 01       		.byte	0x1
  921 02ea 1F       		.byte	0x1f
  922 02eb 8C000000 		.4byte	0x8c
@@ -996,8 +996,8 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  945 032c 31030000 		.4byte	0x331
  946 0330 00       		.byte	0
  947 0331 1C       		.uleb128 0x1c
- 948 0332 01010000 		.4byte	.LASF33
- 949 0336 01010000 		.4byte	.LASF33
+ 948 0332 FF000000 		.4byte	.LASF33
+ 949 0336 FF000000 		.4byte	.LASF33
  950 033a 00       		.byte	0
  951              		.section	.debug_abbrev,"",%progbits
  952              	.Ldebug_abbrev0:
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  967 000e 01       		.uleb128 0x1
  968 000f 10       		.uleb128 0x10
  969 0010 17       		.uleb128 0x17
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 18
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 18
 
 
  970 0011 00       		.byte	0
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  1024 0047 40       		.uleb128 0x40
  1025 0048 18       		.uleb128 0x18
  1026 0049 9742     		.uleb128 0x2117
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 19
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 19
 
 
  1027 004b 19       		.uleb128 0x19
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  1081 0083 13       		.uleb128 0x13
  1082 0084 02       		.uleb128 0x2
  1083 0085 17       		.uleb128 0x17
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 20
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 20
 
 
  1084 0086 00       		.byte	0
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  1138 00bf 0F       		.uleb128 0xf
  1139 00c0 00       		.byte	0
  1140 00c1 0B       		.uleb128 0xb
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 21
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 21
 
 
  1141 00c2 0B       		.uleb128 0xb
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  1195 00f8 3B       		.uleb128 0x3b
  1196 00f9 0B       		.uleb128 0xb
  1197 00fa 27       		.uleb128 0x27
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 22
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 22
 
 
  1198 00fb 19       		.uleb128 0x19
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  1252 0131 00       		.byte	0
  1253 0132 00       		.byte	0
  1254 0133 18       		.uleb128 0x18
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 23
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 23
 
 
  1255 0134 05       		.uleb128 0x5
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  1309 016b 3F       		.uleb128 0x3f
  1310 016c 19       		.uleb128 0x19
  1311 016d 3C       		.uleb128 0x3c
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 24
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 24
 
 
  1312 016e 19       		.uleb128 0x19
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  1366 0066 00       		.sleb128 0
  1367 0067 08       		.byte	0x8
  1368 0068 FF       		.byte	0xff
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 25
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 25
 
 
  1369 0069 1A       		.byte	0x1a
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  1423 00e6 51       		.byte	0x51
  1424 00e7 9F       		.byte	0x9f
  1425 00e8 00000000 		.4byte	0
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 26
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 26
 
 
  1426 00ec 00000000 		.4byte	0
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  1480 0166 70       		.byte	0x70
  1481 0167 01       		.sleb128 1
  1482 0168 9F       		.byte	0x9f
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 27
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 27
 
 
  1483 0169 28000000 		.4byte	.LVL19
@@ -1618,7 +1618,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  1537 01e6 F3       		.byte	0xf3
  1538 01e7 01       		.uleb128 0x1
  1539 01e8 50       		.byte	0x50
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 28
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 28
 
 
  1540 01e9 9F       		.byte	0x9f
@@ -1678,7 +1678,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  1594 0273 0900     		.2byte	0x9
  1595 0275 70       		.byte	0x70
  1596 0276 00       		.sleb128 0
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 29
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 29
 
 
  1597 0277 0C       		.byte	0xc
@@ -1738,7 +1738,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  1651 002c 68000000 		.4byte	.LFE6-.LFB6
  1652 0030 00000000 		.4byte	.LFB8
  1653 0034 64000000 		.4byte	.LFE8-.LFB8
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 30
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 30
 
 
  1654 0038 00000000 		.4byte	.LFB7
@@ -1798,7 +1798,7 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  1708 00c0 20000000 		.4byte	.LBB56
  1709 00c4 26000000 		.4byte	.LBE56
  1710 00c8 36000000 		.4byte	.LBB57
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 31
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 31
 
 
  1711 00cc 44000000 		.4byte	.LBE57
@@ -1820,8 +1820,8 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  1727 010c 00000000 		.4byte	0
  1728              		.section	.debug_line,"",%progbits
  1729              	.Ldebug_line0:
- 1730 0000 E7020000 		.section	.debug_str,"MS",%progbits,1
- 1730      0200F801 
+ 1730 0000 C0020000 		.section	.debug_str,"MS",%progbits,1
+ 1730      0200D101 
  1730      00000201 
  1730      FB0E0D00 
  1730      01010101 
@@ -1853,199 +1853,200 @@ ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 1
  1742      63746F72 
  1742      5F657261 
  1742      736500
- 1743              	.LASF32:
- 1744 006c 666C6173 		.ascii	"flash_addr_to_sector\000"
- 1744      685F6164 
- 1744      64725F74 
- 1744      6F5F7365 
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 32
+ 1743              	.LASF3:
+ 1744 006c 73686F72 		.ascii	"short unsigned int\000"
+ 1744      7420756E 
+ 1744      7369676E 
+ 1744      65642069 
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 32
 
 
- 1744      63746F72 
- 1745              	.LASF22:
- 1746 0081 62797465 		.ascii	"byte\000"
- 1746      00
- 1747              	.LASF18:
- 1748 0086 61646472 		.ascii	"addr\000"
+ 1744      6E7400
+ 1745              	.LASF32:
+ 1746 007f 666C6173 		.ascii	"flash_addr_to_sector\000"
+ 1746      685F6164 
+ 1746      64725F74 
+ 1746      6F5F7365 
+ 1746      63746F72 
+ 1747              	.LASF22:
+ 1748 0094 62797465 		.ascii	"byte\000"
  1748      00
- 1749              	.LASF30:
- 1750 008b 2F557365 		.ascii	"/Users/vincentnaayem/Desktop/TestTest 2/Projet_NF/\000"
- 1750      72732F76 
- 1750      696E6365 
- 1750      6E746E61 
- 1750      6179656D 
+ 1749              	.LASF18:
+ 1750 0099 61646472 		.ascii	"addr\000"
+ 1750      00
  1751              	.LASF20:
- 1752 00be 64617461 		.ascii	"data\000"
+ 1752 009e 64617461 		.ascii	"data\000"
  1752      00
  1753              	.LASF1:
- 1754 00c3 756E7369 		.ascii	"unsigned char\000"
+ 1754 00a3 756E7369 		.ascii	"unsigned char\000"
  1754      676E6564 
  1754      20636861 
  1754      7200
  1755              	.LASF7:
- 1756 00d1 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1756 00b1 6C6F6E67 		.ascii	"long unsigned int\000"
  1756      20756E73 
  1756      69676E65 
  1756      6420696E 
  1756      7400
- 1757              	.LASF3:
- 1758 00e3 73686F72 		.ascii	"short unsigned int\000"
- 1758      7420756E 
- 1758      7369676E 
- 1758      65642069 
- 1758      6E7400
- 1759              	.LASF26:
- 1760 00f6 666C6173 		.ascii	"flash_lock\000"
- 1760      685F6C6F 
- 1760      636B00
- 1761              	.LASF33:
- 1762 0101 5F5F7374 		.ascii	"__stack_chk_fail\000"
- 1762      61636B5F 
- 1762      63686B5F 
- 1762      6661696C 
- 1762      00
- 1763              	.LASF23:
- 1764 0112 666C6173 		.ascii	"flash_wait_while_busy\000"
- 1764      685F7761 
- 1764      69745F77 
- 1764      68696C65 
- 1764      5F627573 
- 1765              	.LASF19:
- 1766 0128 666C6173 		.ascii	"flash_write\000"
- 1766      685F7772 
- 1766      69746500 
- 1767              	.LASF6:
- 1768 0134 5F5F7569 		.ascii	"__uint32_t\000"
- 1768      6E743332 
- 1768      5F7400
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 33
+ 1757              	.LASF30:
+ 1758 00c3 433A5C55 		.ascii	"C:\\Users\\Marc\\Desktop\\lol\\MicroInfo_NF\\Projet"
+ 1758      73657273 
+ 1758      5C4D6172 
+ 1758      635C4465 
+ 1758      736B746F 
+ 1759 00f0 5F4E4600 		.ascii	"_NF\000"
+ 1760              	.LASF26:
+ 1761 00f4 666C6173 		.ascii	"flash_lock\000"
+ 1761      685F6C6F 
+ 1761      636B00
+ 1762              	.LASF33:
+ 1763 00ff 5F5F7374 		.ascii	"__stack_chk_fail\000"
+ 1763      61636B5F 
+ 1763      63686B5F 
+ 1763      6661696C 
+ 1763      00
+ 1764              	.LASF23:
+ 1765 0110 666C6173 		.ascii	"flash_wait_while_busy\000"
+ 1765      685F7761 
+ 1765      69745F77 
+ 1765      68696C65 
+ 1765      5F627573 
+ 1766              	.LASF19:
+ 1767 0126 666C6173 		.ascii	"flash_write\000"
+ 1767      685F7772 
+ 1767      69746500 
+ 1768              	.LASF6:
+ 1769 0132 5F5F7569 		.ascii	"__uint32_t\000"
+ 1769      6E743332 
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 33
 
 
- 1769              	.LASF28:
- 1770 013f 474E5520 		.ascii	"GNU C11 7.2.1 20170904 (release) [ARM/embedded-7-br"
- 1770      43313120 
- 1770      372E322E 
- 1770      31203230 
- 1770      31373039 
- 1771 0172 616E6368 		.ascii	"anch revision 255204] -mcpu=cortex-m4 -mfloat-abi=h"
- 1771      20726576 
- 1771      6973696F 
- 1771      6E203235 
- 1771      35323034 
- 1772 01a5 61726420 		.ascii	"ard -mfpu=fpv4-sp-d16 -mno-thumb-interwork -mthumb "
- 1772      2D6D6670 
- 1772      753D6670 
- 1772      76342D73 
- 1772      702D6431 
- 1773 01d8 2D676764 		.ascii	"-ggdb -O2 -fomit-frame-pointer -falign-functions=16"
- 1773      62202D4F 
- 1773      32202D66 
- 1773      6F6D6974 
- 1773      2D667261 
- 1774 020b 202D666E 		.ascii	" -fno-strict-aliasing -fstack-protector-all -ffunct"
- 1774      6F2D7374 
- 1774      72696374 
- 1774      2D616C69 
- 1774      6173696E 
- 1775 023e 696F6E2D 		.ascii	"ion-sections -fdata-sections -fno-common -fsingle-p"
- 1775      73656374 
- 1775      696F6E73 
- 1775      202D6664 
- 1775      6174612D 
- 1776 0271 72656369 		.ascii	"recision-constant\000"
- 1776      73696F6E 
- 1776      2D636F6E 
- 1776      7374616E 
- 1776      7400
- 1777              	.LASF10:
- 1778 0283 756E7369 		.ascii	"unsigned int\000"
- 1778      676E6564 
- 1778      20696E74 
- 1778      00
- 1779              	.LASF9:
- 1780 0290 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1780      206C6F6E 
- 1780      6720756E 
- 1780      7369676E 
- 1780      65642069 
- 1781              	.LASF11:
- 1782 02a7 75696E74 		.ascii	"uint8_t\000"
- 1782      385F7400 
- 1783              	.LASF24:
- 1784 02af 666C6173 		.ascii	"flash_set_parallelism_8x\000"
- 1784      685F7365 
- 1784      745F7061 
- 1784      72616C6C 
- 1784      656C6973 
- 1785              	.LASF8:
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 34
+ 1769      5F7400
+ 1770              	.LASF28:
+ 1771 013d 474E5520 		.ascii	"GNU C11 7.2.1 20170904 (release) [ARM/embedded-7-br"
+ 1771      43313120 
+ 1771      372E322E 
+ 1771      31203230 
+ 1771      31373039 
+ 1772 0170 616E6368 		.ascii	"anch revision 255204] -mcpu=cortex-m4 -mfloat-abi=h"
+ 1772      20726576 
+ 1772      6973696F 
+ 1772      6E203235 
+ 1772      35323034 
+ 1773 01a3 61726420 		.ascii	"ard -mfpu=fpv4-sp-d16 -mno-thumb-interwork -mthumb "
+ 1773      2D6D6670 
+ 1773      753D6670 
+ 1773      76342D73 
+ 1773      702D6431 
+ 1774 01d6 2D676764 		.ascii	"-ggdb -O2 -fomit-frame-pointer -falign-functions=16"
+ 1774      62202D4F 
+ 1774      32202D66 
+ 1774      6F6D6974 
+ 1774      2D667261 
+ 1775 0209 202D666E 		.ascii	" -fno-strict-aliasing -fstack-protector-all -ffunct"
+ 1775      6F2D7374 
+ 1775      72696374 
+ 1775      2D616C69 
+ 1775      6173696E 
+ 1776 023c 696F6E2D 		.ascii	"ion-sections -fdata-sections -fno-common -fsingle-p"
+ 1776      73656374 
+ 1776      696F6E73 
+ 1776      202D6664 
+ 1776      6174612D 
+ 1777 026f 72656369 		.ascii	"recision-constant\000"
+ 1777      73696F6E 
+ 1777      2D636F6E 
+ 1777      7374616E 
+ 1777      7400
+ 1778              	.LASF10:
+ 1779 0281 756E7369 		.ascii	"unsigned int\000"
+ 1779      676E6564 
+ 1779      20696E74 
+ 1779      00
+ 1780              	.LASF9:
+ 1781 028e 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1781      206C6F6E 
+ 1781      6720756E 
+ 1781      7369676E 
+ 1781      65642069 
+ 1782              	.LASF11:
+ 1783 02a5 75696E74 		.ascii	"uint8_t\000"
+ 1783      385F7400 
+ 1784              	.LASF24:
+ 1785 02ad 666C6173 		.ascii	"flash_set_parallelism_8x\000"
+ 1785      685F7365 
+ 1785      745F7061 
+ 1785      72616C6C 
+ 1785      656C6973 
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 34
 
 
- 1786 02c8 6C6F6E67 		.ascii	"long long int\000"
- 1786      206C6F6E 
- 1786      6720696E 
- 1786      7400
- 1787              	.LASF27:
- 1788 02d6 6F666673 		.ascii	"offset\000"
- 1788      657400
- 1789              	.LASF2:
- 1790 02dd 73686F72 		.ascii	"short int\000"
- 1790      7420696E 
- 1790      7400
- 1791              	.LASF21:
- 1792 02e7 666C6173 		.ascii	"flash\000"
- 1792      6800
- 1793              	.LASF15:
- 1794 02ed 666C6173 		.ascii	"flash_sector_erase_number\000"
- 1794      685F7365 
- 1794      63746F72 
- 1794      5F657261 
- 1794      73655F6E 
- 1795              	.LASF12:
- 1796 0307 75696E74 		.ascii	"uint32_t\000"
- 1796      33325F74 
- 1796      00
- 1797              	.LASF4:
- 1798 0310 6C6F6E67 		.ascii	"long int\000"
- 1798      20696E74 
- 1798      00
- 1799              	.LASF14:
- 1800 0319 6C6F6E67 		.ascii	"long double\000"
- 1800      20646F75 
- 1800      626C6500 
- 1801              	.LASF0:
- 1802 0325 7369676E 		.ascii	"signed char\000"
- 1802      65642063 
- 1802      68617200 
- 1803              	.LASF25:
- 1804 0331 666C6173 		.ascii	"flash_unlock\000"
- 1804      685F756E 
- 1804      6C6F636B 
- 1804      00
- 1805              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
-ARM GAS  /var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s 			page 35
+ 1786              	.LASF8:
+ 1787 02c6 6C6F6E67 		.ascii	"long long int\000"
+ 1787      206C6F6E 
+ 1787      6720696E 
+ 1787      7400
+ 1788              	.LASF27:
+ 1789 02d4 6F666673 		.ascii	"offset\000"
+ 1789      657400
+ 1790              	.LASF2:
+ 1791 02db 73686F72 		.ascii	"short int\000"
+ 1791      7420696E 
+ 1791      7400
+ 1792              	.LASF21:
+ 1793 02e5 666C6173 		.ascii	"flash\000"
+ 1793      6800
+ 1794              	.LASF15:
+ 1795 02eb 666C6173 		.ascii	"flash_sector_erase_number\000"
+ 1795      685F7365 
+ 1795      63746F72 
+ 1795      5F657261 
+ 1795      73655F6E 
+ 1796              	.LASF12:
+ 1797 0305 75696E74 		.ascii	"uint32_t\000"
+ 1797      33325F74 
+ 1797      00
+ 1798              	.LASF4:
+ 1799 030e 6C6F6E67 		.ascii	"long int\000"
+ 1799      20696E74 
+ 1799      00
+ 1800              	.LASF14:
+ 1801 0317 6C6F6E67 		.ascii	"long double\000"
+ 1801      20646F75 
+ 1801      626C6500 
+ 1802              	.LASF0:
+ 1803 0323 7369676E 		.ascii	"signed char\000"
+ 1803      65642063 
+ 1803      68617200 
+ 1804              	.LASF25:
+ 1805 032f 666C6173 		.ascii	"flash_unlock\000"
+ 1805      685F756E 
+ 1805      6C6F636B 
+ 1805      00
+ 1806              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s 			page 35
 
 
 DEFINED SYMBOLS
-                            *ABS*:0000000000000000 flash.c
-/var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s:18     .text.flash_addr_to_sector:0000000000000000 $t
-/var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s:26     .text.flash_addr_to_sector:0000000000000000 flash_addr_to_sector
-/var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s:98     .text.flash_addr_to_sector:0000000000000044 $d
-/var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s:103    .text.flash_lock:0000000000000000 $t
-/var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s:111    .text.flash_lock:0000000000000000 flash_lock
-/var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s:150    .text.flash_lock:0000000000000028 $d
-/var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s:156    .text.flash_unlock:0000000000000000 $t
-/var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s:164    .text.flash_unlock:0000000000000000 flash_unlock
-/var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s:215    .text.flash_unlock:0000000000000030 $d
-/var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s:224    .text.flash_write:0000000000000000 $t
-/var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s:232    .text.flash_write:0000000000000000 flash_write
-/var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s:363    .text.flash_write:000000000000005c $d
-/var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s:370    .text.flash_sector_erase_number:0000000000000000 $t
-/var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s:378    .text.flash_sector_erase_number:0000000000000000 flash_sector_erase_number
-/var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s:479    .text.flash_sector_erase_number:0000000000000058 $d
-/var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s:486    .text.flash_sector_erase:0000000000000000 $t
-/var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s:494    .text.flash_sector_erase:0000000000000000 flash_sector_erase
-/var/folders/sw/9r4bn5156wxfd2589391fjvr0000gn/T//ccM6eVqx.s:582    .text.flash_sector_erase:0000000000000048 $d
+                            *ABS*:00000000 flash.c
+C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s:18     .text.flash_addr_to_sector:00000000 $t
+C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s:26     .text.flash_addr_to_sector:00000000 flash_addr_to_sector
+C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s:98     .text.flash_addr_to_sector:00000044 $d
+C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s:103    .text.flash_lock:00000000 $t
+C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s:111    .text.flash_lock:00000000 flash_lock
+C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s:150    .text.flash_lock:00000028 $d
+C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s:156    .text.flash_unlock:00000000 $t
+C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s:164    .text.flash_unlock:00000000 flash_unlock
+C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s:215    .text.flash_unlock:00000030 $d
+C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s:224    .text.flash_write:00000000 $t
+C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s:232    .text.flash_write:00000000 flash_write
+C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s:363    .text.flash_write:0000005c $d
+C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s:370    .text.flash_sector_erase_number:00000000 $t
+C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s:378    .text.flash_sector_erase_number:00000000 flash_sector_erase_number
+C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s:479    .text.flash_sector_erase_number:00000058 $d
+C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s:486    .text.flash_sector_erase:00000000 $t
+C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s:494    .text.flash_sector_erase:00000000 flash_sector_erase
+C:\Users\Marc\AppData\Local\Temp\ccdKaLDf.s:582    .text.flash_sector_erase:00000048 $d
 
 UNDEFINED SYMBOLS
 __stack_chk_fail
