@@ -1,5 +1,5 @@
-#ifndef LETTER_WRITING_H_
-#define LETTER_WRITING_H_
+#ifndef LETTER_WRITING_H
+#define LETTER_WRITING_H
 
 /*fonctions qui permettent au robot de faire le déplacement suivant la forme
  * géométrique correspondant à chaque lettre écrite dans la fonction.

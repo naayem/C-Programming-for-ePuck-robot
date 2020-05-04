@@ -192,19 +192,20 @@ void management(etats* currentState){
 					break;
 
 		case ALPHABET:
-			lettre_M();
-			decalage_interlettre();
-			lettre_O();
-			decalage_interlettre();
-			lettre_N();
-			decalage_interlettre();
-			lettre_D();
-			decalage_interlettre();
-			lettre_A();
-			decalage_interlettre();
-			lettre_D();
-			decalage_interlettre();
-			lettre_A();
+
+				/*lettre_M();
+				decalage_interlettre();
+				lettre_O();
+				decalage_interlettre();
+				lettre_N();
+				decalage_interlettre();
+				lettre_D();
+				decalage_interlettre();
+				lettre_A();
+				decalage_interlettre();
+				lettre_D();
+				decalage_interlettre();
+				lettre_A();*/
 
 				   break;
 
