@@ -189,7 +189,7 @@ void process_image_start(void){
 
 posLine close_line(void){
 	uint16_t linePosition = line_position;
-	if (obstacle(100)){
+	if (obstacle(150)&&(lineWidth>=200)){
 		if (linePosition<=CENTER_BOUNDARY){
 			return L_GAUCHE;
 		}

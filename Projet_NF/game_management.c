@@ -157,7 +157,7 @@ void management(etats* currentState){
 					/*if ( obstacle(300) ){
 
 
-						nouvel_ordre( TOURNE,  90*DEG_TO_RAD);
+						nouvel_ordre( TOURNE,  180*DEG_TO_RAD);
 						nouvel_ordre( AVANCE,  0);
 
 					}
