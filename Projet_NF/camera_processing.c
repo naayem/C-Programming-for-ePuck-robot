@@ -6,16 +6,11 @@
 
 
 #include <camera/po8030.h>
-
+#include <ir_thread.h>
 #include <camera_processing.h>
 
-#define CLOSE_DISTANCE_BLACK_LINE	4
-#define CLOSE_WIDTH_BLACK_LINE		150
-#define LEFT_SIDE_SECOND_BOUNDARY	199
-#define CENTER_FIRST_BOUNDARY		200
-#define CENTER_SECOND_BOUNDARY		399
-#define RIGHT_SIDE_FIRST_BOUNDARY	400
-#define RIGHT_SIDE_SECOND_BOUNDARY	600
+#define CENTER_BOUNDARY		300
+#define TOP_BOUNDARY		600
 
 static uint16_t lineWidth = 0;
 static float distance_cm = 0;
@@ -194,14 +189,11 @@ void process_image_start(void){
 
 posLine close_line(void){
 	uint16_t linePosition = line_position;
-	if ((distance_cm<=CLOSE_DISTANCE_BLACK_LINE)&&(lineWidth>=CLOSE_WIDTH_BLACK_LINE)){
-		if (linePosition<=LEFT_SIDE_SECOND_BOUNDARY){
+	if (obstacle(100)){
+		if (linePosition<=CENTER_BOUNDARY){
 			return L_GAUCHE;
 		}
-		if ((CENTER_FIRST_BOUNDARY<=linePosition)&&(linePosition<=CENTER_SECOND_BOUNDARY)){
-			return L_MILIEU;
-		}
-		if ((RIGHT_SIDE_FIRST_BOUNDARY<=linePosition)&&(linePosition<=RIGHT_SIDE_SECOND_BOUNDARY)){
+		if ((CENTER_BOUNDARY<linePosition)&&(linePosition<=TOP_BOUNDARY)){
 			return L_DROITE;
 		}
 		return L_NULL;

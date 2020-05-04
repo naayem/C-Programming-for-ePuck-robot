@@ -143,7 +143,7 @@ void management(etats* currentState){
 				   // do something in the stop state
 
 
-					led1 = 0;
+					led1 = 1;
 					led3 = 1;
 					led5 = 1;
 					led7 = 1;
@@ -154,14 +154,15 @@ void management(etats* currentState){
 					palWritePad(GPIOD, GPIOD_LED7, led7 ? 0 : 1);
 
 
-					if ( obstacle() ){
+					/*if ( obstacle(300) ){
 
 
 						nouvel_ordre( TOURNE,  90*DEG_TO_RAD);
 						nouvel_ordre( AVANCE,  0);
 
 					}
-
+					*/
+				while (1){
 					pong = close_line();
 
 					switch(pong){
@@ -183,11 +184,13 @@ void management(etats* currentState){
 							break;
 					}
 					pong=L_NULL;
-
+					chThdSleepMilliseconds(500);
+				}
 
 					boite_virtuelle();
 
-
+					*currentState = PONG;//
+					currentStateManagement = PONG;//
 
 					break;
 
