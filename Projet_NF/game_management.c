@@ -193,7 +193,7 @@ void management(etats* currentState){
 
 		case ALPHABET:
 
-				/*lettre_M();
+				lettre_M();
 				decalage_interlettre();
 				lettre_O();
 				decalage_interlettre();
@@ -205,7 +205,7 @@ void management(etats* currentState){
 				decalage_interlettre();
 				lettre_D();
 				decalage_interlettre();
-				lettre_A();*/
+				lettre_A();
 
 				   break;
 
