@@ -4,7 +4,6 @@
 
 typedef enum posLine{
 	L_NULL=0,
-	L_MILIEU,
 	L_DROITE,
 	L_GAUCHE
 } posLine;

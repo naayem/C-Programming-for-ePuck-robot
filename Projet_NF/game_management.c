@@ -153,44 +153,43 @@ void management(etats* currentState){
 					palWritePad(GPIOD, GPIOD_LED5, led5 ? 0 : 1);
 					palWritePad(GPIOD, GPIOD_LED7, led7 ? 0 : 1);
 
+					nouvel_ordre( AVANCE,  0);
 
-					/*if ( obstacle(300) ){
-
-
+				while (1){
+					if ( obstacle_centre(300) ){
 						nouvel_ordre( TOURNE,  180*DEG_TO_RAD);
 						nouvel_ordre( AVANCE,  0);
-
+					}else{
+						if ( obstacle_gauche(350) ){
+							nouvel_ordre( TOURNE,  -90*DEG_TO_RAD);
+							nouvel_ordre( AVANCE,  0);
+						}
+						if ( obstacle_droite(350) ){
+							nouvel_ordre( TOURNE,  90*DEG_TO_RAD);
+							nouvel_ordre( AVANCE,  0);
+						}
 					}
-					*/
-				while (1){
+
 					pong = close_line();
 
 					switch(pong){
 						case L_NULL:
 							break;
-						case L_MILIEU:
-							nouvel_ordre( TOURNE,  180*DEG_TO_RAD);
-							nouvel_ordre( AVANCE,  0);
-							break;
 						case L_DROITE:
-							nouvel_ordre( TOURNE,  90*DEG_TO_RAD);
+							nouvel_ordre( TOURNE,  135*DEG_TO_RAD);
 							nouvel_ordre( AVANCE,  0);
 							break;
 						case L_GAUCHE:
-							nouvel_ordre( TOURNE,  -90*DEG_TO_RAD);
+							nouvel_ordre( TOURNE,  -135*DEG_TO_RAD);
 							nouvel_ordre( AVANCE,  0);
 							break;
 						default:
 							break;
 					}
 					pong=L_NULL;
-					chThdSleepMilliseconds(500);
-				}
-
+					update_map_position();
 					boite_virtuelle();
-
-					*currentState = PONG;//
-					currentStateManagement = PONG;//
+				}
 
 					break;
 
@@ -527,7 +526,7 @@ void postAvance_init(void){
 }
 
 void boite_virtuelle(void){
-	if(ePuck.y>40){
+	if(ePuck.y>30){
 		if(ePuck.angle>0 && ePuck.angle<=PI/2){
 			nouvel_ordre(TOURNE, -2*ePuck.angle);
 			nouvel_ordre(AVANCE, 0);
@@ -537,7 +536,7 @@ void boite_virtuelle(void){
 		}else go_home();
 	}
 
-	if(ePuck.y<-40){
+	if(ePuck.y<-30){
 			if(ePuck.angle<0 && ePuck.angle>=-PI/2){
 				nouvel_ordre(TOURNE, -2*ePuck.angle);
 				nouvel_ordre(AVANCE, 0);
