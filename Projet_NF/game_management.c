@@ -24,8 +24,8 @@
 #define ZERO				0
 #define DEG_TO_RAD	PI/180
 
-
-
+//semaphore
+static BSEMAPHORE_DECL(image_needed_sem, TRUE);
 
 static mapping ePuck = {0,0,0};
 
@@ -118,13 +118,17 @@ void management(etats* currentState){
 
 			led1 = 0;
 			led3 = 1;
-			led5 = 1;
-			led7 = 0;
+			led5 = 0;
+			led7 = 1;
 
 			palWritePad(GPIOD, GPIOD_LED1, led1 ? 0 : 1);
 			palWritePad(GPIOD, GPIOD_LED3, led3 ? 0 : 1);
 			palWritePad(GPIOD, GPIOD_LED5, led5 ? 0 : 1);
 			palWritePad(GPIOD, GPIOD_LED7, led7 ? 0 : 1);
+
+			//int angle_random = rand()%360;
+			//nouvel_ordre( TOURNE,  angle_random*DEG_TO_RAD);
+			nouvel_ordre( AVANCE,  0);
 
 			*currentState = PONG;
 			currentStateManagement = PONG;
@@ -132,50 +136,42 @@ void management(etats* currentState){
 		   break;
 
 		case PONG:
-			   // do something in the stop state
-				led1 = 1;
-				led3 = 1;
-				led5 = 1;
-				led7 = 1;
+			led1 = 1;
+			led3 = 0;
+			led5 = 0;
+			led7 = 0;
 
-				palWritePad(GPIOD, GPIOD_LED1, led1 ? 0 : 1);
-				palWritePad(GPIOD, GPIOD_LED3, led3 ? 0 : 1);
-				palWritePad(GPIOD, GPIOD_LED5, led5 ? 0 : 1);
-				palWritePad(GPIOD, GPIOD_LED7, led7 ? 0 : 1);
+			palWritePad(GPIOD, GPIOD_LED1, led1 ? 0 : 1);
+			palWritePad(GPIOD, GPIOD_LED3, led3 ? 0 : 1);
+			palWritePad(GPIOD, GPIOD_LED5, led5 ? 0 : 1);
+			palWritePad(GPIOD, GPIOD_LED7, led7 ? 0 : 1);
 
-				int angle_random = rand()%360;
-				moteurs_tourne (angle_random*DEG_TO_RAD);
+			chBSemSignal(&image_needed_sem);
+			if ((obstacle_droite(300))||(obstacle_gauche(300))){
+				nouvel_ordre( TOURNE,  180*DEG_TO_RAD);
 				nouvel_ordre( AVANCE,  0);
+			}
 
-				while (1){
-					update_map_position();
-					if ((obstacle_droite(300))||(obstacle_gauche(300))){
-						nouvel_ordre( TOURNE,  180*DEG_TO_RAD);
-						nouvel_ordre( AVANCE,  0);
-					}
+			pong = close_line();
 
-					pong = close_line();
-
-					switch(pong){
-						case L_NULL:
-							break;
-						case L_DROITE:
-							nouvel_ordre( TOURNE,  135*DEG_TO_RAD);
-							nouvel_ordre( AVANCE,  0);
-							break;
-						case L_GAUCHE:
-							nouvel_ordre( TOURNE,  -135*DEG_TO_RAD);
-							nouvel_ordre( AVANCE,  0);
-							break;
-						default:
-							break;
-					}
-					pong=L_NULL;
-					update_map_position();
-					boite_virtuelle();
-				}
-
+			switch(pong){
+				case L_NULL:
 					break;
+				case L_DROITE:
+					nouvel_ordre( TOURNE,  135*DEG_TO_RAD);
+					nouvel_ordre( AVANCE,  0);
+					break;
+				case L_GAUCHE:
+					nouvel_ordre( TOURNE,  -135*DEG_TO_RAD);
+					nouvel_ordre( AVANCE,  0);
+					break;
+				default:
+					break;
+			}
+			pong=L_NULL;
+			boite_virtuelle();
+			sortie_gagnant();
+			break;
 
 		case ALPHABET:
 
@@ -531,8 +527,18 @@ void boite_virtuelle(void){
 	}
 }
 
+void sortie_gagnant(void){
+	if((ePuck.x<-60)||(ePuck.x>60)){
+		go_home();
+		chThdSleepMilliseconds(200);
+	}
+}
+
 void go_home(void){
 
 }
 
+void wait_image_needed(void){
+	chBSemWait(&image_needed_sem);
+}
 

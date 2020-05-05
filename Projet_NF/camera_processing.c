@@ -8,6 +8,7 @@
 #include <camera/po8030.h>
 #include <ir_thread.h>
 #include <camera_processing.h>
+#include <game_management.h>
 
 #define CENTER_BOUNDARY		300
 #define TOP_BOUNDARY		600
@@ -116,6 +117,7 @@ static THD_FUNCTION(CaptureImage, arg) {
 	dcmi_prepare();
 
     while(1){
+    	wait_image_needed();
         //starts a capture
 		dcmi_capture_start();
 		//waits for the capture to be done

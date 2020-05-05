@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
   55 0026 B0EE611A 		vmov.f32	s2, s3
   56 002a B0EE600A 		vmov.f32	s0, s1
   57 002e FFF7FEFF 		bl	motors_set_position
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 2
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 2
 
 
   58              	.LVL1:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  112 0004 82B0     		sub	sp, sp, #8
  113              		.cfi_def_cfa_offset 16
  114              		.loc 1 41 0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 3
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 3
 
 
  115 0006 F3EE0E1A 		vmov.f32	s3, #3.0e+1
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  169 0098 2368     		ldr	r3, [r4]
  170 009a 9A42     		cmp	r2, r3
  171 009c 0CD1     		bne	.L13
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 4
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 4
 
 
  172 009e DFED0A0A 		vldr.32	s1, .L14+12
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  226              		.cfi_def_cfa_offset 16
  227              		.loc 1 52 0
  228 000a 2368     		ldr	r3, [r4]
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 5
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 5
 
 
  229 000c 0193     		str	r3, [sp, #4]
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  283 00a6 FFF7FEFF 		bl	motors_set_position
  284              	.LVL20:
  285              		.loc 1 61 0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 6
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 6
 
 
  286 00aa DFED130A 		vldr.32	s1, .L21
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  340              		.type	lettre_N, %function
  341              	lettre_N:
  342              	.LFB296:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 7
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 7
 
 
  343              		.loc 1 66 0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  397 007a B3EE0E1A 		vmov.f32	s2, #3.0e+1
  398 007e FFF7FEFF 		bl	motors_set_position
  399              	.LVL30:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 8
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 8
 
 
  400              		.loc 1 73 0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  454              		.cfi_startproc
  455              		@ args = 0, pretend = 0, frame = 8
  456              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 9
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 9
 
 
  457 0000 10B5     		push	{r4, lr}
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  511 0082 F3EE0E1A 		vmov.f32	s3, #3.0e+1
  512 0086 F2EE040A 		vmov.f32	s1, #1.0e+1
  513 008a B0EE611A 		vmov.f32	s2, s3
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 10
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 10
 
 
  514 008e B0EE600A 		vmov.f32	s0, s1
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  568 0108 FFF7FEFF 		bl	__stack_chk_fail
  569              	.LVL46:
  570              	.L36:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 11
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 11
 
 
  571              		.align	2
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  625 003e B3EE0E1A 		vmov.f32	s2, #3.0e+1
  626 0042 FFF7FEFF 		bl	motors_set_position
  627              	.LVL49:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 12
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 12
 
 
  628              		.loc 1 96 0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  682 00da DFED0C0A 		vldr.32	s1, .L42+20
  683 00de F3EE0E1A 		vmov.f32	s3, #3.0e+1
  684 00e2 B0EE600A 		vmov.f32	s0, s1
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 13
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 13
 
 
  685 00e6 BBEE0E1A 		vmov.f32	s2, #-3.0e+1
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  739              		.file 25 "../lib/e-puck2_main-processor/ChibiOS//os/hal/ports/STM32/STM32F4xx/adc_lld.h"
  740              		.file 26 "../lib/e-puck2_main-processor/ChibiOS//os/hal/include/can.h"
  741              		.file 27 "../lib/e-puck2_main-processor/ChibiOS//os/hal/ports/STM32/LLD/can_lld.h"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 14
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 14
 
 
  742              		.file 28 "../lib/e-puck2_main-processor/ChibiOS//os/hal/include/dac.h"
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  796 002f 696E7400 		.ascii	"int\000"
  797 0033 04       		.uleb128 0x4
  798 0034 5F0C0000 		.4byte	.LASF5
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 15
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 15
 
 
  799 0038 02       		.byte	0x2
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  853 009e 06170000 		.4byte	.LASF13
  854 00a2 04       		.uleb128 0x4
  855 00a3 CF1C0000 		.4byte	.LASF14
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 16
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 16
 
 
  856 00a7 03       		.byte	0x3
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  910 011c 04       		.uleb128 0x4
  911 011d EC0B0000 		.4byte	.LASF24
  912 0121 05       		.byte	0x5
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 17
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 17
 
 
  913 0122 45       		.byte	0x45
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  967 019a 05       		.byte	0x5
  968 019b 52       		.byte	0x52
  969 019c FC000000 		.4byte	0xfc
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 18
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 18
 
 
  970 01a0 04       		.uleb128 0x4
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  1024 020f 08       		.uleb128 0x8
  1025 0210 43200000 		.4byte	.LASF44
  1026 0214 07       		.byte	0x7
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 19
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 19
 
 
  1027 0215 D2       		.byte	0xd2
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  1081 0283 3C01     		.2byte	0x13c
  1082 0285 0E030000 		.4byte	0x30e
  1083 0289 30       		.byte	0x30
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 20
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 20
 
 
  1084 028a 0A       		.uleb128 0xa
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  1138 02fc B0       		.byte	0xb0
  1139 02fd 0E030000 		.4byte	0x30e
  1140 0301 08       		.uleb128 0x8
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 21
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 21
 
 
  1141 0302 A1110000 		.4byte	.LASF38
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  1195 0371 CC0B0000 		.4byte	.LASF69
  1196 0375 07       		.byte	0x7
  1197 0376 9401     		.2byte	0x194
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 22
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 22
 
 
  1198 0378 900D0000 		.4byte	0xd90
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  1252 03e9 BC080000 		.4byte	.LASF77
  1253 03ed 07       		.byte	0x7
  1254 03ee 6D01     		.2byte	0x16d
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 23
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 23
 
 
  1255 03f0 23110000 		.4byte	0x1123
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  1309 0464 AB010000 		.4byte	0x1ab
  1310 0468 0C       		.byte	0xc
  1311 0469 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 24
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 24
 
 
  1312 046a 04       		.uleb128 0x4
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  1366 04df B2040000 		.4byte	.LASF93
  1367 04e3 07       		.byte	0x7
  1368 04e4 CA01     		.2byte	0x1ca
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 25
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 25
 
 
  1369 04e6 1D040000 		.4byte	0x41d
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  1423 0561 09       		.byte	0x9
  1424 0562 4C       		.byte	0x4c
  1425 0563 FC000000 		.4byte	0xfc
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 26
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 26
 
 
  1426 0567 17       		.uleb128 0x17
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  1480 05cf D8090000 		.4byte	.LASF104
  1481 05d3 0A       		.byte	0xa
  1482 05d4 CE       		.byte	0xce
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 27
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 27
 
 
  1483 05d5 07010000 		.4byte	0x107
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  1537 0641 07010000 		.4byte	0x107
  1538 0645 44       		.byte	0x44
  1539 0646 08       		.uleb128 0x8
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 28
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 28
 
 
  1540 0647 71200000 		.4byte	.LASF112
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  1594 06af 0A       		.byte	0xa
  1595 06b0 F5       		.byte	0xf5
  1596 06b1 E6060000 		.4byte	0x6e6
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 29
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 29
 
 
  1597 06b5 18       		.uleb128 0x18
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  1651 0722 2003     		.2byte	0x320
  1652 0724 0A       		.byte	0xa
  1653 0725 0B01     		.2byte	0x10b
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 30
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 30
 
 
  1654 0727 57080000 		.4byte	0x857
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  1708 079f 20       		.byte	0x20
  1709 07a0 11       		.uleb128 0x11
  1710 07a1 73110000 		.4byte	.LASF126
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 31
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 31
 
 
  1711 07a5 0A       		.byte	0xa
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  1765 0823 0A       		.byte	0xa
  1766 0824 1F01     		.2byte	0x11f
  1767 0826 FC000000 		.4byte	0xfc
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 32
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 32
 
 
  1768 082a 1802     		.2byte	0x218
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  1822 08a6 00       		.byte	0
  1823 08a7 1A       		.uleb128 0x1a
  1824 08a8 2E0C0000 		.4byte	.LASF138
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 33
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 33
 
 
  1825 08ac 0A       		.byte	0xa
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  1879 091e 07010000 		.4byte	0x107
  1880 0922 1C       		.byte	0x1c
  1881 0923 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 34
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 34
 
 
  1882 0924 891E0000 		.4byte	.LASF146
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  1936 0996 0A       		.byte	0xa
  1937 0997 5B01     		.2byte	0x15b
  1938 0999 07010000 		.4byte	0x107
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 35
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 35
 
 
  1939 099d 04       		.byte	0x4
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  1993 0a11 28       		.byte	0x28
  1994 0a12 00       		.byte	0
  1995 0a13 1A       		.uleb128 0x1a
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 36
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 36
 
 
  1996 0a14 E0030000 		.4byte	.LASF158
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  2050 0a8b 14       		.uleb128 0x14
  2051 0a8c 3E000000 		.4byte	0x3e
  2052 0a90 01       		.byte	0x1
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 37
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 37
 
 
  2053 0a91 00       		.byte	0
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  2107 0b03 53523200 		.ascii	"SR2\000"
  2108 0b07 0A       		.byte	0xa
  2109 0b08 4702     		.2byte	0x247
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 38
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 38
 
 
  2110 0b0a 07010000 		.4byte	0x107
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  2164 0b7f 0C       		.byte	0xc
  2165 0b80 0A       		.uleb128 0xa
  2166 0b81 F2180000 		.4byte	.LASF170
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 39
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 39
 
 
  2167 0b85 0A       		.byte	0xa
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  2221 0bfa 0A       		.byte	0xa
  2222 0bfb CE02     		.2byte	0x2ce
  2223 0bfd 0C010000 		.4byte	0x10c
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 40
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 40
 
 
  2224 0c01 34       		.byte	0x34
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  2278 0c72 EA0C0000 		.4byte	0xcea
  2279 0c76 09       		.uleb128 0x9
  2280 0c77 43523100 		.ascii	"CR1\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 41
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 41
 
 
  2281 0c7b 0A       		.byte	0xa
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  2335 0ceb 511F0000 		.4byte	.LASF188
  2336 0cef 0A       		.byte	0xa
  2337 0cf0 E602     		.2byte	0x2e6
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 42
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 42
 
 
  2338 0cf2 6D0C0000 		.4byte	0xc6d
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  2392 0d65 13       		.uleb128 0x13
  2393 0d66 07010000 		.4byte	0x107
  2394 0d6a 750D0000 		.4byte	0xd75
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 43
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 43
 
 
  2395 0d6e 14       		.uleb128 0x14
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  2449 0dda 73313900 		.ascii	"s19\000"
  2450 0dde 0C       		.byte	0xc
  2451 0ddf F9       		.byte	0xf9
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 44
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 44
 
 
  2452 0de0 7A0D0000 		.4byte	0xd7a
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  2506 0e4f 7A0D0000 		.4byte	0xd7a
  2507 0e53 30       		.byte	0x30
  2508 0e54 09       		.uleb128 0x9
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 45
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 45
 
 
  2509 0e55 73323900 		.ascii	"s29\000"
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  2563 0ec4 72313000 		.ascii	"r10\000"
  2564 0ec8 0C       		.byte	0xc
  2565 0ec9 0D01     		.2byte	0x10d
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 46
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 46
 
 
  2566 0ecb 7A0D0000 		.4byte	0xd7a
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  2620 0f35 0804     		.2byte	0x408
  2621 0f37 0D       		.byte	0xd
  2622 0f38 67       		.byte	0x67
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 47
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 47
 
 
  2623 0f39 620F0000 		.4byte	0xf62
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  2677 0fa5 0E       		.byte	0xe
  2678 0fa6 48       		.byte	0x48
  2679 0fa7 E60F0000 		.4byte	0xfe6
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 48
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 48
 
 
  2680 0fab 08       		.uleb128 0x8
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  2734 1012 D8200000 		.4byte	.LASF213
  2735 1016 0F       		.byte	0xf
  2736 1017 3B       		.byte	0x3b
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 49
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 49
 
 
  2737 1018 E60F0000 		.4byte	0xfe6
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  2791 1091 00       		.byte	0
  2792 1092 0B       		.uleb128 0xb
  2793 1093 04       		.byte	0x4
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 50
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 50
 
 
  2794 1094 D9020000 		.4byte	0x2d9
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  2848 1100 0B       		.uleb128 0xb
  2849 1101 04       		.byte	0x4
  2850 1102 C3100000 		.4byte	0x10c3
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 51
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 51
 
 
  2851 1106 0B       		.uleb128 0xb
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  2905 1175 12       		.byte	0x12
  2906 1176 38       		.byte	0x38
  2907 1177 E1000000 		.4byte	0xe1
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 52
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 52
 
 
  2908 117b 06       		.byte	0x6
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  2962 11e7 10       		.byte	0x10
  2963 11e8 08       		.uleb128 0x8
  2964 11e9 25080000 		.4byte	.LASF245
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 53
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 53
 
 
  2965 11ed 12       		.byte	0x12
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  3019 125c 04       		.byte	0x4
  3020 125d 50120000 		.4byte	0x1250
  3021 1261 04       		.uleb128 0x4
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 54
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 54
 
 
  3022 1262 A90A0000 		.4byte	.LASF253
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  3076 12ce B5120000 		.4byte	0x12b5
  3077 12d2 00       		.byte	0
  3078 12d3 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 55
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 55
 
 
  3079 12d4 04       		.uleb128 0x4
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  3133 1343 14       		.byte	0x14
  3134 1344 55       		.byte	0x55
  3135 1345 57130000 		.4byte	0x1357
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 56
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 56
 
 
  3136 1349 1C       		.byte	0x1c
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  3190 13bb 33000000 		.4byte	0x33
  3191 13bf D3130000 		.4byte	0x13d3
  3192 13c3 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 57
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 57
 
 
  3193 13c4 C1030000 		.4byte	0x3c1
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  3247 1439 15       		.byte	0x15
  3248 143a DF       		.byte	0xdf
  3249 143b C6000000 		.4byte	0xc6
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 58
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 58
 
 
  3250 143f 09       		.byte	0x9
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  3304 14b8 A0010000 		.4byte	0x1a0
  3305 14bc 00       		.byte	0
  3306 14bd 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 59
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 59
 
 
  3307 14be 04       		.byte	0x4
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  3361 1536 22       		.uleb128 0x22
  3362 1537 22070000 		.4byte	.LASF288
  3363 153b 05       		.byte	0x5
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 60
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 60
 
 
  3364 153c 22       		.uleb128 0x22
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  3418 15ab 0E       		.uleb128 0xe
  3419 15ac C1030000 		.4byte	0x3c1
  3420 15b0 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 61
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 61
 
 
  3421 15b1 FC000000 		.4byte	0xfc
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  3475 1629 E1000000 		.4byte	0xe1
  3476 162d 00       		.byte	0
  3477 162e 08       		.uleb128 0x8
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 62
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 62
 
 
  3478 162f 230C0000 		.4byte	.LASF297
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  3532 1694 49445200 		.ascii	"IDR\000"
  3533 1698 17       		.byte	0x17
  3534 1699 AF       		.byte	0xaf
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 63
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 63
 
 
  3535 169a 07010000 		.4byte	0x107
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  3589 1706 00       		.byte	0
  3590 1707 08       		.uleb128 0x8
  3591 1708 E0020000 		.4byte	.LASF308
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 64
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 64
 
 
  3592 170c 17       		.byte	0x17
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  3646 1775 E0       		.byte	0xe0
  3647 1776 50170000 		.4byte	0x1750
  3648 177a 1C       		.byte	0x1c
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 65
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 65
 
 
  3649 177b 08       		.uleb128 0x8
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  3703 17e8 EC170000 		.4byte	0x17ec
  3704 17ec 0B       		.uleb128 0xb
  3705 17ed 04       		.byte	0x4
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 66
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 66
 
 
  3706 17ee E8160000 		.4byte	0x16e8
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  3760 1861 22       		.uleb128 0x22
  3761 1862 A70D0000 		.4byte	.LASF335
  3762 1866 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 67
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 67
 
 
  3763 1867 22       		.uleb128 0x22
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  3817 18dc D9020000 		.4byte	0x2d9
  3818 18e0 14       		.byte	0x14
  3819 18e1 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 68
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 68
 
 
  3820 18e2 F40B0000 		.4byte	.LASF345
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  3874 1957 5B190000 		.4byte	0x195b
  3875 195b 0D       		.uleb128 0xd
  3876 195c 6B190000 		.4byte	0x196b
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 69
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 69
 
 
  3877 1960 0E       		.uleb128 0xe
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  3931 19d4 19       		.byte	0x19
  3932 19d5 8201     		.2byte	0x182
  3933 19d7 FC000000 		.4byte	0xfc
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 70
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 70
 
 
  3934 19db 18       		.byte	0x18
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  3988 1a4b 5E060000 		.4byte	0x65e
  3989 1a4f 0B       		.uleb128 0xb
  3990 1a50 04       		.byte	0x4
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 71
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 71
 
 
  3991 1a51 64140000 		.4byte	0x1464
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  4045 1ac3 F4       		.byte	0xf4
  4046 1ac4 E21A0000 		.4byte	0x1ae2
  4047 1ac8 18       		.uleb128 0x18
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 72
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 72
 
 
  4048 1ac9 6D637200 		.ascii	"mcr\000"
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  4102 1b3d 0A       		.uleb128 0xa
  4103 1b3e 0A0B0000 		.4byte	.LASF375
  4104 1b42 1B       		.byte	0x1b
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 73
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 73
 
 
  4105 1b43 2A01     		.2byte	0x12a
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  4159 1bb6 22       		.uleb128 0x22
  4160 1bb7 E3200000 		.4byte	.LASF382
  4161 1bbb 01       		.byte	0x1
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 74
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 74
 
 
  4162 1bbc 22       		.uleb128 0x22
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  4216 1c29 8C170000 		.4byte	.LASF347
  4217 1c2d 1D       		.byte	0x1d
  4218 1c2e 1101     		.2byte	0x111
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 75
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 75
 
 
  4219 1c30 FC000000 		.4byte	0xfc
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  4273 1ca7 0A       		.uleb128 0xa
  4274 1ca8 2D1B0000 		.4byte	.LASF340
  4275 1cac 1D       		.byte	0x1d
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 76
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 76
 
 
  4276 1cad 8F01     		.2byte	0x18f
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  4330 1d21 04       		.byte	0x4
  4331 1d22 261D0000 		.4byte	0x1d26
  4332 1d26 0D       		.uleb128 0xd
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 77
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 77
 
 
  4333 1d27 3B1D0000 		.4byte	0x1d3b
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  4387 1d99 5201     		.2byte	0x152
  4388 1d9b D41D0000 		.4byte	0x1dd4
  4389 1d9f 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 78
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 78
 
 
  4390 1da0 A4100000 		.4byte	.LASF351
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  4444 1e15 05       		.uleb128 0x5
  4445 1e16 091E0000 		.4byte	0x1e09
  4446 1e1a 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 79
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 79
 
 
  4447 1e1b 04       		.byte	0x4
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  4501 1e8b 1F       		.byte	0x1f
  4502 1e8c 79       		.byte	0x79
  4503 1e8d 251F0000 		.4byte	0x1f25
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 80
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 80
 
 
  4504 1e91 04       		.byte	0x4
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  4558 1ef9 2A200000 		.4byte	.LASF420
  4559 1efd 1F       		.byte	0x1f
  4560 1efe 6A       		.byte	0x6a
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 81
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 81
 
 
  4561 1eff 051F0000 		.4byte	0x1f05
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  4615 1f6e 3B170000 		.4byte	.LASF429
  4616 1f72 20       		.byte	0x20
  4617 1f73 3C       		.byte	0x3c
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 82
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 82
 
 
  4618 1f74 781F0000 		.4byte	0x1f78
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  4672 1fe6 43523100 		.ascii	"CR1\000"
  4673 1fea 22       		.byte	0x22
  4674 1feb 9F01     		.2byte	0x19f
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 83
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 83
 
 
  4675 1fed 07010000 		.4byte	0x107
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  4729 2061 07010000 		.4byte	0x107
  4730 2065 24       		.byte	0x24
  4731 2066 09       		.uleb128 0x9
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 84
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 84
 
 
  4732 2067 50534300 		.ascii	"PSC\000"
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  4786 20db 290C0000 		.4byte	.LASF440
  4787 20df 22       		.byte	0x22
  4788 20e0 B201     		.2byte	0x1b2
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 85
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 85
 
 
  4789 20e2 920A0000 		.4byte	0xa92
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  4843 2156 04       		.byte	0x4
  4844 2157 E8200000 		.4byte	0x20e8
  4845 215b 15       		.uleb128 0x15
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 86
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 86
 
 
  4846 215c 31220000 		.4byte	.LASF447
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  4900 21d0 FC000000 		.4byte	0xfc
  4901 21d4 24       		.uleb128 0x24
  4902 21d5 07       		.byte	0x7
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 87
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 87
 
 
  4903 21d6 01       		.byte	0x1
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  4957 2245 87030000 		.4byte	.LASF468
  4958 2249 24       		.byte	0x24
  4959 224a 8901     		.2byte	0x189
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 88
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 88
 
 
  4960 224c FC000000 		.4byte	0xfc
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  5014 22c3 B201     		.2byte	0x1b2
  5015 22c5 D9020000 		.4byte	0x2d9
  5016 22c9 20       		.byte	0x20
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 89
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 89
 
 
  5017 22ca 0A       		.uleb128 0xa
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  5071 233a 5D230000 		.4byte	0x235d
  5072 233e 22       		.uleb128 0x22
  5073 233f 47100000 		.4byte	.LASF479
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 90
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 90
 
 
  5074 2343 00       		.byte	0
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  5128 23b4 0A       		.uleb128 0xa
  5129 23b5 FC000000 		.4byte	.LASF476
  5130 23b9 26       		.byte	0x26
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 91
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 91
 
 
  5131 23ba 3001     		.2byte	0x130
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  5185 242a 44010000 		.4byte	.LASF488
  5186 242e 26       		.byte	0x26
  5187 242f FB       		.byte	0xfb
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 92
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 92
 
 
  5188 2430 C1030000 		.4byte	0x3c1
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  5242 24a1 4A       		.byte	0x4a
  5243 24a2 B9240000 		.4byte	0x24b9
  5244 24a6 22       		.uleb128 0x22
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 93
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 93
 
 
  5245 24a7 E0060000 		.4byte	.LASF494
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  5299 251c 10       		.byte	0x10
  5300 251d 0A       		.uleb128 0xa
  5301 251e 1D0C0000 		.4byte	.LASF430
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 94
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 94
 
 
  5302 2522 28       		.byte	0x28
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  5356 2598 28       		.byte	0x28
  5357 2599 3D01     		.2byte	0x13d
  5358 259b 5A250000 		.4byte	0x255a
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 95
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 95
 
 
  5359 259f 00       		.byte	0
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  5413 2611 00       		.byte	0
  5414 2612 13       		.uleb128 0x13
  5415 2613 AE250000 		.4byte	0x25ae
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 96
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 96
 
 
  5416 2617 22260000 		.4byte	0x2622
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  5470 268e 29       		.byte	0x29
  5471 268f 59       		.byte	0x59
  5472 2690 69260000 		.4byte	0x2669
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 97
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 97
 
 
  5473 2694 04       		.uleb128 0x4
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  5527 26fe 94190000 		.4byte	.LASF520
  5528 2702 29       		.byte	0x29
  5529 2703 7B       		.byte	0x7b
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 98
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 98
 
 
  5530 2704 9E270000 		.4byte	0x279e
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  5584 2771 E1140000 		.4byte	0x14e1
  5585 2775 18       		.byte	0x18
  5586 2776 08       		.uleb128 0x8
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 99
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 99
 
 
  5587 2777 19130000 		.4byte	.LASF527
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  5641 27e6 39200000 		.4byte	.LASF534
  5642 27ea 2C       		.byte	0x2c
  5643 27eb C9       		.byte	0xc9
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 100
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 100
 
 
  5644 27ec F0270000 		.4byte	0x27f0
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  5698 285c 34       		.byte	0x34
  5699 285d 09       		.uleb128 0x9
  5700 285e 72636100 		.ascii	"rca\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 101
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 101
 
 
  5701 2862 2C       		.byte	0x2c
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  5755 28d0 07       		.uleb128 0x7
  5756 28d1 DB210000 		.4byte	.LASF541
  5757 28d5 20       		.byte	0x20
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 102
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 102
 
 
  5758 28d6 2C       		.byte	0x2c
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  5812 2942 0B       		.uleb128 0xb
  5813 2943 04       		.byte	0x4
  5814 2944 3D290000 		.4byte	0x293d
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 103
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 103
 
 
  5815 2948 0B       		.uleb128 0xb
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  5869 29b8 8C290000 		.4byte	0x298c
  5870 29bc 00       		.byte	0
  5871 29bd 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 104
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 104
 
 
  5872 29be 2D1B0000 		.4byte	.LASF340
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  5926 2a33 04       		.byte	0x4
  5927 2a34 382A0000 		.4byte	0x2a38
  5928 2a38 0D       		.uleb128 0xd
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 105
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 105
 
 
  5929 2a39 432A0000 		.4byte	0x2a43
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  5983 2aaf 2F       		.byte	0x2f
  5984 2ab0 FA       		.byte	0xfa
  5985 2ab1 B52A0000 		.4byte	0x2ab5
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 106
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 106
 
 
  5986 2ab5 10       		.uleb128 0x10
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  6040 2b2b 0A       		.uleb128 0xa
  6041 2b2c B81A0000 		.4byte	.LASF567
  6042 2b30 30       		.byte	0x30
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 107
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 107
 
 
  6043 2b31 A101     		.2byte	0x1a1
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  6097 2ba6 C901     		.2byte	0x1c9
  6098 2ba8 FC000000 		.4byte	0xfc
  6099 2bac 58       		.byte	0x58
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 108
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 108
 
 
  6100 2bad 0A       		.uleb128 0xa
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  6154 2c1a 96240000 		.4byte	.LASF585
  6155 2c1e 2F       		.byte	0x2f
  6156 2c1f 0A01     		.2byte	0x10a
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 109
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 109
 
 
  6157 2c21 EC2B0000 		.4byte	0x2bec
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  6211 2c90 22       		.uleb128 0x22
  6212 2c91 F6210000 		.4byte	.LASF598
  6213 2c95 04       		.byte	0x4
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 110
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 110
 
 
  6214 2c96 22       		.uleb128 0x22
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  6268 2d09 0D2D0000 		.4byte	0x2d0d
  6269 2d0d 0B       		.uleb128 0xb
  6270 2d0e 04       		.byte	0x4
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 111
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 111
 
 
  6271 2d0f 132D0000 		.4byte	0x2d13
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  6325 2d90 0E       		.uleb128 0xe
  6326 2d91 E1000000 		.4byte	0xe1
  6327 2d95 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 112
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 112
 
 
  6328 2d96 0B       		.uleb128 0xb
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  6382 2dff 07010000 		.4byte	0x107
  6383 2e03 1C       		.byte	0x1c
  6384 2e04 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 113
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 113
 
 
  6385 2e05 04       		.uleb128 0x4
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  6439 2e71 31       		.byte	0x31
  6440 2e72 52       		.byte	0x52
  6441 2e73 07010000 		.4byte	0x107
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 114
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 114
 
 
  6442 2e77 1C       		.byte	0x1c
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  6496 2ee0 08       		.uleb128 0x8
  6497 2ee1 321F0000 		.4byte	.LASF624
  6498 2ee5 31       		.byte	0x31
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 115
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 115
 
 
  6499 2ee6 63       		.byte	0x63
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  6553 2f52 07010000 		.4byte	0x107
  6554 2f56 18       		.byte	0x18
  6555 2f57 08       		.uleb128 0x8
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 116
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 116
 
 
  6556 2f58 87070000 		.4byte	.LASF637
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  6610 2fc4 B1100000 		.4byte	.LASF645
  6611 2fc8 31       		.byte	0x31
  6612 2fc9 7E       		.byte	0x7e
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 117
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 117
 
 
  6613 2fca E5310000 		.4byte	0x31e5
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  6667 303e 07010000 		.4byte	0x107
  6668 3042 1404     		.2byte	0x414
  6669 3044 27       		.uleb128 0x27
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 118
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 118
 
 
  6670 3045 6B0B0000 		.4byte	.LASF655
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  6724 30b9 79040000 		.4byte	.LASF663
  6725 30bd 31       		.byte	0x31
  6726 30be 98       		.byte	0x98
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 119
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 119
 
 
  6727 30bf 07010000 		.4byte	0x107
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  6781 3134 07010000 		.4byte	0x107
  6782 3138 3008     		.2byte	0x830
  6783 313a 27       		.uleb128 0x27
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 120
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 120
 
 
  6784 313b E00C0000 		.4byte	.LASF673
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  6838 31ae EE210000 		.4byte	.LASF680
  6839 31b2 31       		.byte	0x31
  6840 31b3 B2       		.byte	0xb2
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 121
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 121
 
 
  6841 31b4 07010000 		.4byte	0x107
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  6895 3232 14       		.uleb128 0x14
  6896 3233 3E000000 		.4byte	0x3e
  6897 3237 0F       		.byte	0xf
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 122
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 122
 
 
  6898 3238 00       		.byte	0
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  6952 32b4 04       		.uleb128 0x4
  6953 32b5 FA230000 		.4byte	.LASF682
  6954 32b9 31       		.byte	0x31
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 123
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 123
 
 
  6955 32ba B6       		.byte	0xb6
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  7009 3320 26330000 		.4byte	0x3326
  7010 3324 00       		.byte	0
  7011 3325 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 124
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 124
 
 
  7012 3326 0B       		.uleb128 0xb
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  7066 338f 00       		.byte	0
  7067 3390 04       		.uleb128 0x4
  7068 3391 B9100000 		.4byte	.LASF694
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 125
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 125
 
 
  7069 3395 30       		.byte	0x30
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  7123 33ff F7       		.byte	0xf7
  7124 3400 95150000 		.4byte	0x1595
  7125 3404 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 126
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 126
 
 
  7126 3405 08       		.uleb128 0x8
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  7180 3475 640B0000 		.4byte	.LASF703
  7181 3479 30       		.byte	0x30
  7182 347a 3301     		.2byte	0x133
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 127
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 127
 
 
  7183 347c 012D0000 		.4byte	0x2d01
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  7237 34ef 30       		.byte	0x30
  7238 34f0 5C01     		.2byte	0x15c
  7239 34f2 2B350000 		.4byte	0x352b
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 128
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 128
 
 
  7240 34f6 0A       		.uleb128 0xa
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  7294 356a B4320000 		.4byte	0x32b4
  7295 356e 0B       		.uleb128 0xb
  7296 356f 04       		.byte	0x4
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 129
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 129
 
 
  7297 3570 F7320000 		.4byte	0x32f7
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  7351 35e0 22       		.uleb128 0x22
  7352 35e1 BD060000 		.4byte	.LASF725
  7353 35e5 05       		.byte	0x5
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 130
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 130
 
 
  7354 35e6 22       		.uleb128 0x22
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  7408 3652 04       		.uleb128 0x4
  7409 3653 EB0C0000 		.4byte	.LASF731
  7410 3657 32       		.byte	0x32
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 131
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 131
 
 
  7411 3658 A0       		.byte	0xa0
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  7465 36c6 BD       		.byte	0xbd
  7466 36c7 FC000000 		.4byte	0xfc
  7467 36cb 0C       		.byte	0xc
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 132
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 132
 
 
  7468 36cc 00       		.byte	0
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  7522 373f 2A       		.uleb128 0x2a
  7523 3740 F80D0000 		.4byte	.LASF742
  7524 3744 34       		.byte	0x34
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 133
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 133
 
 
  7525 3745 A9       		.byte	0xa9
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  7579 37b4 16       		.uleb128 0x16
  7580 37b5 FD200000 		.4byte	.LASF749
  7581 37b9 35       		.byte	0x35
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 134
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 134
 
 
  7582 37ba E9       		.byte	0xe9
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  7636 3829 2F010000 		.4byte	.LASF759
  7637 382d 36       		.byte	0x36
  7638 382e 12       		.byte	0x12
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 135
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 135
 
 
  7639 382f 95150000 		.4byte	0x1595
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  7693 389b 36       		.byte	0x36
  7694 389c 18       		.byte	0x18
  7695 389d AE380000 		.4byte	0x38ae
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 136
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 136
 
 
  7696 38a1 08       		.uleb128 0x8
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  7750 390a 21       		.byte	0x21
  7751 390b C1030000 		.4byte	0x3c1
  7752 390f 04       		.byte	0x4
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 137
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 137
 
 
  7753 3910 08       		.uleb128 0x8
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  7807 397b 2C000000 		.4byte	0x2c
  7808 397f 10       		.byte	0x10
  7809 3980 18       		.uleb128 0x18
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 138
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 138
 
 
  7810 3981 5F7800   		.ascii	"_x\000"
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  7864 39ef 37       		.byte	0x37
  7865 39f0 3E       		.byte	0x3e
  7866 39f1 2C000000 		.4byte	0x2c
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 139
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 139
 
 
  7867 39f5 14       		.byte	0x14
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  7921 3a64 14       		.uleb128 0x14
  7922 3a65 3E000000 		.4byte	0x3e
  7923 3a69 1F       		.byte	0x1f
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 140
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 140
 
 
  7924 3a6a 00       		.byte	0
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  7978 3ad7 37       		.byte	0x37
  7979 3ad8 76       		.byte	0x76
  7980 3ad9 EB3A0000 		.4byte	0x3aeb
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 141
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 141
 
 
  7981 3add 00       		.byte	0
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  8035 3b43 3E040000 		.4byte	.LASF801
  8036 3b47 37       		.byte	0x37
  8037 3b48 BC       		.byte	0xbc
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 142
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 142
 
 
  8038 3b49 2C000000 		.4byte	0x2c
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  8092 3bb5 DE3D0000 		.4byte	0x3dde
  8093 3bb9 40       		.byte	0x40
  8094 3bba 08       		.uleb128 0x8
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 143
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 143
 
 
  8095 3bbb A4020000 		.4byte	.LASF808
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  8149 3c2a C1030000 		.4byte	0x3c1
  8150 3c2e 0E       		.uleb128 0xe
  8151 3c2f 92370000 		.4byte	0x3792
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 144
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 144
 
 
  8152 3c33 0E       		.uleb128 0xe
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  8206 3ca8 2C000000 		.4byte	0x2c
  8207 3cac 30       		.byte	0x30
  8208 3cad 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 145
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 145
 
 
  8209 3cae 99210000 		.4byte	.LASF823
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  8263 3d23 8B040000 		.4byte	.LASF832
  8264 3d27 37       		.byte	0x37
  8265 3d28 7802     		.2byte	0x278
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 146
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 146
 
 
  8266 3d2a 05400000 		.4byte	0x4005
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  8320 3da9 0E       		.uleb128 0xe
  8321 3daa 393C0000 		.4byte	0x3c39
  8322 3dae 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 147
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 147
 
 
  8323 3daf C1030000 		.4byte	0x3c1
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  8377 3e2a 2601     		.2byte	0x126
  8378 3e2c 2C000000 		.4byte	0x2c
  8379 3e30 04       		.byte	0x4
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 148
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 148
 
 
  8380 3e31 0A       		.uleb128 0xa
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  8434 3ea1 3E000000 		.4byte	0x3e
  8435 3ea5 00       		.byte	0
  8436 3ea6 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 149
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 149
 
 
  8437 3ea7 C9130000 		.4byte	.LASF846
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  8491 3f1c 1E160000 		.4byte	.LASF855
  8492 3f20 37       		.byte	0x37
  8493 3f21 6502     		.2byte	0x265
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 150
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 150
 
 
  8494 3f23 A13F0000 		.4byte	0x3fa1
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  8548 3f9a 14       		.uleb128 0x14
  8549 3f9b 3E000000 		.4byte	0x3e
  8550 3f9f 19       		.byte	0x19
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 151
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 151
 
 
  8551 3fa0 00       		.byte	0
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  8605 4013 37       		.byte	0x37
  8606 4014 6E02     		.2byte	0x26e
  8607 4016 903E0000 		.4byte	0x3e90
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 152
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 152
 
 
  8608 401a 1E       		.uleb128 0x1e
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  8662 4091 37       		.byte	0x37
  8663 4092 0803     		.2byte	0x308
  8664 4094 3F3C0000 		.4byte	0x3c3f
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 153
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 153
 
 
  8665 4098 16       		.uleb128 0x16
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  8719 4103 84140000 		.4byte	.LASF878
  8720 4107 39       		.byte	0x39
  8721 4108 09       		.byte	0x9
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 154
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 154
 
 
  8722 4109 0D410000 		.4byte	0x410d
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  8776 4173 04       		.byte	0x4
  8777 4174 02410000 		.4byte	0x4102
  8778 4178 07       		.uleb128 0x7
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 155
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 155
 
 
  8779 4179 95160000 		.4byte	.LASF884
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  8833 41e5 08       		.byte	0x8
  8834 41e6 39       		.byte	0x39
  8835 41e7 20       		.byte	0x20
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 156
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 156
 
 
  8836 41e8 0D420000 		.4byte	0x420d
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  8890 424d E0410000 		.4byte	0x41e0
  8891 4251 00       		.byte	0
  8892 4252 16       		.uleb128 0x16
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 157
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 157
 
 
  8893 4253 7C0C0000 		.4byte	.LASF890
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  8947 42ca 90       		.byte	0x90
  8948 42cb 40       		.uleb128 0x40
  8949 42cc 07       		.uleb128 0x7
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 158
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 158
 
 
  8950 42cd F4       		.byte	0xf4
@@ -9478,7 +9478,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  9004 431e 34       		.uleb128 0x34
  9005 431f 02       		.uleb128 0x2
  9006 4320 90       		.byte	0x90
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 159
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 159
 
 
  9007 4321 42       		.uleb128 0x42
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  9061 436f 04       		.byte	0x4
  9062 4370 0000F0C1 		.4byte	0xc1f00000
  9063 4374 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 160
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 160
 
 
  9064 4375 33       		.uleb128 0x33
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  9118 43cc 34       		.uleb128 0x34
  9119 43cd 02       		.uleb128 0x2
  9120 43ce 90       		.byte	0x90
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 161
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 161
 
 
  9121 43cf 41       		.uleb128 0x41
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  9175 441d 04       		.byte	0x4
  9176 441e 0000F041 		.4byte	0x41f00000
  9177 4422 34       		.uleb128 0x34
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 162
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 162
 
 
  9178 4423 02       		.uleb128 0x2
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  9232 447a 34       		.uleb128 0x34
  9233 447b 02       		.uleb128 0x2
  9234 447c 90       		.byte	0x90
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 163
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 163
 
 
  9235 447d 40       		.uleb128 0x40
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  9289 44cb 04       		.byte	0x4
  9290 44cc 0629D140 		.4byte	0x40d12906
  9291 44d0 34       		.uleb128 0x34
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 164
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 164
 
 
  9292 44d1 02       		.uleb128 0x2
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  9346 451f F4       		.byte	0xf4
  9347 4520 25       		.uleb128 0x25
  9348 4521 04       		.byte	0x4
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 165
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 165
 
 
  9349 4522 0000F041 		.4byte	0x41f00000
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  9403 457f 9C       		.byte	0x9c
  9404 4580 76480000 		.4byte	0x4876
  9405 4584 33       		.uleb128 0x33
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 166
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 166
 
 
  9406 4585 1E000000 		.4byte	.LVL34
@@ -9958,7 +9958,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  9460 45dc 02       		.uleb128 0x2
  9461 45dd 90       		.byte	0x90
  9462 45de 41       		.uleb128 0x41
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 167
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 167
 
 
  9463 45df 07       		.uleb128 0x7
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  9517 462d 0000F041 		.4byte	0x41f00000
  9518 4631 34       		.uleb128 0x34
  9519 4632 02       		.uleb128 0x2
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 168
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 168
 
 
  9520 4633 90       		.byte	0x90
@@ -10078,7 +10078,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  9574 468a 02       		.uleb128 0x2
  9575 468b 90       		.byte	0x90
  9576 468c 40       		.uleb128 0x40
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 169
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 169
 
 
  9577 468d 07       		.uleb128 0x7
@@ -10138,7 +10138,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  9631 46db CD750640 		.4byte	0x400675cd
  9632 46df 34       		.uleb128 0x34
  9633 46e0 02       		.uleb128 0x2
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 170
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 170
 
 
  9634 46e1 90       		.byte	0x90
@@ -10198,7 +10198,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  9688 472f 25       		.uleb128 0x25
  9689 4730 04       		.byte	0x4
  9690 4731 0000F041 		.4byte	0x41f00000
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 171
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 171
 
 
  9691 4735 00       		.byte	0
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  9745 4789 713D6241 		.4byte	0x41623d71
  9746 478d 34       		.uleb128 0x34
  9747 478e 02       		.uleb128 0x2
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 172
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 172
 
 
  9748 478f 90       		.byte	0x90
@@ -10318,7 +10318,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  9802 47dd 25       		.uleb128 0x25
  9803 47de 04       		.byte	0x4
  9804 47df 0000F041 		.4byte	0x41f00000
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 173
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 173
 
 
  9805 47e3 34       		.uleb128 0x34
@@ -10378,7 +10378,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  9859 4837 6C480000 		.4byte	0x486c
  9860 483b 34       		.uleb128 0x34
  9861 483c 02       		.uleb128 0x2
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 174
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 174
 
 
  9862 483d 90       		.byte	0x90
@@ -10438,7 +10438,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  9916 489a 90       		.byte	0x90
  9917 489b 40       		.uleb128 0x40
  9918 489c 07       		.uleb128 0x7
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 175
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 175
 
 
  9919 489d F4       		.byte	0xf4
@@ -10498,7 +10498,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  9973 48ee 34       		.uleb128 0x34
  9974 48ef 02       		.uleb128 0x2
  9975 48f0 90       		.byte	0x90
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 176
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 176
 
 
  9976 48f1 42       		.uleb128 0x42
@@ -10558,7 +10558,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  10030 493f 04       		.byte	0x4
  10031 4940 0000F041 		.4byte	0x41f00000
  10032 4944 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 177
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 177
 
 
  10033 4945 33       		.uleb128 0x33
@@ -10618,7 +10618,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  10087 499c 34       		.uleb128 0x34
  10088 499d 02       		.uleb128 0x2
  10089 499e 90       		.byte	0x90
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 178
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 178
 
 
  10090 499f 41       		.uleb128 0x41
@@ -10678,7 +10678,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  10144 49ed 04       		.byte	0x4
  10145 49ee 0000F041 		.4byte	0x41f00000
  10146 49f2 34       		.uleb128 0x34
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 179
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 179
 
 
  10147 49f3 02       		.uleb128 0x2
@@ -10738,7 +10738,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  10201 4a4a 34       		.uleb128 0x34
  10202 4a4b 02       		.uleb128 0x2
  10203 4a4c 90       		.byte	0x90
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 180
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 180
 
 
  10204 4a4d 40       		.uleb128 0x40
@@ -10798,7 +10798,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  10258 4aaa 40       		.uleb128 0x40
  10259 4aab 07       		.uleb128 0x7
  10260 4aac F4       		.byte	0xf4
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 181
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 181
 
 
  10261 4aad 25       		.uleb128 0x25
@@ -10858,7 +10858,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  10315 4afe 02       		.uleb128 0x2
  10316 4aff 90       		.byte	0x90
  10317 4b00 42       		.uleb128 0x42
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 182
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 182
 
 
  10318 4b01 07       		.uleb128 0x7
@@ -10918,7 +10918,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  10372 4b4f 0000F0C1 		.4byte	0xc1f00000
  10373 4b53 00       		.byte	0
  10374 4b54 33       		.uleb128 0x33
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 183
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 183
 
 
  10375 4b55 5A000000 		.4byte	.LVL16
@@ -10978,7 +10978,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  10429 4bac 02       		.uleb128 0x2
  10430 4bad 90       		.byte	0x90
  10431 4bae 41       		.uleb128 0x41
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 184
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 184
 
 
  10432 4baf 07       		.uleb128 0x7
@@ -11038,7 +11038,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  10486 4bfd 0000F041 		.4byte	0x41f00000
  10487 4c01 34       		.uleb128 0x34
  10488 4c02 02       		.uleb128 0x2
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 185
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 185
 
 
  10489 4c03 90       		.byte	0x90
@@ -11098,7 +11098,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  10543 4c5a 02       		.uleb128 0x2
  10544 4c5b 90       		.byte	0x90
  10545 4c5c 40       		.uleb128 0x40
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 186
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 186
 
 
  10546 4c5d 07       		.uleb128 0x7
@@ -11158,7 +11158,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  10600 4cab CD758640 		.4byte	0x408675cd
  10601 4caf 34       		.uleb128 0x34
  10602 4cb0 02       		.uleb128 0x2
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 187
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 187
 
 
  10603 4cb1 90       		.byte	0x90
@@ -11218,7 +11218,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  10657 4cff 25       		.uleb128 0x25
  10658 4d00 04       		.byte	0x4
  10659 4d01 0000F041 		.4byte	0x41f00000
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 188
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 188
 
 
  10660 4d05 00       		.byte	0
@@ -11278,7 +11278,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  10714 4d5f 5D4F0000 		.4byte	0x4f5d
  10715 4d63 33       		.uleb128 0x33
  10716 4d64 1E000000 		.4byte	.LVL4
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 189
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 189
 
 
  10717 4d68 36500000 		.4byte	0x5036
@@ -11338,7 +11338,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  10771 4dbc 90       		.byte	0x90
  10772 4dbd 41       		.uleb128 0x41
  10773 4dbe 07       		.uleb128 0x7
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 190
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 190
 
 
  10774 4dbf F4       		.byte	0xf4
@@ -11398,7 +11398,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  10828 4e10 34       		.uleb128 0x34
  10829 4e11 02       		.uleb128 0x2
  10830 4e12 90       		.byte	0x90
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 191
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 191
 
 
  10831 4e13 43       		.uleb128 0x43
@@ -11458,7 +11458,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  10885 4e6a 90       		.byte	0x90
  10886 4e6b 40       		.uleb128 0x40
  10887 4e6c 07       		.uleb128 0x7
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 192
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 192
 
 
  10888 4e6d F4       		.byte	0xf4
@@ -11518,7 +11518,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  10942 4ebe 34       		.uleb128 0x34
  10943 4ebf 02       		.uleb128 0x2
  10944 4ec0 90       		.byte	0x90
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 193
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 193
 
 
  10945 4ec1 42       		.uleb128 0x42
@@ -11578,7 +11578,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  10999 4f0f 04       		.byte	0x4
  11000 4f10 0000F041 		.4byte	0x41f00000
  11001 4f14 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 194
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 194
 
 
  11002 4f15 35       		.uleb128 0x35
@@ -11638,7 +11638,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  11056 4f72 33       		.uleb128 0x33
  11057 4f73 1E000000 		.4byte	.LVL0
  11058 4f77 36500000 		.4byte	0x5036
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 195
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 195
 
 
  11059 4f7b B04F0000 		.4byte	0x4fb0
@@ -11698,7 +11698,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  11113 4fcc 41       		.uleb128 0x41
  11114 4fcd 07       		.uleb128 0x7
  11115 4fce F4       		.byte	0xf4
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 196
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 196
 
 
  11116 4fcf 25       		.uleb128 0x25
@@ -11758,7 +11758,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  11170 5020 02       		.uleb128 0x2
  11171 5021 90       		.byte	0x90
  11172 5022 43       		.uleb128 0x43
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 197
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 197
 
 
  11173 5023 07       		.uleb128 0x7
@@ -11818,7 +11818,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  11227 0021 0B       		.uleb128 0xb
  11228 0022 0B       		.uleb128 0xb
  11229 0023 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 198
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 198
 
 
  11230 0024 0B       		.uleb128 0xb
@@ -11878,7 +11878,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  11284 005a 3B       		.uleb128 0x3b
  11285 005b 0B       		.uleb128 0xb
  11286 005c 49       		.uleb128 0x49
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 199
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 199
 
 
  11287 005d 13       		.uleb128 0x13
@@ -11938,7 +11938,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  11341 0093 05       		.uleb128 0x5
  11342 0094 01       		.uleb128 0x1
  11343 0095 13       		.uleb128 0x13
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 200
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 200
 
 
  11344 0096 00       		.byte	0
@@ -11998,7 +11998,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  11398 00cc 00       		.byte	0
  11399 00cd 12       		.uleb128 0x12
  11400 00ce 0D       		.uleb128 0xd
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 201
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 201
 
 
  11401 00cf 00       		.byte	0
@@ -12058,7 +12058,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  11455 0105 0B       		.uleb128 0xb
  11456 0106 3B       		.uleb128 0x3b
  11457 0107 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 202
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 202
 
 
  11458 0108 49       		.uleb128 0x49
@@ -12118,7 +12118,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  11512 013e 3A       		.uleb128 0x3a
  11513 013f 0B       		.uleb128 0xb
  11514 0140 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 203
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 203
 
 
  11515 0141 05       		.uleb128 0x5
@@ -12178,7 +12178,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  11569 0177 13       		.uleb128 0x13
  11570 0178 00       		.byte	0
  11571 0179 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 204
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 204
 
 
  11572 017a 1F       		.uleb128 0x1f
@@ -12238,7 +12238,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  11626 01b0 23       		.uleb128 0x23
  11627 01b1 0D       		.uleb128 0xd
  11628 01b2 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 205
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 205
 
 
  11629 01b3 03       		.uleb128 0x3
@@ -12298,7 +12298,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  11683 01e9 49       		.uleb128 0x49
  11684 01ea 13       		.uleb128 0x13
  11685 01eb 38       		.uleb128 0x38
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 206
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 206
 
 
  11686 01ec 05       		.uleb128 0x5
@@ -12358,7 +12358,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  11740 0222 13       		.uleb128 0x13
  11741 0223 00       		.byte	0
  11742 0224 03       		.uleb128 0x3
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 207
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 207
 
 
  11743 0225 0E       		.uleb128 0xe
@@ -12418,7 +12418,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  11797 025b 13       		.uleb128 0x13
  11798 025c 3A       		.uleb128 0x3a
  11799 025d 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 208
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 208
 
 
  11800 025e 3B       		.uleb128 0x3b
@@ -12478,7 +12478,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  11854 0299 02       		.uleb128 0x2
  11855 029a 18       		.uleb128 0x18
  11856 029b 9142     		.uleb128 0x2111
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 209
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 209
 
 
  11857 029d 18       		.uleb128 0x18
@@ -12538,7 +12538,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  11911 02d8 00       		.byte	0
  11912 02d9 00       		.byte	0
  11913              		.section	.debug_aranges,"",%progbits
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 210
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 210
 
 
  11914 0000 44000000 		.4byte	0x44
@@ -12598,7 +12598,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  11959      72616365 
  11959      5F627566 
  11959      6665725F 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 211
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 211
 
 
  11959      7400
@@ -12658,7 +12658,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  11985 00b5 55534244 		.ascii	"USBD1\000"
  11985      3100
  11986              	.LASF366:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 212
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 212
 
 
  11987 00bb 43414E5F 		.ascii	"CAN_STOP\000"
@@ -12718,7 +12718,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12016              	.LASF488:
  12017 0144 72785F62 		.ascii	"rx_buffer\000"
  12017      75666665 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 213
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 213
 
 
  12017      7200
@@ -12778,7 +12778,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12049 01c5 47434346 		.ascii	"GCCFG\000"
  12049      4700
  12050              	.LASF437:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 214
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 214
 
 
  12051 01cb 42445452 		.ascii	"BDTR\000"
@@ -12838,7 +12838,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12081      64735F71 
  12081      75657565 
  12081      00
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 215
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 215
 
 
  12082              	.LASF893:
@@ -12898,7 +12898,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12113 02d8 48505458 		.ascii	"HPTXSTS\000"
  12113      53545300 
  12114              	.LASF308:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 216
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 216
 
 
  12115 02e0 6F747970 		.ascii	"otyper\000"
@@ -12958,7 +12958,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12142              	.LASF854:
  12143 0379 5F776374 		.ascii	"_wctomb_state\000"
  12143      6F6D625F 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 217
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 217
 
 
  12143      73746174 
@@ -13018,7 +13018,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12173 0404 61646373 		.ascii	"adcstate_t\000"
  12173      74617465 
  12173      5F7400
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 218
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 218
 
 
  12174              	.LASF769:
@@ -13078,7 +13078,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12203 0490 474F5447 		.ascii	"GOTGCTL\000"
  12203      43544C00 
  12204              	.LASF605:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 219
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 219
 
 
  12205 0498 75736265 		.ascii	"usbepcallback_t\000"
@@ -13138,7 +13138,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12230              	.LASF359:
  12231 052f 41444343 		.ascii	"ADCConversionGroup\000"
  12231      6F6E7665 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 220
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 220
 
 
  12231      7273696F 
@@ -13198,7 +13198,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12257      6661696C 
  12257      00
  12258              	.LASF171:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 221
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 221
 
 
  12259 05c6 52455350 		.ascii	"RESP1\000"
@@ -13258,7 +13258,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12288              	.LASF672:
  12289 0650 72657376 		.ascii	"resvd830\000"
  12289      64383330 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 222
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 222
 
 
  12289      00
@@ -13318,7 +13318,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12318              	.LASF187:
  12319 06da 49325350 		.ascii	"I2SPR\000"
  12319      5200
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 223
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 223
 
 
  12320              	.LASF494:
@@ -13378,7 +13378,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12349      7365645F 
  12349      72616E64 
  12349      00
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 224
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 224
 
 
  12350              	.LASF629:
@@ -13438,7 +13438,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12377 07f6 5F726573 		.ascii	"_result_k\000"
  12377      756C745F 
  12377      6B00
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 225
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 225
 
 
  12378              	.LASF418:
@@ -13498,7 +13498,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12407 0885 72785F66 		.ascii	"rx_fifo_size\000"
  12407      69666F5F 
  12407      73697A65 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 226
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 226
 
 
  12407      00
@@ -13558,7 +13558,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12436              	.LASF65:
  12437 0916 72656164 		.ascii	"ready_list_t\000"
  12437      795F6C69 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 227
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 227
 
 
  12437      73745F74 
@@ -13618,7 +13618,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12464              	.LASF145:
  12465 09a8 44485238 		.ascii	"DHR8R2\000"
  12465      523200
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 228
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 228
 
 
  12466              	.LASF433:
@@ -13678,7 +13678,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12498              	.LASF465:
  12499 0a2a 46415354 		.ascii	"FAST_DUTY_CYCLE_16_9\000"
  12499      5F445554 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 229
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 229
 
 
  12499      595F4359 
@@ -13738,7 +13738,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12525      00
  12526              	.LASF809:
  12527 0aba 5F626C6B 		.ascii	"_blksize\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 230
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 230
 
 
  12527      73697A65 
@@ -13798,7 +13798,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12554              	.LASF241:
  12555 0b47 63665F6F 		.ascii	"cf_off_newer\000"
  12555      66665F6E 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 231
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 231
 
 
  12555      65776572 
@@ -13858,7 +13858,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12585 0bd2 76745F6E 		.ascii	"vt_next\000"
  12585      65787400 
  12586              	.LASF480:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 232
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 232
 
 
  12587 0bda 4932535F 		.ascii	"I2S_STOP\000"
@@ -13918,7 +13918,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12617      643800
  12618              	.LASF5:
  12619 0c5f 73697A65 		.ascii	"size_t\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 233
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 233
 
 
  12619      5F7400
@@ -13978,7 +13978,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12647      6261636B 
  12647      5F7400
  12648              	.LASF618:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 234
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 234
 
 
  12649 0cfa 44494550 		.ascii	"DIEPCTL\000"
@@ -14038,7 +14038,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12678 0da2 52463052 		.ascii	"RF0R\000"
  12678      00
  12679              	.LASF335:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 235
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 235
 
 
  12680 0da7 4144435F 		.ascii	"ADC_ERR_DMAFAILURE\000"
@@ -14098,7 +14098,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12706      4552524F 
  12706      5200
  12707              	.LASF740:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 236
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 236
 
 
  12708 0e43 77696E74 		.ascii	"wint_t\000"
@@ -14158,7 +14158,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12732 0f1e 61726420 		.ascii	"ard -mfpu=fpv4-sp-d16 -mno-thumb-interwork -mthumb "
  12732      2D6D6670 
  12732      753D6670 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 237
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 237
 
 
  12732      76342D73 
@@ -14218,7 +14218,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12754      554E494E 
  12754      495400
  12755              	.LASF306:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 238
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 238
 
 
  12756 1052 73746D33 		.ascii	"stm32_gpio_t\000"
@@ -14278,7 +14278,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12783              	.LASF16:
  12784 10eb 5F5F7569 		.ascii	"__uint64_t\000"
  12784      6E743634 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 239
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 239
 
 
  12784      5F7400
@@ -14338,7 +14338,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12810      616C6C62 
  12810      61636B5F 
  12810      7400
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 240
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 240
 
 
  12811              	.LASF267:
@@ -14398,7 +14398,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12842      757000
  12843              	.LASF156:
  12844 121b 43575354 		.ascii	"CWSTRTR\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 241
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 241
 
 
  12844      52545200 
@@ -14458,7 +14458,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12872      7265616D 
  12872      5F7400
  12873              	.LASF713:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 242
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 242
 
 
  12874 12ac 72657175 		.ascii	"requests_hook_cb\000"
@@ -14518,7 +14518,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12900      6F6E6700 
  12901              	.LASF86:
  12902 1343 70616E69 		.ascii	"panic_msg\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 243
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 243
 
 
  12902      635F6D73 
@@ -14578,7 +14578,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12929              	.LASF237:
  12930 13d6 63685F74 		.ascii	"ch_timesize\000"
  12930      696D6573 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 244
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 244
 
 
  12930      697A6500 
@@ -14638,7 +14638,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12958      6E7400
  12959              	.LASF467:
  12960 1470 6F705F6D 		.ascii	"op_mode\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 245
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 245
 
 
  12960      6F646500 
@@ -14698,7 +14698,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  12988      6970746F 
  12988      7200
  12989              	.LASF556:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 246
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 246
 
 
  12990 1503 73706963 		.ascii	"spicallback_t\000"
@@ -14758,7 +14758,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13016 159c 63685F76 		.ascii	"ch_version\000"
  13016      65727369 
  13016      6F6E00
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 247
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 247
 
 
  13017              	.LASF795:
@@ -14818,7 +14818,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13047              	.LASF847:
  13048 1628 5F617363 		.ascii	"_asctime_buf\000"
  13048      74696D65 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 248
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 248
 
 
  13048      5F627566 
@@ -14878,7 +14878,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13073              	.LASF292:
  13074 16c2 626C6B73 		.ascii	"blkstate_t\000"
  13074      74617465 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 249
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 249
 
 
  13074      5F7400
@@ -14938,7 +14938,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13103              	.LASF321:
  13104 1750 50484461 		.ascii	"PHData\000"
  13104      746100
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 250
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 250
 
 
  13105              	.LASF324:
@@ -14998,7 +14998,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13137              	.LASF518:
  13138 17d7 69717565 		.ascii	"iqueue\000"
  13138      756500
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 251
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 251
 
 
  13139              	.LASF702:
@@ -15058,7 +15058,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13170 185f 64657074 		.ascii	"depth\000"
  13170      6800
  13171              	.LASF133:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 252
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 252
 
 
  13172 1865 46464131 		.ascii	"FFA1R\000"
@@ -15118,7 +15118,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13198      434D4400 
  13199              	.LASF374:
  13200 18fa 72786675 		.ascii	"rxfull_event\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 253
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 253
 
 
  13200      6C6C5F65 
@@ -15178,7 +15178,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13228 198f 73796E63 		.ascii	"sync\000"
  13228      00
  13229              	.LASF520:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 254
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 254
 
 
  13230 1994 75736172 		.ascii	"usart\000"
@@ -15238,7 +15238,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13256      74726561 
  13256      6D7300
  13257              	.LASF141:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 255
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 255
 
 
  13258 1a2b 44485231 		.ascii	"DHR12L1\000"
@@ -15298,7 +15298,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13284      325F6F74 
  13284      675F686F 
  13284      73745F63 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 256
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 256
 
 
  13284      686E5F74 
@@ -15358,7 +15358,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13315              	.LASF868:
  13316 1b57 5F5F6C6F 		.ascii	"__locale_t\000"
  13316      63616C65 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 257
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 257
 
 
  13316      5F7400
@@ -15418,7 +15418,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13342 1bfb 63617061 		.ascii	"capacity\000"
  13342      63697479 
  13342      00
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 258
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 258
 
 
  13343              	.LASF271:
@@ -15478,7 +15478,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13371              	.LASF594:
  13372 1c8c 5553425F 		.ascii	"USB_EVENT_RESET\000"
  13372      4556454E 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 259
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 259
 
 
  13372      545F5245 
@@ -15538,7 +15538,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13396      7200
  13397              	.LASF586:
  13398 1d30 5553425F 		.ascii	"USB_EP0_WAITING_SETUP\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 260
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 260
 
 
  13398      4550305F 
@@ -15598,7 +15598,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13427              	.LASF900:
  13428 1dba 6C657474 		.ascii	"lettre_O\000"
  13428      72655F4F 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 261
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 261
 
 
  13428      00
@@ -15658,7 +15658,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13455              	.LASF195:
  13456 1e4d 73655F74 		.ascii	"se_time\000"
  13456      696D6500 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 262
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 262
 
 
  13457              	.LASF658:
@@ -15718,7 +15718,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13484 1ee4 6C6F6E67 		.ascii	"long long unsigned int\000"
  13484      206C6F6E 
  13484      6720756E 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 263
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 263
 
 
  13484      7369676E 
@@ -15778,7 +15778,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13513              	.LASF47:
  13514 1f83 705F666C 		.ascii	"p_flags\000"
  13514      61677300 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 264
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 264
 
 
  13515              	.LASF222:
@@ -15838,7 +15838,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13542      5F7400
  13543              	.LASF730:
  13544 2018 64636D69 		.ascii	"dcmi\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 265
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 265
 
 
  13544      00
@@ -15898,7 +15898,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13574      636B5F74 
  13574      00
  13575              	.LASF81:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 266
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 266
 
 
  13576 2097 76697274 		.ascii	"virtual_timers_list_t\000"
@@ -15958,7 +15958,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13603              	.LASF646:
  13604 2127 48505458 		.ascii	"HPTXFSIZ\000"
  13604      4653495A 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 267
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 267
 
 
  13604      00
@@ -16018,7 +16018,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13629              	.LASF539:
  13630 21c5 6275735F 		.ascii	"bus_width\000"
  13630      77696474 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 268
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 268
 
 
  13630      6800
@@ -16078,7 +16078,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13659              	.LASF287:
  13660 2254 424C4B5F 		.ascii	"BLK_DISCONNECTING\000"
  13660      44495343 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 269
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 269
 
 
  13660      4F4E4E45 
@@ -16138,7 +16138,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13686 22ea 63685F7A 		.ascii	"ch_zero\000"
  13686      65726F00 
  13687              	.LASF464:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 270
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 270
 
 
  13688 22f2 46415354 		.ascii	"FAST_DUTY_CYCLE_2\000"
@@ -16198,7 +16198,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13716      554E494E 
  13716      495400
  13717              	.LASF276:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 271
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 271
 
 
  13718 237c 73747265 		.ascii	"stream\000"
@@ -16258,7 +16258,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13746      5F697364 
  13746      737400
  13747              	.LASF485:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 272
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 272
 
 
  13748 2411 49325344 		.ascii	"I2SDriver\000"
@@ -16318,32 +16318,32 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 1
  13778      74617465 
  13778      5F7400
  13779              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 273
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 273
 
 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s 			page 274
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s 			page 274
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 letter_writing.c
-C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s:18     .text.decalage_interlettre:00000000 $t
-C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s:26     .text.decalage_interlettre:00000000 decalage_interlettre
-C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s:87     .text.decalage_interlettre:00000058 $d
-C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s:93     .text.lettre_M:00000000 $t
-C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s:101    .text.lettre_M:00000000 lettre_M
-C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s:195    .text.lettre_M:000000bc $d
-C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s:203    .text.lettre_O:00000000 $t
-C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s:211    .text.lettre_O:00000000 lettre_O
-C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s:327    .text.lettre_O:000000f8 $d
-C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s:333    .text.lettre_N:00000000 $t
-C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s:341    .text.lettre_N:00000000 lettre_N
-C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s:435    .text.lettre_N:000000bc $d
-C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s:443    .text.lettre_D:00000000 $t
-C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s:451    .text.lettre_D:00000000 lettre_D
-C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s:573    .text.lettre_D:0000010c $d
-C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s:581    .text.lettre_A:00000000 $t
-C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s:589    .text.lettre_A:00000000 lettre_A
-C:\Users\Marc\AppData\Local\Temp\cc4QO5UB.s:705    .text.lettre_A:000000f8 $d
+C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s:18     .text.decalage_interlettre:00000000 $t
+C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s:26     .text.decalage_interlettre:00000000 decalage_interlettre
+C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s:87     .text.decalage_interlettre:00000058 $d
+C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s:93     .text.lettre_M:00000000 $t
+C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s:101    .text.lettre_M:00000000 lettre_M
+C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s:195    .text.lettre_M:000000bc $d
+C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s:203    .text.lettre_O:00000000 $t
+C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s:211    .text.lettre_O:00000000 lettre_O
+C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s:327    .text.lettre_O:000000f8 $d
+C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s:333    .text.lettre_N:00000000 $t
+C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s:341    .text.lettre_N:00000000 lettre_N
+C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s:435    .text.lettre_N:000000bc $d
+C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s:443    .text.lettre_D:00000000 $t
+C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s:451    .text.lettre_D:00000000 lettre_D
+C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s:573    .text.lettre_D:0000010c $d
+C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s:581    .text.lettre_A:00000000 $t
+C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s:589    .text.lettre_A:00000000 lettre_A
+C:\Users\Marc\AppData\Local\Temp\ccAsmEDI.s:705    .text.lettre_A:000000f8 $d
 
 UNDEFINED SYMBOLS
 motors_set_position

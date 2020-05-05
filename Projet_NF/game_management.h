@@ -36,8 +36,12 @@ void postAvance_init(void);
 
 void boite_virtuelle(void);
 
+void sortie_gagnant(void);
+
 void go_home(void);
 
+//passer la semaphore du pong à d'autre module
+void wait_image_needed(void);
 
 
 
