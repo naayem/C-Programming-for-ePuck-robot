@@ -35,6 +35,8 @@ build/obj/game_management.o: game_management.c \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\xlocale.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\strings.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\string.h \
+ c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\time.h \
+ c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\time.h \
  main.h ../lib/e-puck2_main-processor/src/camera/dcmi_camera.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\lib\gcc\arm-none-eabi\7.2.1\include\stdint.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\stdint.h \
@@ -220,6 +222,10 @@ c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-
 c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\strings.h:
 
 c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\string.h:
+
+c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\time.h:
+
+c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\time.h:
 
 main.h:
 

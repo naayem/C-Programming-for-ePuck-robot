@@ -22,10 +22,4 @@ _Bool obstacle_droite(int reflet_obstacle);
  */
 _Bool obstacle_gauche(int reflet_obstacle);
 
-/* Test si il y a un obstacle pile poil devant l'e-puck
- *
- * int reflet_obstacle - le niveau de reflet prévu pour l'obstacle
- */
-_Bool obstacle_centre(int reflet_obstacle);
-
 #endif /* IRT_HREAD_H_ */

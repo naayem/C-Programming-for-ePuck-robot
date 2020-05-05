@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-
-
+#include <time.h>
 
 #include <main.h>
 
@@ -17,8 +15,6 @@
 #include <motors_processing.h>
 #include <camera_processing.h>
 #include <letter_writing.h>
-
-
 
 //TO ADJUST IF NECESSARY. NOT ALL THE E-PUCK2 HAVE EXACTLY THE SAME WHEEL DISTANCE
 #define WHEEL_DISTANCE      5.35f    //cm
@@ -130,44 +126,32 @@ void management(etats* currentState){
 			palWritePad(GPIOD, GPIOD_LED5, led5 ? 0 : 1);
 			palWritePad(GPIOD, GPIOD_LED7, led7 ? 0 : 1);
 
-
-
-
-
 			*currentState = PONG;
 			currentStateManagement = PONG;
 
 		   break;
 
 		case PONG:
-				   // do something in the stop state
+			   // do something in the stop state
+				led1 = 1;
+				led3 = 1;
+				led5 = 1;
+				led7 = 1;
 
+				palWritePad(GPIOD, GPIOD_LED1, led1 ? 0 : 1);
+				palWritePad(GPIOD, GPIOD_LED3, led3 ? 0 : 1);
+				palWritePad(GPIOD, GPIOD_LED5, led5 ? 0 : 1);
+				palWritePad(GPIOD, GPIOD_LED7, led7 ? 0 : 1);
 
-					led1 = 1;
-					led3 = 1;
-					led5 = 1;
-					led7 = 1;
-
-					palWritePad(GPIOD, GPIOD_LED1, led1 ? 0 : 1);
-					palWritePad(GPIOD, GPIOD_LED3, led3 ? 0 : 1);
-					palWritePad(GPIOD, GPIOD_LED5, led5 ? 0 : 1);
-					palWritePad(GPIOD, GPIOD_LED7, led7 ? 0 : 1);
-
-					nouvel_ordre( AVANCE,  0);
+				int angle_random = rand()%360;
+				moteurs_tourne (angle_random*DEG_TO_RAD);
+				nouvel_ordre( AVANCE,  0);
 
 				while (1){
-					if ( obstacle_centre(300) ){
+					update_map_position();
+					if ((obstacle_droite(300))||(obstacle_gauche(300))){
 						nouvel_ordre( TOURNE,  180*DEG_TO_RAD);
 						nouvel_ordre( AVANCE,  0);
-					}else{
-						if ( obstacle_gauche(350) ){
-							nouvel_ordre( TOURNE,  -90*DEG_TO_RAD);
-							nouvel_ordre( AVANCE,  0);
-						}
-						if ( obstacle_droite(350) ){
-							nouvel_ordre( TOURNE,  90*DEG_TO_RAD);
-							nouvel_ordre( AVANCE,  0);
-						}
 					}
 
 					pong = close_line();
