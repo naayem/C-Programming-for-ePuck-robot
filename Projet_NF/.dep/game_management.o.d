@@ -1,4 +1,4 @@
-build/obj/game_management.o: game_management.c \
+build/obj/game_management.o: game_management.c main.h \
  /Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/stdio.h \
  /Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/_ansi.h \
  /Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/newlib.h \
@@ -35,7 +35,7 @@ build/obj/game_management.o: game_management.c \
  /Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/xlocale.h \
  /Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/strings.h \
  /Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/string.h \
- main.h ../lib/e-puck2_main-processor/src/camera/dcmi_camera.h \
+ ../lib/e-puck2_main-processor/src/camera/dcmi_camera.h \
  /Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include/stdint.h \
  /Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/stdint.h \
  /Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/_intsup.h \
@@ -141,13 +141,16 @@ build/obj/game_management.o: game_management.c \
  /Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/unistd.h \
  ../lib/e-puck2_main-processor/src/parameter/parameter.h \
  ../lib/e-puck2_main-processor/ChibiOS//os/hal/lib/streams/chprintf.h \
+ game_management.h \
  /Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/math.h \
  ../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/arm_math.h \
  ../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/core_cm4.h \
- audio_processing.h game_management.h ir_thread.h \
+ audio_processing.h ir_thread.h \
  ../lib/e-puck2_main-processor/src/sensors/proximity.h \
  motors_processing.h ../lib/e-puck2_main-processor/src/motors.h \
  camera_processing.h
+
+main.h:
 
 /Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/stdio.h:
 
@@ -220,8 +223,6 @@ build/obj/game_management.o: game_management.c \
 /Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/strings.h:
 
 /Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/string.h:
-
-main.h:
 
 ../lib/e-puck2_main-processor/src/camera/dcmi_camera.h:
 
@@ -437,6 +438,8 @@ mcuconf.h:
 
 ../lib/e-puck2_main-processor/ChibiOS//os/hal/lib/streams/chprintf.h:
 
+game_management.h:
+
 /Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/math.h:
 
 ../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/arm_math.h:
@@ -444,8 +447,6 @@ mcuconf.h:
 ../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/core_cm4.h:
 
 audio_processing.h:
-
-game_management.h:
 
 ir_thread.h:
 

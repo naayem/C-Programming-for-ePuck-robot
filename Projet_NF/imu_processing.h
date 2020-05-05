@@ -1,5 +1,6 @@
-#ifndef REBOND_H_
-#define REBOND_H_
+#ifndef IMU_PROCESSING_H_
+#define IMU_PROCESSING_H_
+
 
 #include <ch.h>
 #include <hal.h>
@@ -12,4 +13,5 @@
 void rebondStart(void);
 
 
-#endif /* REBOND_H_ */
+
+#endif /* IMU_PROCESSING_H_ */

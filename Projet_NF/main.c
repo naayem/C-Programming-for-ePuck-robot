@@ -1,22 +1,19 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <main.h>
 
 #include "ch.h"
 #include "hal.h"
 #include "memory_protection.h"
 #include <usbcfg.h>
-#include <main.h>
+
 #include <motors.h>
 #include <audio/microphone.h>
 
 #include <audio_processing.h>
 #include <fft.h>
 #include <communications.h>
-#include <arm_math.h>
+
 
 #include<game_management.h>
-
 #include <camera_processing.h>
 
 
@@ -45,46 +42,32 @@ int main(void)
     halInit();
     chSysInit();
     mpu_init();
-
     //starts the serial communication
     serial_start();
     //starts the USB communication
     usb_start();
-
     //starts the camera
       dcmi_start();
   	po8030_start();
-
     //inits the motors
     motors_init();
-
+    //starts the microphones
     mic_start(&processAudioData);
-
-    etats currentState = MENU_PRINCIPAL;
-
-
     //Enables data transfer between threads
     messagebus_init(&bus, &bus_lock, &bus_condvar);
 
-    chThdSleepMilliseconds(2000);
+    chThdSleepMilliseconds(500);
 
+    //starts the mapping thread
     mapping_start();
-
-
-
-
- 	//stars the threads for the pi regulator and the processing of the image
+ 	//stars the threads for the processing of the image
  	process_image_start();
 
 
     /* Infinite loop. */
     while (1) {
 
-
-    management(&currentState);
-
-
-
+    management();
 
     }
 }

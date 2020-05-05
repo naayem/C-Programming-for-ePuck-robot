@@ -121,6 +121,9 @@ static THD_FUNCTION(CaptureImage, arg) {
 	dcmi_prepare();
 
     while(1){
+
+    		wait_image_needed();
+
         //starts a capture
 		dcmi_capture_start();
 		//waits for the capture to be done
@@ -137,7 +140,7 @@ static THD_FUNCTION(ProcessImage, arg) {
     chRegSetThreadName(__FUNCTION__);
     (void)arg;
 
-    volatile systime_t time;
+    //volatile systime_t time;
 
 
 	uint8_t *img_buff_ptr;
@@ -147,7 +150,7 @@ static THD_FUNCTION(ProcessImage, arg) {
 
     while(1){
 
-		time = chVTGetSystemTime();
+		//time = chVTGetSystemTime();
 
     	//waits until an image has been captured
         chBSemWait(&image_ready_sem);
@@ -175,7 +178,7 @@ static THD_FUNCTION(ProcessImage, arg) {
 		}*/
 		//invert the bool
 		send_to_computer = !send_to_computer;
-		chThdSleepUntilWindowed(time, time + MS2ST(100));
+		//chThdSleepUntilWindowed(time, time + MS2ST(100));
     }
 }
 

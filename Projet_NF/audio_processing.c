@@ -68,7 +68,7 @@ void sound_remote(float* data){
 		//left_motor_set_speed(600);
 		//right_motor_set_speed(600);
 
-		state_compare(changeState = MENU_PRINCIPAL);
+		state_compare(changeState = ENDGAME);
 
 	}
 	//turn left

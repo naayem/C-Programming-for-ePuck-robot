@@ -1,5 +1,4 @@
-build/obj/Asercom2.o: \
- ../lib/e-puck2_main-processor/src/epuck1x/Asercom2.c main.h \
+build/obj/imu_processing.o: imu_processing.c main.h \
  /Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/stdio.h \
  /Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/_ansi.h \
  /Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/newlib.h \
@@ -142,44 +141,12 @@ build/obj/Asercom2.o: \
  /Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/unistd.h \
  ../lib/e-puck2_main-processor/src/parameter/parameter.h \
  ../lib/e-puck2_main-processor/ChibiOS//os/hal/lib/streams/chprintf.h \
- ../lib/e-puck2_main-processor/src/sensors/VL53L0X/VL53L0X.h \
- ../lib/e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/vl53l0x_api.h \
- ../lib/e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/vl53l0x_api_strings.h \
- ../lib/e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/vl53l0x_def.h \
- ../lib/e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/vl53l0x_device.h \
- ../lib/e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/vl53l0x_types.h \
- ../lib/e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/../../platform/inc/vl53l0x_platform.h \
- ../lib/e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/../../platform/inc/../../core/inc/vl53l0x_def.h \
- ../lib/e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/../../platform/inc/vl53l0x_platform_log.h \
- ../lib/e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/../../platform/inc/vl53l0x_i2c_platform.h \
- ../lib/e-puck2_main-processor/src/audio/play_melody.h \
- ../lib/e-puck2_main-processor/src/audio/play_sound_file.h \
- ../lib/e-puck2_main-processor/src/button.h \
- ../lib/e-puck2_main-processor/src/leds.h \
- ../lib/e-puck2_main-processor/src/fat.h \
- ../lib/e-puck2_main-processor/ChibiOS_ext//ext/fatfs/src/ff.h \
- ../lib/e-puck2_main-processor/ChibiOS_ext//ext/fatfs/src/integer.h \
- ../lib/e-puck2_main-processor/src/ffconf.h \
- /Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/ctype.h \
- ../lib/e-puck2_main-processor/src/epuck1x/motor_led/e_epuck_ports.h \
- ../lib/e-puck2_main-processor/src/epuck1x/motor_led/e_init_port.h \
- ../lib/e-puck2_main-processor/src/epuck1x/motor_led/advance_one_timer/e_led.h \
- ../lib/e-puck2_main-processor/src/epuck1x/motor_led/advance_one_timer/e_motors.h \
- ../lib/e-puck2_main-processor/src/epuck1x/uart/e_uart_char.h \
- ../lib/e-puck2_main-processor/src/epuck1x/a_d/advance_ad_scan/e_ad_conv.h \
- ../lib/e-puck2_main-processor/src/epuck1x/a_d/advance_ad_scan/e_acc.h \
- ../lib/e-puck2_main-processor/src/epuck1x/a_d/advance_ad_scan/e_prox.h \
- ../lib/e-puck2_main-processor/src/epuck1x/a_d/advance_ad_scan/e_micro.h \
- ../lib/e-puck2_main-processor/src/epuck1x/motor_led/advance_one_timer/e_agenda.h \
- ../lib/e-puck2_main-processor/src/epuck1x/camera/fast_2_timer/e_po8030d.h \
- ../lib/e-puck2_main-processor/src/epuck1x/camera/fast_2_timer/e_poxxxx.h \
- ../lib/e-puck2_main-processor/src/epuck1x/codec/e_sound.h \
- ../lib/e-puck2_main-processor/src/epuck1x/utility/utility.h \
- ../lib/e-puck2_main-processor/src/epuck1x/acc_gyro/e_lsm330.h \
- ../lib/e-puck2_main-processor/src/epuck1x/I2C/e_I2C_protocol.h \
- ../lib/e-puck2_main-processor/src/epuck1x/motor_led/advance_one_timer/e_remote_control.h \
- ../lib/e-puck2_main-processor/src/epuck1x/DataEEPROM.h \
- ../lib/e-puck2_main-processor/src/epuck1x/memory.h
+ imu_processing.h ../lib/e-puck2_main-processor/src/sensors/imu.h \
+ ../lib/e-puck2_main-processor/src/sensors/mpu9250.h \
+ ../lib/e-puck2_main-processor/src/sensors/mpu9250_registers.h \
+ /Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/math.h \
+ ../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/arm_math.h \
+ ../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/core_cm4.h
 
 main.h:
 
@@ -469,78 +436,16 @@ mcuconf.h:
 
 ../lib/e-puck2_main-processor/ChibiOS//os/hal/lib/streams/chprintf.h:
 
-../lib/e-puck2_main-processor/src/sensors/VL53L0X/VL53L0X.h:
+imu_processing.h:
 
-../lib/e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/vl53l0x_api.h:
+../lib/e-puck2_main-processor/src/sensors/imu.h:
 
-../lib/e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/vl53l0x_api_strings.h:
+../lib/e-puck2_main-processor/src/sensors/mpu9250.h:
 
-../lib/e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/vl53l0x_def.h:
+../lib/e-puck2_main-processor/src/sensors/mpu9250_registers.h:
 
-../lib/e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/vl53l0x_device.h:
+/Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/math.h:
 
-../lib/e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/vl53l0x_types.h:
+../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/arm_math.h:
 
-../lib/e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/../../platform/inc/vl53l0x_platform.h:
-
-../lib/e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/../../platform/inc/../../core/inc/vl53l0x_def.h:
-
-../lib/e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/../../platform/inc/vl53l0x_platform_log.h:
-
-../lib/e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/../../platform/inc/vl53l0x_i2c_platform.h:
-
-../lib/e-puck2_main-processor/src/audio/play_melody.h:
-
-../lib/e-puck2_main-processor/src/audio/play_sound_file.h:
-
-../lib/e-puck2_main-processor/src/button.h:
-
-../lib/e-puck2_main-processor/src/leds.h:
-
-../lib/e-puck2_main-processor/src/fat.h:
-
-../lib/e-puck2_main-processor/ChibiOS_ext//ext/fatfs/src/ff.h:
-
-../lib/e-puck2_main-processor/ChibiOS_ext//ext/fatfs/src/integer.h:
-
-../lib/e-puck2_main-processor/src/ffconf.h:
-
-/Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/ctype.h:
-
-../lib/e-puck2_main-processor/src/epuck1x/motor_led/e_epuck_ports.h:
-
-../lib/e-puck2_main-processor/src/epuck1x/motor_led/e_init_port.h:
-
-../lib/e-puck2_main-processor/src/epuck1x/motor_led/advance_one_timer/e_led.h:
-
-../lib/e-puck2_main-processor/src/epuck1x/motor_led/advance_one_timer/e_motors.h:
-
-../lib/e-puck2_main-processor/src/epuck1x/uart/e_uart_char.h:
-
-../lib/e-puck2_main-processor/src/epuck1x/a_d/advance_ad_scan/e_ad_conv.h:
-
-../lib/e-puck2_main-processor/src/epuck1x/a_d/advance_ad_scan/e_acc.h:
-
-../lib/e-puck2_main-processor/src/epuck1x/a_d/advance_ad_scan/e_prox.h:
-
-../lib/e-puck2_main-processor/src/epuck1x/a_d/advance_ad_scan/e_micro.h:
-
-../lib/e-puck2_main-processor/src/epuck1x/motor_led/advance_one_timer/e_agenda.h:
-
-../lib/e-puck2_main-processor/src/epuck1x/camera/fast_2_timer/e_po8030d.h:
-
-../lib/e-puck2_main-processor/src/epuck1x/camera/fast_2_timer/e_poxxxx.h:
-
-../lib/e-puck2_main-processor/src/epuck1x/codec/e_sound.h:
-
-../lib/e-puck2_main-processor/src/epuck1x/utility/utility.h:
-
-../lib/e-puck2_main-processor/src/epuck1x/acc_gyro/e_lsm330.h:
-
-../lib/e-puck2_main-processor/src/epuck1x/I2C/e_I2C_protocol.h:
-
-../lib/e-puck2_main-processor/src/epuck1x/motor_led/advance_one_timer/e_remote_control.h:
-
-../lib/e-puck2_main-processor/src/epuck1x/DataEEPROM.h:
-
-../lib/e-puck2_main-processor/src/epuck1x/memory.h:
+../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/core_cm4.h:

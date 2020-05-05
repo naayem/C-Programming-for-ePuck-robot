@@ -1,7 +1,13 @@
+#include <main.h>
+
 #include <chprintf.h>
 
-#include "rebond.h"
+#include "imu_processing.h"
 #include "sensors/imu.h"
+
+#include <math.h>
+#include <arm_math.h>
+
 
 
 
@@ -50,4 +56,3 @@ static THD_FUNCTION(ThdAccTest, arg) {
 void rebond_start(void){
 	chThdCreateStatic(waThdAccTest, sizeof(waThdAccTest), NORMALPRIO, ThdAccTest, NULL);
 }
-

@@ -17,6 +17,7 @@ CSRC += ./main.c \
 		./ir_thread.c \
 		./motors_processing.c \
 		./camera_processing.c \
+		./imu_processing.c \
 		
 
 #Header folders to include
