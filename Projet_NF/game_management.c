@@ -15,6 +15,7 @@
 #include <motors_processing.h>
 #include <camera_processing.h>
 #include <letter_writing.h>
+#include <leds.h>
 
 //TO ADJUST IF NECESSARY. NOT ALL THE E-PUCK2 HAVE EXACTLY THE SAME WHEEL DISTANCE
 #define WHEEL_DISTANCE      5.35f    //cm
@@ -37,7 +38,7 @@ static etats currentStateManagement = 0;
 static order action = ARRET;
 
 static float counted_current_steps = 0;
-
+static uint8_t point_joueur_avant = 0, point_joueur_arriere = 0;
 
 static THD_WORKING_AREA(waThdMapping, 628);
 static THD_FUNCTION(ThdMapping, arg) {
@@ -513,28 +514,133 @@ void boite_virtuelle(void){
 		}else if(ePuck.angle>PI/2 && ePuck.angle<PI){
 			nouvel_ordre(TOURNE, 2*(PI-ePuck.angle));
 			nouvel_ordre(AVANCE, 0);
-		}else go_home();
+		}
 	}
 
 	if(ePuck.y<-30){
-			if(ePuck.angle<0 && ePuck.angle>=-PI/2){
-				nouvel_ordre(TOURNE, -2*ePuck.angle);
-				nouvel_ordre(AVANCE, 0);
-			}else if(ePuck.angle<-PI/2 && ePuck.angle>-PI){
-				nouvel_ordre(TOURNE, 2*((-PI)-ePuck.angle));
-				nouvel_ordre(AVANCE, 0);
-			}else go_home();
+		if(ePuck.angle<0 && ePuck.angle>=-PI/2){
+			nouvel_ordre(TOURNE, -2*ePuck.angle);
+			nouvel_ordre(AVANCE, 0);
+		}else if(ePuck.angle<-PI/2 && ePuck.angle>-PI){
+			nouvel_ordre(TOURNE, 2*((-PI)-ePuck.angle));
+			nouvel_ordre(AVANCE, 0);
+		}
 	}
 }
 
 void sortie_gagnant(void){
 	if((ePuck.x<-60)||(ePuck.x>60)){
+		uint8_t point_temp_avant = point_joueur_avant, point_temp_arriere = point_joueur_arriere;
+		if (ePuck.x<-60){
+			point_joueur_avant++;
+		}
+		if (ePuck.x>60){
+			point_joueur_arriere++;
+		}
 		go_home();
-		chThdSleepMilliseconds(200);
+		if (point_temp_avant != point_joueur_avant || point_temp_arriere != point_joueur_arriere){
+			for (int i = 0; i < point_joueur_avant; i++){
+				set_led(LED3, 1);
+				chThdSleepMilliseconds(500);
+				set_led(LED3, 0);
+				chThdSleepMilliseconds(500);
+			}
+			for (int j = 0; j < point_joueur_arriere; j++){
+				set_led(LED7, 1);
+				chThdSleepMilliseconds(500);
+				set_led(LED7, 0);
+				chThdSleepMilliseconds(500);
+			}
+		}
 	}
 }
 
 void go_home(void){
+
+	chprintf((BaseSequentialStream *)&SD3, "go home\n");
+	//back_home = TRUE;
+	//game_status = FALSE;
+	//left_motor_set_speed(0);
+	//right_motor_set_speed(0);
+
+
+	float angle_rotation;
+
+	//vitesse = cm_to_steps(VITESSE_MAX);
+
+	//if (left_motor_get_pos() || right_motor_get_pos())
+	//{
+	//	update_map_position();
+	//	left_motor_set_pos(0);
+	//	right_motor_set_pos(0);
+	//}
+
+	motors_stop_speed();
+
+
+	float coord_x=ePuck.x;
+	float coord_y=ePuck.y;
+
+
+	int j = 1;
+
+	if(coord_y > 0 && coord_x > 0)
+			j = 1;
+	if(coord_y > 0 && coord_x < 0)
+			j = 2;
+	if(coord_y < 0 && coord_x < 0)
+			j = 3;
+	if(coord_y < 0 && coord_x > 0)
+			j = 4;
+
+	uint8_t num_quadrant = j;
+
+
+
+
+
+		float norme = sqrt(coord_x*coord_x+coord_y*coord_y);
+
+		if(norme == 0){
+			chprintf((BaseSequentialStream *)&SD3,"NORME =0 IL DEVRAIT RIEN FAIRE PR GO HOME \n");
+			return;
+		}
+
+		switch(num_quadrant)
+		{
+		case 1:
+		angle_rotation = acos(coord_x/norme)-PI;
+		break;
+		case 2:
+		angle_rotation = acos(coord_x/norme)-PI;
+		break;
+		case 3:
+		angle_rotation = -acos(coord_x/norme)+PI;
+		break;
+		case 4:
+		angle_rotation = -acos(coord_x/norme)+PI;
+		break;
+		}
+
+		angle_rotation -= ePuck.angle;
+
+		while(angle_rotation > PI)
+				angle_rotation -= (2*PI);
+		while(angle_rotation < (-PI))
+				angle_rotation += (2*PI);
+
+
+	if (norme<0.1 && ePuck.angle==0)
+		return;
+
+	nouvel_ordre(TOURNE, angle_rotation);
+	nouvel_ordre(AVANCE, 0);
+
+	norme = cm_to_steps(norme);
+
+
+
+	return;
 
 }
 

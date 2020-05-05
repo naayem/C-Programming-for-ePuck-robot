@@ -149,7 +149,8 @@ build/obj/game_management.o: game_management.c \
  audio_processing.h game_management.h ir_thread.h \
  ../lib/e-puck2_main-processor/src/sensors/proximity.h \
  motors_processing.h ../lib/e-puck2_main-processor/src/motors.h \
- camera_processing.h letter_writing.h
+ camera_processing.h letter_writing.h \
+ ../lib/e-puck2_main-processor/src/leds.h
 
 c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\stdio.h:
 
@@ -464,3 +465,5 @@ motors_processing.h:
 camera_processing.h:
 
 letter_writing.h:
+
+../lib/e-puck2_main-processor/src/leds.h:
