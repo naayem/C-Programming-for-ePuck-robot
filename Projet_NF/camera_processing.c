@@ -10,6 +10,7 @@
 #include <camera_processing.h>
 #include <game_management.h>
 
+#define LINE_WIDTH_MIN		200
 #define CENTER_BOUNDARY		300
 #define TOP_BOUNDARY		600
 
@@ -176,10 +177,6 @@ static THD_FUNCTION(ProcessImage, arg) {
     }
 }
 
-float get_distance_cm(void){
-	return distance_cm;
-}
-
 uint16_t get_line_position(void){
 	return line_position;
 }
@@ -191,7 +188,7 @@ void process_image_start(void){
 
 posLine close_line(void){
 	uint16_t linePosition = line_position;
-	if (aide_detection_ligne()&&(lineWidth>=200)){
+	if (aide_detection_ligne()&&(lineWidth>=LINE_WIDTH_MIN)){
 		if (linePosition<=CENTER_BOUNDARY){
 			return L_GAUCHE;
 		}

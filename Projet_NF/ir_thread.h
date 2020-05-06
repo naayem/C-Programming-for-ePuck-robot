@@ -4,8 +4,7 @@
 #include <main.h>
 #include <sensors/proximity.h>
 
-
-/* Test de proximitÃ© avec les 2 capteurs IR Ã  l'avant du robot
+/* Test de proximité avec les 2 capteurs IR à l'avant du robot
  * Renvoie 1 en cas de feuille proche et 0 sinon
  */
 _Bool aide_detection_ligne(void);
@@ -22,4 +21,4 @@ _Bool obstacle_droite(int reflet_obstacle);
  */
 _Bool obstacle_gauche(int reflet_obstacle);
 
-#endif /* IRT_HREAD_H_ */
+#endif

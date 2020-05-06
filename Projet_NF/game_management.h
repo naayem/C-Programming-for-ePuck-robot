@@ -36,8 +36,14 @@ void postAvance_init(void);
 
 void boite_virtuelle(void);
 
+/*en cas de dépassement d'un côté d'un joueur
+ * 1 point pour l'autre et retour dans la direction initiale
+ */
 void sortie_gagnant(void);
 
+/* permet au robot de se tourner dans la direction et sens
+ * du point initial de départ
+ */
 void go_home(void);
 
 //passer la semaphore du pong à d'autre module
