@@ -1,6 +1,7 @@
 #ifndef AUDIO_PROCESSING_H
 #define AUDIO_PROCESSING_H
 
+#include <game_management.h>
 
 #define FFT_SIZE 	1024
 
@@ -29,5 +30,10 @@ void wait_send_to_computer(void);
 *	Returns the pointer to the BUFFER_NAME_t buffer asked
 */
 float* get_audio_buffer_ptr(BUFFER_NAME_t name);
+
+/*
+*	Returns the state of the letter to be written
+*/
+lettre get_letter_state(void);
 
 #endif /* AUDIO_PROCESSING_H */

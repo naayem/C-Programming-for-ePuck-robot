@@ -11,8 +11,6 @@
 #include <fft.h>
 #include <arm_math.h>
 
-#include <game_management.h>
-
 //semaphore
 static BSEMAPHORE_DECL(sendToComputer_sem, TRUE);
 
@@ -29,26 +27,44 @@ static float micBack_output[FFT_SIZE];
 
 #define MIN_VALUE_THRESHOLD	10000 
 
-#define MIN_FREQ		10	//we don't analyze before this index to not use resources for nothing
-#define FREQ_FORWARD	16	//250Hz
-#define FREQ_LEFT		19	//296Hz
-#define FREQ_RIGHT		23	//359HZ
-#define FREQ_BACKWARD	26	//406Hz
-#define MAX_FREQ		30	//we don't analyze after this index to not use resources for nothing
+#define MIN_FREQ			10	//we don't analyze before this index to not use resources for nothing
+#define FREQ_MENU_PRINCIPAL	16	//250Hz
+#define FREQ_PONG_INIT		19	//296Hz
+#define FREQ_ALPHABET		23	//359HZ
+#define FREQ_BILLARD_INIT	26	//406Hz
+#define FREQ_LETTER_M 		144 //2200Hz
+#define FREQ_LETTER_O 		156 //2375Hz
+#define FREQ_LETTER_N	 	164 //2500Hz
+#define FREQ_LETTER_D	 	180 //2750HZ
+#define FREQ_LETTER_A		197	//3000Hz
+#define MAX_FREQ			205	//we don't analyze after this index to not use resources for nothing
 
-#define FREQ_FORWARD_L		(FREQ_FORWARD-1)
-#define FREQ_FORWARD_H		(FREQ_FORWARD+1)
-#define FREQ_LEFT_L			(FREQ_LEFT-1)
-#define FREQ_LEFT_H			(FREQ_LEFT+1)
-#define FREQ_RIGHT_L		(FREQ_RIGHT-1)
-#define FREQ_RIGHT_H		(FREQ_RIGHT+1)
-#define FREQ_BACKWARD_L		(FREQ_BACKWARD-1)
-#define FREQ_BACKWARD_H		(FREQ_BACKWARD+1)
+#define FREQ_MENU_PRINCIPAL_L		(FREQ_MENU_PRINCIPAL-1)
+#define FREQ_MENU_PRINCIPAL_H		(FREQ_MENU_PRINCIPAL+1)
+#define FREQ_PONG_INIT_L			(FREQ_PONG_INIT-1)
+#define FREQ_PONG_INIT_H			(FREQ_PONG_INIT+1)
+#define FREQ_ALPHABET_L				(FREQ_ALPHABET-1)
+#define FREQ_ALPHABET_H				(FREQ_ALPHABET+1)
+#define FREQ_BILLARD_INIT_L			(FREQ_BILLARD_INIT-1)
+#define FREQ_BILLARD_INIT_H			(FREQ_BILLARD_INIT+1)
+#define FREQ_LETTER_M_L				(FREQ_LETTER_M-1)
+#define FREQ_LETTER_M_H				(FREQ_LETTER_M+1)
+#define FREQ_LETTER_O_L				(FREQ_LETTER_O-1)
+#define FREQ_LETTER_O_H				(FREQ_LETTER_O+1)
+#define FREQ_LETTER_N_L				(FREQ_LETTER_N-1)
+#define FREQ_LETTER_N_H				(FREQ_LETTER_N+1)
+#define FREQ_LETTER_D_L				(FREQ_LETTER_D-1)
+#define FREQ_LETTER_D_H				(FREQ_LETTER_D+1)
+#define FREQ_LETTER_A_L				(FREQ_LETTER_A-1)
+#define FREQ_LETTER_A_H				(FREQ_LETTER_A+1)
 
 /*
 *	Simple function used to detect the highest value in a buffer
 *	and to execute a motor command depending on it
 */
+
+static lettre letter_state_new = 0;
+
 void sound_remote(float* data){
 	float max_norm = MIN_VALUE_THRESHOLD;
 	int16_t max_norm_index = -1; 
@@ -63,45 +79,33 @@ void sound_remote(float* data){
 		}
 	}
 
-	//go forward
-	if(max_norm_index >= FREQ_FORWARD_L && max_norm_index <= FREQ_FORWARD_H){
-		//left_motor_set_speed(600);
-		//right_motor_set_speed(600);
-
+	if(max_norm_index >= FREQ_MENU_PRINCIPAL_L && max_norm_index <= FREQ_MENU_PRINCIPAL_H){
 		state_compare(changeState = MENU_PRINCIPAL);
-
 	}
-	//turn left
-	else if(max_norm_index >= FREQ_LEFT_L && max_norm_index <= FREQ_LEFT_H){
-		//left_motor_set_speed(-600);
-		//right_motor_set_speed(600);
-
+	else if(max_norm_index >= FREQ_PONG_INIT_L && max_norm_index <= FREQ_PONG_INIT_H){
 		state_compare(changeState = PONG_INIT);
-
 	}
-	//turn right
-	else if(max_norm_index >= FREQ_RIGHT_L && max_norm_index <= FREQ_RIGHT_H){
-		//left_motor_set_speed(600);
-		//right_motor_set_speed(-600);
-
+	else if(max_norm_index >= FREQ_ALPHABET_L && max_norm_index <= FREQ_ALPHABET_H){
 		state_compare(changeState = ALPHABET);
-
 	}
-	//go backward
-	else if(max_norm_index >= FREQ_BACKWARD_L && max_norm_index <= FREQ_BACKWARD_H){
-		//left_motor_set_speed(-600);
-		//right_motor_set_speed(-600);
-
+	else if(max_norm_index >= FREQ_BILLARD_INIT_L && max_norm_index <= FREQ_BILLARD_INIT_H){
 		state_compare(changeState = BILLARD_INIT);
-
 	}
-	else{
-		//left_motor_set_speed(0);
-		//right_motor_set_speed(0);
-
-
-
+	else if(max_norm_index >= FREQ_LETTER_M_L && max_norm_index <= FREQ_LETTER_M_H){
+		letter_state_new = LETTRE_M;
 	}
+	else if(max_norm_index >= FREQ_LETTER_O_L && max_norm_index <= FREQ_LETTER_O_H){
+		letter_state_new = LETTRE_O;
+	}
+	else if(max_norm_index >= FREQ_LETTER_N_L && max_norm_index <= FREQ_LETTER_N_H){
+		letter_state_new = LETTRE_N;
+	}
+	else if(max_norm_index >= FREQ_LETTER_D_L && max_norm_index <= FREQ_LETTER_D_H){
+		letter_state_new = LETTRE_D;
+	}
+	else if(max_norm_index >= FREQ_LETTER_A_L && max_norm_index <= FREQ_LETTER_A_H){
+		letter_state_new = LETTRE_A;
+	}else letter_state_new = AUCUN;
 }
 
 /*
@@ -219,4 +223,10 @@ float* get_audio_buffer_ptr(BUFFER_NAME_t name){
 	else{
 		return NULL;
 	}
+}
+
+lettre get_letter_state(void){
+	lettre letter_state = letter_state_new;
+	letter_state_new=AUCUN;
+	return letter_state;
 }

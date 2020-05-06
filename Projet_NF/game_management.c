@@ -30,6 +30,7 @@ static BSEMAPHORE_DECL(image_needed_sem, TRUE);
 
 static mapping ePuck = {0,0,0};
 
+static lettre lettre_state = 0;
 
 static etats nextState = 0;
 
@@ -48,10 +49,6 @@ static THD_FUNCTION(ThdMapping, arg) {
     (void)arg;
 
     volatile systime_t time;
-
-
-
-
 
     while(1){
 
@@ -114,9 +111,6 @@ void management(etats* currentState){
 			//initialization of variables
 			//activate threads
 
-			proximity_start();
-			calibrate_ir();
-
 			led1 = 0;
 			led3 = 1;
 			led5 = 0;
@@ -175,22 +169,37 @@ void management(etats* currentState){
 			break;
 
 		case ALPHABET:
-
-				lettre_M();
-				decalage_interlettre();
-				lettre_O();
-				decalage_interlettre();
-				lettre_N();
-				decalage_interlettre();
-				lettre_D();
-				decalage_interlettre();
-				lettre_A();
-				decalage_interlettre();
-				lettre_D();
-				decalage_interlettre();
-				lettre_A();
-
-				   break;
+			lettre_state = get_letter_state();
+			switch (lettre_state){
+				case LETTRE_M:
+					lettre_M();
+					decalage_interlettre();
+					lettre_state = AUCUN;
+					break;
+				case LETTRE_O:
+					lettre_O();
+					decalage_interlettre();
+					lettre_state = AUCUN;
+					break;
+				case LETTRE_N:
+					lettre_N();
+					decalage_interlettre();
+					lettre_state = AUCUN;
+					break;
+				case LETTRE_D:
+					lettre_D();
+					decalage_interlettre();
+					lettre_state = AUCUN;
+					break;
+				case LETTRE_A:
+					lettre_A();
+					decalage_interlettre();
+					lettre_state = AUCUN;
+					break;
+				case AUCUN:
+					break;
+			}
+			break;
 
 		case BILLARD_INIT:
 				   // do something in the stop state

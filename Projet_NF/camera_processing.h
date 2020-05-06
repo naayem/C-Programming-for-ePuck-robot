@@ -15,6 +15,8 @@ void process_image_start(void);
 
 /*fonction qui renvoie l'emplacement (droite/gauche) de la ligne noire
  * sur la feuille par rapport au robot si cette dernière est à proximité
+ *
+ * posLine - Renvoie un des trois enum qu'on trouve plus haut dans le module
  */
 posLine close_line(void);
 

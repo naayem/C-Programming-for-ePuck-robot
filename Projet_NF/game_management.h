@@ -3,7 +3,14 @@
 
 #include <stdio.h>
 
-
+typedef enum lettre{
+AUCUN=0,
+LETTRE_M,
+LETTRE_O,
+LETTRE_N,
+LETTRE_D,
+LETTRE_A
+} lettre;
 
 typedef struct mapping{
     float x;
