@@ -25,22 +25,22 @@ static float micRight_output[FFT_SIZE];
 static float micFront_output[FFT_SIZE];
 static float micBack_output[FFT_SIZE];
 
-#define MIN_VALUE_THRESHOLD	10000 
+#define MIN_VALUE_THRESHOLD	100000
 
-#define MIN_FREQ			10	//we don't analyze before this index to not use resources for nothing
-#define FREQ_MENU_PRINCIPAL	16	//250Hz
-#define FREQ_PONG_INIT		19	//296Hz
-#define FREQ_ALPHABET		23	//359HZ
-#define FREQ_BILLARD_INIT	26	//406Hz
-#define FREQ_LETTER_M 		144 //2200Hz
-#define FREQ_LETTER_O 		156 //2375Hz
-#define FREQ_LETTER_N	 	164 //2500Hz
-#define FREQ_LETTER_D	 	180 //2750HZ
-#define FREQ_LETTER_A		197	//3000Hz
+#define MIN_FREQ			78	//we don't analyze before this index to not use resources for nothing
+#define FREQ_BILLARD_INIT	80	//1250Hz
+#define FREQ_PONG_INIT		96	//1500Hz
+#define FREQ_ALPHABET		112	//1750HZ
+#define FREQ_LETTER_M		128	//2000Hz
+#define FREQ_LETTER_O 		144 //2200Hz
+#define FREQ_LETTER_N 		156 //2375Hz
+#define FREQ_LETTER_D	 	164 //2500Hz
+#define FREQ_LETTER_A	 	180 //2750HZ
+#define FREQ_END_GAME		197	//3000Hz
 #define MAX_FREQ			205	//we don't analyze after this index to not use resources for nothing
 
-#define FREQ_MENU_PRINCIPAL_L		(FREQ_MENU_PRINCIPAL-1)
-#define FREQ_MENU_PRINCIPAL_H		(FREQ_MENU_PRINCIPAL+1)
+#define FREQ_END_GAME_L				(FREQ_END_GAME-1)//2984Hz
+#define FREQ_END_GAME_H				(FREQ_END_GAME+1)//3028Hz
 #define FREQ_PONG_INIT_L			(FREQ_PONG_INIT-1)
 #define FREQ_PONG_INIT_H			(FREQ_PONG_INIT+1)
 #define FREQ_ALPHABET_L				(FREQ_ALPHABET-1)
@@ -79,8 +79,8 @@ void sound_remote(float* data){
 		}
 	}
 
-	if(max_norm_index >= FREQ_MENU_PRINCIPAL_L && max_norm_index <= FREQ_MENU_PRINCIPAL_H){
-		state_compare(changeState = MENU_PRINCIPAL);
+	if(max_norm_index >= FREQ_END_GAME_L && max_norm_index <= FREQ_END_GAME_H){
+		state_compare(changeState = ENDGAME);
 	}
 	else if(max_norm_index >= FREQ_PONG_INIT_L && max_norm_index <= FREQ_PONG_INIT_H){
 		state_compare(changeState = PONG_INIT);

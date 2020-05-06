@@ -22,8 +22,14 @@ void moteurs_avance(void);
 int32_t cm_to_steps(float valeur);
 float steps_to_cm(float steps);
 
-order change_order(order previous_state, order new_state);
 
 
+/**
+ * @brief Effectue une rotation de l'ePuck
+ *
+ * @param angle_rotation			Angle de rotation a effectuer par l'ePuck
+ *
+ */
+void moteurs_tourne(float angle_rotation);
 
 #endif /* MOTORS_PROCESSING_H_ */

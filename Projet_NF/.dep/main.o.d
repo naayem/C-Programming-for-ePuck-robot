@@ -1,4 +1,4 @@
-build/obj/main.o: main.c \
+build/obj/main.o: main.c main.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\stdio.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\_ansi.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\newlib.h \
@@ -35,12 +35,15 @@ build/obj/main.o: main.c \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\xlocale.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\strings.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\string.h \
- ../lib/e-puck2_main-processor/ChibiOS//os/rt/include/ch.h \
- ../lib/e-puck2_main-processor/ChibiOS//os/rt/ports/ARMCMx/compilers/GCC/chtypes.h \
+ ../lib/e-puck2_main-processor/src/camera/dcmi_camera.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\lib\gcc\arm-none-eabi\7.2.1\include\stdint.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\stdint.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\_intsup.h \
+ ../lib/e-puck2_main-processor/ChibiOS//os/hal/include/hal.h \
+ ../lib/e-puck2_main-processor/ChibiOS//os/hal/osal/rt/osal.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\lib\gcc\arm-none-eabi\7.2.1\include\stdbool.h \
+ ../lib/e-puck2_main-processor/ChibiOS//os/rt/include/ch.h \
+ ../lib/e-puck2_main-processor/ChibiOS//os/rt/ports/ARMCMx/compilers/GCC/chtypes.h \
  chconf.h \
  ../lib/e-puck2_main-processor/ChibiOS//os/rt/include/chlicense.h \
  ../lib/e-puck2_main-processor/ChibiOS//os/rt/include/chsystypes.h \
@@ -76,9 +79,7 @@ build/obj/main.o: main.c \
  ../lib/e-puck2_main-processor/ChibiOS//os/rt/include/chdynamic.h \
  ../lib/e-puck2_main-processor/ChibiOS//os/rt/include/chqueues.h \
  ../lib/e-puck2_main-processor/ChibiOS//os/rt/include/chstreams.h \
- ../lib/e-puck2_main-processor/ChibiOS//os/hal/include/hal.h \
- ../lib/e-puck2_main-processor/ChibiOS//os/hal/osal/rt/osal.h halconf.h \
- mcuconf.h \
+ halconf.h mcuconf.h \
  ../lib/e-puck2_main-processor/ChibiOS//os/hal/ports/STM32/STM32F4xx/hal_lld.h \
  ../lib/e-puck2_main-processor/ChibiOS//os/hal/ports/STM32/STM32F4xx/stm32_registry.h \
  ../lib/e-puck2_main-processor/ChibiOS//os/hal/ports/common/ARMCMx/nvic.h \
@@ -130,9 +131,6 @@ build/obj/main.o: main.c \
  ../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/ports/STM32/STM32F4xx/stm32_registry.h \
  ../lib/e-puck2_main-processor/ChibiOS//os/hal/include/mmc_spi.h \
  ../lib/e-puck2_main-processor/ChibiOS//os/hal/include/serial_usb.h \
- ../lib/e-puck2_main-processor/src/memory_protection.h \
- ../lib/e-puck2_main-processor/src/usbcfg.h main.h \
- ../lib/e-puck2_main-processor/src/camera/dcmi_camera.h \
  ../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/include/dcmi.h \
  ../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/include/../ports/STM32/STM32F4xx/dcmi_lld.h \
  ../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/include/../ports/STM32/STM32F4xx/stm32_registry.h \
@@ -143,14 +141,15 @@ build/obj/main.o: main.c \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\unistd.h \
  ../lib/e-puck2_main-processor/src/parameter/parameter.h \
  ../lib/e-puck2_main-processor/ChibiOS//os/hal/lib/streams/chprintf.h \
+ ../lib/e-puck2_main-processor/src/memory_protection.h \
+ ../lib/e-puck2_main-processor/src/usbcfg.h \
  ../lib/e-puck2_main-processor/src/motors.h \
  ../lib/e-puck2_main-processor/src/audio/microphone.h \
  ../lib/e-puck2_main-processor/src/audio/mp45dt02_processing.h \
  audio_processing.h game_management.h fft.h communications.h \
- ../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/arm_math.h \
- ../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/core_cm4.h \
- c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\math.h \
  camera_processing.h
+
+main.h:
 
 c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\stdio.h:
 
@@ -224,9 +223,7 @@ c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-
 
 c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\string.h:
 
-../lib/e-puck2_main-processor/ChibiOS//os/rt/include/ch.h:
-
-../lib/e-puck2_main-processor/ChibiOS//os/rt/ports/ARMCMx/compilers/GCC/chtypes.h:
+../lib/e-puck2_main-processor/src/camera/dcmi_camera.h:
 
 c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\lib\gcc\arm-none-eabi\7.2.1\include\stdint.h:
 
@@ -234,7 +231,15 @@ c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-
 
 c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\_intsup.h:
 
+../lib/e-puck2_main-processor/ChibiOS//os/hal/include/hal.h:
+
+../lib/e-puck2_main-processor/ChibiOS//os/hal/osal/rt/osal.h:
+
 c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\lib\gcc\arm-none-eabi\7.2.1\include\stdbool.h:
+
+../lib/e-puck2_main-processor/ChibiOS//os/rt/include/ch.h:
+
+../lib/e-puck2_main-processor/ChibiOS//os/rt/ports/ARMCMx/compilers/GCC/chtypes.h:
 
 chconf.h:
 
@@ -305,10 +310,6 @@ chconf.h:
 ../lib/e-puck2_main-processor/ChibiOS//os/rt/include/chqueues.h:
 
 ../lib/e-puck2_main-processor/ChibiOS//os/rt/include/chstreams.h:
-
-../lib/e-puck2_main-processor/ChibiOS//os/hal/include/hal.h:
-
-../lib/e-puck2_main-processor/ChibiOS//os/hal/osal/rt/osal.h:
 
 halconf.h:
 
@@ -416,14 +417,6 @@ mcuconf.h:
 
 ../lib/e-puck2_main-processor/ChibiOS//os/hal/include/serial_usb.h:
 
-../lib/e-puck2_main-processor/src/memory_protection.h:
-
-../lib/e-puck2_main-processor/src/usbcfg.h:
-
-main.h:
-
-../lib/e-puck2_main-processor/src/camera/dcmi_camera.h:
-
 ../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/include/dcmi.h:
 
 ../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/include/../ports/STM32/STM32F4xx/dcmi_lld.h:
@@ -444,6 +437,10 @@ c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-
 
 ../lib/e-puck2_main-processor/ChibiOS//os/hal/lib/streams/chprintf.h:
 
+../lib/e-puck2_main-processor/src/memory_protection.h:
+
+../lib/e-puck2_main-processor/src/usbcfg.h:
+
 ../lib/e-puck2_main-processor/src/motors.h:
 
 ../lib/e-puck2_main-processor/src/audio/microphone.h:
@@ -457,11 +454,5 @@ game_management.h:
 fft.h:
 
 communications.h:
-
-../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/arm_math.h:
-
-../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/core_cm4.h:
-
-c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\math.h:
 
 camera_processing.h:

@@ -4,8 +4,7 @@
 #define	SECOND_IR_SENSOR		1
 #define	SEVENTH_IR_SENSOR		6
 #define EIGTH_IR_SENSOR			7
-#define REFLET_FEUILLE			50
-#define REFLET_DOIGT_PROCHE		400
+#define REFLET_FEUILLE			20
 
 _Bool aide_detection_ligne(){
 	if (get_calibrated_prox(FIRST_IR_SENSOR)>=REFLET_FEUILLE){

@@ -1,4 +1,4 @@
-build/obj/game_management.o: game_management.c \
+build/obj/game_management.o: game_management.c main.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\stdio.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\_ansi.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\newlib.h \
@@ -35,9 +35,7 @@ build/obj/game_management.o: game_management.c \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\xlocale.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\strings.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\string.h \
- c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\time.h \
- c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\time.h \
- main.h ../lib/e-puck2_main-processor/src/camera/dcmi_camera.h \
+ ../lib/e-puck2_main-processor/src/camera/dcmi_camera.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\lib\gcc\arm-none-eabi\7.2.1\include\stdint.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\stdint.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\_intsup.h \
@@ -143,14 +141,17 @@ build/obj/game_management.o: game_management.c \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\unistd.h \
  ../lib/e-puck2_main-processor/src/parameter/parameter.h \
  ../lib/e-puck2_main-processor/ChibiOS//os/hal/lib/streams/chprintf.h \
+ game_management.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\math.h \
  ../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/arm_math.h \
  ../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/core_cm4.h \
- audio_processing.h game_management.h ir_thread.h \
+ audio_processing.h ir_thread.h \
  ../lib/e-puck2_main-processor/src/sensors/proximity.h \
  motors_processing.h ../lib/e-puck2_main-processor/src/motors.h \
- camera_processing.h letter_writing.h \
- ../lib/e-puck2_main-processor/src/leds.h
+ camera_processing.h ../lib/e-puck2_main-processor/src/leds.h \
+ letter_writing.h
+
+main.h:
 
 c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\stdio.h:
 
@@ -223,12 +224,6 @@ c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-
 c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\strings.h:
 
 c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\string.h:
-
-c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\time.h:
-
-c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\time.h:
-
-main.h:
 
 ../lib/e-puck2_main-processor/src/camera/dcmi_camera.h:
 
@@ -444,6 +439,8 @@ c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-
 
 ../lib/e-puck2_main-processor/ChibiOS//os/hal/lib/streams/chprintf.h:
 
+game_management.h:
+
 c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\math.h:
 
 ../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/arm_math.h:
@@ -451,8 +448,6 @@ c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-
 ../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/core_cm4.h:
 
 audio_processing.h:
-
-game_management.h:
 
 ir_thread.h:
 
@@ -464,6 +459,6 @@ motors_processing.h:
 
 camera_processing.h:
 
-letter_writing.h:
-
 ../lib/e-puck2_main-processor/src/leds.h:
+
+letter_writing.h:
