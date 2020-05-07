@@ -15,7 +15,7 @@
 
 #include<game_management.h>
 #include <camera_processing.h>
-
+#include <sensors/proximity.h>
 
 
 messagebus_t bus;
@@ -62,6 +62,8 @@ int main(void)
     mapping_start();
  	//stars the threads for the processing of the image
  	process_image_start();
+ 	//initializes IR sensors
+ 	proximity_start();
 
     /* Infinite loop. */
     while (1)

@@ -147,7 +147,8 @@ build/obj/main.o: main.c main.h \
  ../lib/e-puck2_main-processor/src/audio/microphone.h \
  ../lib/e-puck2_main-processor/src/audio/mp45dt02_processing.h \
  audio_processing.h game_management.h fft.h communications.h \
- camera_processing.h
+ camera_processing.h \
+ ../lib/e-puck2_main-processor/src/sensors/proximity.h
 
 main.h:
 
@@ -456,3 +457,5 @@ fft.h:
 communications.h:
 
 camera_processing.h:
+
+../lib/e-puck2_main-processor/src/sensors/proximity.h:

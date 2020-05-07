@@ -11,6 +11,9 @@
 #include <leds.h>
 #include <letter_writing.h>
 
+#define TAILLE_BOITE_PONG_X		35
+#define TAILLE_BOITE_PONG_Y		20
+
 static BSEMAPHORE_DECL(image_needed_sem, TRUE);
 
 //Faire comme dans motor.c???
@@ -250,7 +253,7 @@ void go_home(void){
  *
  */
 void boite_virtuelle(void){
-	if(ePuck.y>40){
+	if(ePuck.y>TAILLE_BOITE_PONG_Y){
 		if(ePuck.angle>0 && ePuck.angle<=PI/2){
 			nouvel_ordre(TOURNE, -2*ePuck.angle);
 			nouvel_ordre(AVANCE, 0);
@@ -260,7 +263,7 @@ void boite_virtuelle(void){
 		}
 	}
 
-	if(ePuck.y<-40){
+	if(ePuck.y<-TAILLE_BOITE_PONG_Y){
 		if(ePuck.angle<0 && ePuck.angle>=-PI/2){
 			nouvel_ordre(TOURNE, -2*ePuck.angle);
 			nouvel_ordre(AVANCE, 0);
@@ -275,12 +278,12 @@ void boite_virtuelle(void){
  * 1 point pour l'autre et retour dans la direction initiale
  */
 void sortie_gagnant(void){
-	if((ePuck.x<-60)||(ePuck.x>60)){
+	if((ePuck.x<-TAILLE_BOITE_PONG_X)||(ePuck.x>TAILLE_BOITE_PONG_X)){
 		uint8_t point_temp_avant = point_joueur_avant, point_temp_arriere = point_joueur_arriere;
-		if (ePuck.x<-60){
+		if (ePuck.x<-TAILLE_BOITE_PONG_X){
 			point_joueur_avant++;
 		}
-		if (ePuck.x>60){
+		if (ePuck.x>TAILLE_BOITE_PONG_X){
 			point_joueur_arriere++;
 		}
 		go_home();
@@ -358,7 +361,6 @@ void management(){
 		case PONG_INIT:
 			//initialization of variables
 			//activate threads
-			proximity_start(); // peut etre a mettre dans le main!!!!!!!!!!
 			calibrate_ir();
 			leds_management(0,1,1,0);
 			nouvel_ordre( AVANCE,  0);
