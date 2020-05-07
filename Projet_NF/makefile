@@ -5,6 +5,8 @@
 # Define project name here
 PROJECT = Projet_NF
 
+#USE_PROCESS_STACKSIZE = 0x400
+
 #Define path to the e-puck2_main-processor folder
 GLOBAL_PATH = ../lib/e-puck2_main-processor
 

@@ -53,7 +53,7 @@ static float micLeft_cmplx_input[2 * FFT_SIZE];
 static float micLeft_output[FFT_SIZE];
 //containing the maximum norm index to be able to verify the sound a second time
 static int16_t max_norm_index = -1;
-//contains the new lettre to be written to pass it on to game management
+//contains the new letter to be written, to pass it on to game management
 static lettre letter_state_new = AUCUN;
 
 /*
@@ -105,33 +105,23 @@ void sound_remote(float* data){
 	}
 	else if(max_norm_index >= FREQ_LETTER_M_L && max_norm_index <= FREQ_LETTER_M_H){
 		max_norm_index = -1;
-		if (letter_state_new != LETTRE_M){
-			letter_state_new = LETTRE_M;
-		}else letter_state_new = DECALAGE;
+		letter_state_new = LETTRE_M;
 	}
 	else if(max_norm_index >= FREQ_LETTER_O_L && max_norm_index <= FREQ_LETTER_O_H){
 		max_norm_index = -1;
-		if (letter_state_new != LETTRE_O){
-			letter_state_new = LETTRE_O;
-		}else letter_state_new = DECALAGE;
+		letter_state_new = LETTRE_O;
 	}
 	else if(max_norm_index >= FREQ_LETTER_N_L && max_norm_index <= FREQ_LETTER_N_H){
 		max_norm_index = -1;
-		if (letter_state_new != LETTRE_N){
-			letter_state_new = LETTRE_N;
-		}else letter_state_new = DECALAGE;
+		letter_state_new = LETTRE_N;
 	}
 	else if(max_norm_index >= FREQ_LETTER_D_L && max_norm_index <= FREQ_LETTER_D_H){
 		max_norm_index = -1;
-		if (letter_state_new != LETTRE_D){
-			letter_state_new = LETTRE_D;
-		}else letter_state_new = DECALAGE;
+		letter_state_new = LETTRE_D;
 	}
 	else if(max_norm_index >= FREQ_LETTER_A_L && max_norm_index <= FREQ_LETTER_A_H){
 		max_norm_index = -1;
-		if (letter_state_new != LETTRE_A){
-			letter_state_new = LETTRE_A;
-		}else letter_state_new = DECALAGE;
+		letter_state_new = LETTRE_A;
 	}else {
 	max_norm_index = -1;
 	letter_state_new = AUCUN;
@@ -224,6 +214,7 @@ float* get_audio_buffer_ptr(BUFFER_NAME_t name){
 }
 
 lettre get_letter_state(void){
-	lettre letter_state = letter_state_new;
-	return letter_state;
+	lettre letter_state_management = letter_state_new;
+	letter_state_new = AUCUN;
+	return letter_state_management;
 }

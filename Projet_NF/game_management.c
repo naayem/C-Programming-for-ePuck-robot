@@ -13,8 +13,12 @@
 
 #define TAILLE_BOITE_PONG_X		35
 #define TAILLE_BOITE_PONG_Y		20
-#define ROTATION_180_DEGRE			180*DEG_TO_RAD
-#define ROTATION_135_DEGRE			135*DEG_TO_RAD
+#define ROTATION_180_DEGRE		180*DEG_TO_RAD
+#define ROTATION_135_DEGRE		135*DEG_TO_RAD
+#define QUADRANT_SUP_DROIT		1
+#define QUADRANT_SUP_GAUCHE		2
+#define QUADRANT_INF_GAUCHE		3
+#define QUADRANT_INF_DROIT		4
 
 static BSEMAPHORE_DECL(image_needed_sem, TRUE);
 
@@ -195,18 +199,16 @@ void go_home(void){
 
 	motors_stop_speed();
 
-	uint8_t j = 1;
+	uint8_t num_quadrant;
 
-	if(coord_y > 0 && coord_x > 0)
-			j = 1;
-	if(coord_y > 0 && coord_x < 0)
-			j = 2;
-	if(coord_y < 0 && coord_x < 0)
-			j = 3;
-	if(coord_y < 0 && coord_x > 0)
-			j = 4;
-
-	uint8_t num_quadrant = j;
+	if(coord_y >= 0 && coord_x > 0)
+		num_quadrant = QUADRANT_SUP_DROIT;
+	if(coord_y > 0 && coord_x <= 0)
+		num_quadrant = QUADRANT_SUP_GAUCHE;
+	if(coord_y <= 0 && coord_x < 0)
+		num_quadrant = QUADRANT_INF_GAUCHE;
+	if(coord_y < 0 && coord_x >= 0)
+		num_quadrant = QUADRANT_INF_DROIT;
 
 		float norme = sqrt(coord_x*coord_x+coord_y*coord_y);
 
@@ -217,16 +219,16 @@ void go_home(void){
 
 		switch(num_quadrant)
 		{
-		case 1:
+		case QUADRANT_SUP_DROIT:
 		angle_rotation = acos(coord_x/norme)-PI;
 		break;
-		case 2:
+		case QUADRANT_SUP_GAUCHE:
 		angle_rotation = acos(coord_x/norme)-PI;
 		break;
-		case 3:
+		case QUADRANT_INF_GAUCHE:
 		angle_rotation = -acos(coord_x/norme)+PI;
 		break;
-		case 4:
+		case QUADRANT_INF_DROIT:
 		angle_rotation = -acos(coord_x/norme)+PI;
 		break;
 		}
@@ -378,7 +380,6 @@ void management(){
 				nouvel_ordre( AVANCE,  0);
 			}
 
-			chBSemSignal(&image_needed_sem);
 			pong = close_line();
 
 			switch(pong){
@@ -407,20 +408,22 @@ void management(){
 			switch (lettre_state){
 				case LETTRE_M:
 					lettre_M();
+					decalage_interlettre();
 					break;
 				case LETTRE_O:
 					lettre_O();
+					decalage_interlettre();
 					break;
 				case LETTRE_N:
 					lettre_N();
+					decalage_interlettre();
 					break;
 				case LETTRE_D:
 					lettre_D();
+					decalage_interlettre();
 					break;
 				case LETTRE_A:
 					lettre_A();
-					break;
-				case DECALAGE:
 					decalage_interlettre();
 					break;
 				case AUCUN:
@@ -519,10 +522,4 @@ void state_compare(etats changeState){
 		default:
 			break;
 	}
-}
-
-
-
-void wait_image_needed(void){
-    chBSemWait(&image_needed_sem);
 }

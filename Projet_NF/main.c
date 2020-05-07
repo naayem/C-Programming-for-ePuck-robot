@@ -4,6 +4,7 @@
 #include "hal.h"
 #include "memory_protection.h"
 #include <usbcfg.h>
+#include <time.h>
 
 #include <motors.h>
 #include <audio/microphone.h>
@@ -38,6 +39,7 @@ static void serial_start(void)
 
 int main(void)
 {
+	volatile systime_t time;
 
     halInit();
     chSysInit();
@@ -47,7 +49,7 @@ int main(void)
     //starts the USB communication
     usb_start();
     //starts the camera
-      dcmi_start();
+    dcmi_start();
   	po8030_start();
     //inits the motors
     motors_init();
@@ -68,7 +70,9 @@ int main(void)
     /* Infinite loop. */
     while (1)
     {
+    	time = chVTGetSystemTime();
     	management();
+    	chThdSleepUntilWindowed(time, time + MS2ST(10));
     }
 }
 

@@ -109,8 +109,6 @@ uint16_t extract_line_width(uint8_t *buffer){
 static THD_WORKING_AREA(waCaptureImage, 456);
 static THD_FUNCTION(CaptureImage, arg) {
 
-	wait_image_needed();
-
     chRegSetThreadName(__FUNCTION__);
     (void)arg;
 

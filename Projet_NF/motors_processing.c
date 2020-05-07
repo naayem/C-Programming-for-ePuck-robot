@@ -16,7 +16,7 @@ void motors_set_position(float position_l, float position_r, float speed_l, floa
 	right_motor_set_speed(speed_r);
 
 	while((abs(right_motor_get_pos()) < abs(position_r)) || (abs(left_motor_get_pos()) < abs(position_l))){
-
+		chThdSleepMilliseconds(2);
 	}
 	motors_stop_pos();
 	return;
