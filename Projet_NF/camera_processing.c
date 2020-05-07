@@ -19,6 +19,7 @@ static float distance_cm = 0;
 static uint16_t line_position = IMAGE_BUFFER_SIZE/2;	//middle
 
 //semaphore
+static BSEMAPHORE_DECL(image_captured_sem, TRUE);
 static BSEMAPHORE_DECL(image_ready_sem, TRUE);
 
 /*
@@ -108,6 +109,8 @@ uint16_t extract_line_width(uint8_t *buffer){
 static THD_WORKING_AREA(waCaptureImage, 456);
 static THD_FUNCTION(CaptureImage, arg) {
 
+	wait_image_needed();
+
     chRegSetThreadName(__FUNCTION__);
     (void)arg;
 
@@ -118,13 +121,12 @@ static THD_FUNCTION(CaptureImage, arg) {
 	dcmi_prepare();
 
     while(1){
-    	wait_image_needed();
         //starts a capture
 		dcmi_capture_start();
 		//waits for the capture to be done
 		wait_image_ready();
 		//signals an image has been captured
-		chBSemSignal(&image_ready_sem);
+		chBSemSignal(&image_captured_sem);
     }
 }
 
@@ -148,7 +150,7 @@ static THD_FUNCTION(ProcessImage, arg) {
 		time = chVTGetSystemTime();
 
     	//waits until an image has been captured
-        chBSemWait(&image_ready_sem);
+        chBSemWait(&image_captured_sem);
 		//gets the pointer to the array filled with the last image in RGB565
 		img_buff_ptr = dcmi_get_last_image_ptr();
 
@@ -174,6 +176,7 @@ static THD_FUNCTION(ProcessImage, arg) {
 		//invert the bool
 		send_to_computer = !send_to_computer;
 		chThdSleepUntilWindowed(time, time + MS2ST(100));
+		chBSemSignal(&image_ready_sem);
     }
 }
 
@@ -187,6 +190,8 @@ void process_image_start(void){
 }
 
 posLine close_line(void){
+	//waits until an image has been captured
+	chBSemWait(&image_ready_sem);
 	uint16_t linePosition = line_position;
 	if (aide_detection_ligne()&&(lineWidth>=LINE_WIDTH_MIN)){
 		if (linePosition<=CENTER_BOUNDARY){

@@ -11,33 +11,19 @@
 #include <fft.h>
 #include <arm_math.h>
 
-//semaphore
-static BSEMAPHORE_DECL(sendToComputer_sem, TRUE);
-
-//2 times FFT_SIZE because these arrays contain complex numbers (real + imaginary)
-static float micLeft_cmplx_input[2 * FFT_SIZE];
-static float micRight_cmplx_input[2 * FFT_SIZE];
-static float micFront_cmplx_input[2 * FFT_SIZE];
-static float micBack_cmplx_input[2 * FFT_SIZE];
-//Arrays containing the computed magnitude of the complex numbers
-static float micLeft_output[FFT_SIZE];
-static float micRight_output[FFT_SIZE];
-static float micFront_output[FFT_SIZE];
-static float micBack_output[FFT_SIZE];
-
 #define MIN_VALUE_THRESHOLD	100000
 
-#define MIN_FREQ			78	//we don't analyze before this index to not use resources for nothing
-#define FREQ_BILLARD_INIT	80	//1250Hz
-#define FREQ_PONG_INIT		96	//1500Hz
-#define FREQ_ALPHABET		112	//1750HZ
-#define FREQ_LETTER_M		128	//2000Hz
-#define FREQ_LETTER_O 		144 //2200Hz
-#define FREQ_LETTER_N 		156 //2375Hz
-#define FREQ_LETTER_D	 	164 //2500Hz
-#define FREQ_LETTER_A	 	180 //2750HZ
-#define FREQ_END_GAME		197	//3000Hz
-#define MAX_FREQ			205	//we don't analyze after this index to not use resources for nothing
+#define MIN_FREQ			25	//we don't analyze before this index to not use resources for nothing
+#define FREQ_BILLARD_INIT	26	//sol
+#define FREQ_PONG_INIT		28	//sol diese, la
+#define FREQ_ALPHABET		30	//la diese
+#define FREQ_LETTER_M		32	//si
+#define FREQ_LETTER_O 		34  //do
+#define FREQ_LETTER_N 		36  //do diese
+#define FREQ_LETTER_D	 	38  //re
+#define FREQ_LETTER_A	 	41  //re diese
+#define FREQ_END_GAME		43	//mi
+#define MAX_FREQ			44	//we don't analyze after this index to not use resources for nothing
 
 #define FREQ_END_GAME_L				(FREQ_END_GAME-1)//2984Hz
 #define FREQ_END_GAME_H				(FREQ_END_GAME+1)//3028Hz
@@ -58,54 +44,98 @@ static float micBack_output[FFT_SIZE];
 #define FREQ_LETTER_A_L				(FREQ_LETTER_A-1)
 #define FREQ_LETTER_A_H				(FREQ_LETTER_A+1)
 
+//semaphore
+static BSEMAPHORE_DECL(sendToComputer_sem, TRUE);
+
+//2 times FFT_SIZE because these arrays contain complex numbers (real + imaginary)
+static float micLeft_cmplx_input[2 * FFT_SIZE];
+//Arrays containing the computed magnitude of the complex numbers
+static float micLeft_output[FFT_SIZE];
+//containing the maximum norm index to be able to verify the sound a second time
+static int16_t max_norm_index = -1;
+//contains the new lettre to be written to pass it on to game management
+static lettre letter_state_new = AUCUN;
+
 /*
 *	Simple function used to detect the highest value in a buffer
 *	and to execute a motor command depending on it
 */
-
-static lettre letter_state_new = 0;
-
 void sound_remote(float* data){
 	float max_norm = MIN_VALUE_THRESHOLD;
-	int16_t max_norm_index = -1; 
+	int16_t max_norm_index_verify = -1;
 
 	etats changeState = 0; // doit etre =get_currentState!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 	//search for the highest peak
-	for(uint16_t i = MIN_FREQ ; i <= MAX_FREQ ; i++){
-		if(data[i] > max_norm){
-			max_norm = data[i];
-			max_norm_index = i;
+	if (max_norm_index==-1){
+		for(uint16_t i = MIN_FREQ ; i <= MAX_FREQ ; i++){
+			if(data[i] > max_norm){
+				max_norm = data[i];
+				max_norm_index = i;
+			}
 		}
+		return;
+	}
+	for(uint16_t j = MIN_FREQ ; j <= MAX_FREQ ; j++){
+		if(data[j] > max_norm){
+			max_norm = data[j];
+			max_norm_index_verify = j;
+		}
+	}
+	if (max_norm_index != max_norm_index_verify){
+		max_norm_index = -1;
+		return;
 	}
 
 	if(max_norm_index >= FREQ_END_GAME_L && max_norm_index <= FREQ_END_GAME_H){
+		max_norm_index = -1;
 		state_compare(changeState = ENDGAME);
 	}
 	else if(max_norm_index >= FREQ_PONG_INIT_L && max_norm_index <= FREQ_PONG_INIT_H){
+		max_norm_index = -1;
 		state_compare(changeState = PONG_INIT);
 	}
 	else if(max_norm_index >= FREQ_ALPHABET_L && max_norm_index <= FREQ_ALPHABET_H){
+		max_norm_index = -1;
 		state_compare(changeState = ALPHABET);
 	}
 	else if(max_norm_index >= FREQ_BILLARD_INIT_L && max_norm_index <= FREQ_BILLARD_INIT_H){
+		max_norm_index = -1;
 		state_compare(changeState = BILLARD_INIT);
 	}
 	else if(max_norm_index >= FREQ_LETTER_M_L && max_norm_index <= FREQ_LETTER_M_H){
-		letter_state_new = LETTRE_M;
+		max_norm_index = -1;
+		if (letter_state_new != LETTRE_M){
+			letter_state_new = LETTRE_M;
+		}else letter_state_new = DECALAGE;
 	}
 	else if(max_norm_index >= FREQ_LETTER_O_L && max_norm_index <= FREQ_LETTER_O_H){
-		letter_state_new = LETTRE_O;
+		max_norm_index = -1;
+		if (letter_state_new != LETTRE_O){
+			letter_state_new = LETTRE_O;
+		}else letter_state_new = DECALAGE;
 	}
 	else if(max_norm_index >= FREQ_LETTER_N_L && max_norm_index <= FREQ_LETTER_N_H){
-		letter_state_new = LETTRE_N;
+		max_norm_index = -1;
+		if (letter_state_new != LETTRE_N){
+			letter_state_new = LETTRE_N;
+		}else letter_state_new = DECALAGE;
 	}
 	else if(max_norm_index >= FREQ_LETTER_D_L && max_norm_index <= FREQ_LETTER_D_H){
-		letter_state_new = LETTRE_D;
+		max_norm_index = -1;
+		if (letter_state_new != LETTRE_D){
+			letter_state_new = LETTRE_D;
+		}else letter_state_new = DECALAGE;
 	}
 	else if(max_norm_index >= FREQ_LETTER_A_L && max_norm_index <= FREQ_LETTER_A_H){
-		letter_state_new = LETTRE_A;
-	}else letter_state_new = AUCUN;
+		max_norm_index = -1;
+		if (letter_state_new != LETTRE_A){
+			letter_state_new = LETTRE_A;
+		}else letter_state_new = DECALAGE;
+	}else {
+	max_norm_index = -1;
+	letter_state_new = AUCUN;
+	}
 }
 
 /*
@@ -133,17 +163,11 @@ void processAudioData(int16_t *data, uint16_t num_samples){
 	//loop to fill the buffers
 	for(uint16_t i = 0 ; i < num_samples ; i+=4){
 		//construct an array of complex numbers. Put 0 to the imaginary part
-		//micRight_cmplx_input[nb_samples] = (float)data[i + MIC_RIGHT];
 		micLeft_cmplx_input[nb_samples] = (float)data[i + MIC_LEFT];
-		//micBack_cmplx_input[nb_samples] = (float)data[i + MIC_BACK];
-		//micFront_cmplx_input[nb_samples] = (float)data[i + MIC_FRONT];
 
 		nb_samples++;
 
-		//micRight_cmplx_input[nb_samples] = 0;
 		micLeft_cmplx_input[nb_samples] = 0;
-		//micBack_cmplx_input[nb_samples] = 0;
-		//micFront_cmplx_input[nb_samples] = 0;
 
 		nb_samples++;
 
@@ -160,10 +184,7 @@ void processAudioData(int16_t *data, uint16_t num_samples){
 		*	This is an "In Place" function. 
 		*/
 
-		//doFFT_optimized(FFT_SIZE, micRight_cmplx_input);
 		doFFT_optimized(FFT_SIZE, micLeft_cmplx_input);
-		//doFFT_optimized(FFT_SIZE, micFront_cmplx_input);
-		//doFFT_optimized(FFT_SIZE, micBack_cmplx_input);
 
 		/*	Magnitude processing
 		*
@@ -172,10 +193,7 @@ void processAudioData(int16_t *data, uint16_t num_samples){
 		*	real numbers.
 		*
 		*/
-		//arm_cmplx_mag_f32(micRight_cmplx_input, micRight_output, FFT_SIZE);
 		arm_cmplx_mag_f32(micLeft_cmplx_input, micLeft_output, FFT_SIZE);
-		//arm_cmplx_mag_f32(micFront_cmplx_input, micFront_output, FFT_SIZE);
-		//arm_cmplx_mag_f32(micBack_cmplx_input, micBack_output, FFT_SIZE);
 
 		//sends only one FFT result over 10 for 1 mic to not flood the computer
 		//sends to UART3
@@ -191,6 +209,7 @@ void processAudioData(int16_t *data, uint16_t num_samples){
 	}
 }
 
+
 void wait_send_to_computer(void){
 	chBSemWait(&sendToComputer_sem);
 }
@@ -199,27 +218,6 @@ float* get_audio_buffer_ptr(BUFFER_NAME_t name){
 	if(name == LEFT_CMPLX_INPUT){
 		return micLeft_cmplx_input;
 	}
-	else if (name == RIGHT_CMPLX_INPUT){
-		return micRight_cmplx_input;
-	}
-	else if (name == FRONT_CMPLX_INPUT){
-		return micFront_cmplx_input;
-	}
-	else if (name == BACK_CMPLX_INPUT){
-		return micBack_cmplx_input;
-	}
-	else if (name == LEFT_OUTPUT){
-		return micLeft_output;
-	}
-	else if (name == RIGHT_OUTPUT){
-		return micRight_output;
-	}
-	else if (name == FRONT_OUTPUT){
-		return micFront_output;
-	}
-	else if (name == BACK_OUTPUT){
-		return micBack_output;
-	}
 	else{
 		return NULL;
 	}
@@ -227,6 +225,5 @@ float* get_audio_buffer_ptr(BUFFER_NAME_t name){
 
 lettre get_letter_state(void){
 	lettre letter_state = letter_state_new;
-	letter_state_new=AUCUN;
 	return letter_state;
 }

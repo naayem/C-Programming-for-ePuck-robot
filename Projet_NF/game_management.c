@@ -13,6 +13,8 @@
 
 #define TAILLE_BOITE_PONG_X		35
 #define TAILLE_BOITE_PONG_Y		20
+#define ROTATION_180_DEGRE			180*DEG_TO_RAD
+#define ROTATION_135_DEGRE			135*DEG_TO_RAD
 
 static BSEMAPHORE_DECL(image_needed_sem, TRUE);
 
@@ -339,12 +341,11 @@ static const uint8_t step_table[8][4] = {
 */
 void leds_update(const uint8_t *out)  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 {
-    /* left motor */
+
     out[0] ? palWritePad(GPIOD, GPIOD_LED1, 0) : palWritePad(GPIOD, GPIOD_LED1, 1);
     out[1] ? palWritePad(GPIOD, GPIOD_LED3, 0) : palWritePad(GPIOD, GPIOD_LED3, 1);
     out[2] ? palWritePad(GPIOD, GPIOD_LED5, 0) : palWritePad(GPIOD, GPIOD_LED5, 1);
     out[3] ? palWritePad(GPIOD, GPIOD_LED7, 0) : palWritePad(GPIOD, GPIOD_LED7, 1);
-
 }
 
 void management(){
@@ -362,31 +363,33 @@ void management(){
 			//initialization of variables
 			//activate threads
 			calibrate_ir();
-			leds_management(0,1,1,0);
+			leds_management(0,1,0,1);
 			nouvel_ordre( AVANCE,  0);
 			currentStateManagement = PONG;
 			nextState = PONG;
 			break;
 
 		case PONG:
-			chBSemSignal(&image_needed_sem);
-			leds_management(1,0,0,0);
+			leds_management(0,0,0,0);
+			set_front_led(1);
 
-			if ((obstacle_droite(200))||(obstacle_gauche(200))){
-				nouvel_ordre( TOURNE,  180*DEG_TO_RAD);
+			if (obstacle_demi_tour()){
+				nouvel_ordre( TOURNE,  ROTATION_180_DEGRE);
 				nouvel_ordre( AVANCE,  0);
 			}
+
+			chBSemSignal(&image_needed_sem);
 			pong = close_line();
 
 			switch(pong){
 				case L_NULL:
 					break;
 				case L_DROITE:
-					nouvel_ordre( TOURNE,  135*DEG_TO_RAD);
+					nouvel_ordre( TOURNE,  ROTATION_135_DEGRE);
 					nouvel_ordre( AVANCE,  0);
 					break;
 				case L_GAUCHE:
-					nouvel_ordre( TOURNE,  -135*DEG_TO_RAD);
+					nouvel_ordre( TOURNE,  -ROTATION_135_DEGRE);
 					nouvel_ordre( AVANCE,  0);
 					break;
 				default:
@@ -399,33 +402,26 @@ void management(){
 			break;
 
 		case ALPHABET:
-			leds_management(0,1,1,0);
+			leds_management(0,1,1,1);
 			lettre_state = get_letter_state();
 			switch (lettre_state){
 				case LETTRE_M:
 					lettre_M();
-					decalage_interlettre();
-					lettre_state = AUCUN;
 					break;
 				case LETTRE_O:
 					lettre_O();
-					decalage_interlettre();
-					lettre_state = AUCUN;
 					break;
 				case LETTRE_N:
 					lettre_N();
-					decalage_interlettre();
-					lettre_state = AUCUN;
 					break;
 				case LETTRE_D:
 					lettre_D();
-					decalage_interlettre();
-					lettre_state = AUCUN;
 					break;
 				case LETTRE_A:
 					lettre_A();
+					break;
+				case DECALAGE:
 					decalage_interlettre();
-					lettre_state = AUCUN;
 					break;
 				case AUCUN:
 					break;
@@ -450,14 +446,13 @@ void management(){
 			ePuck.x = 0;
 			ePuck.y = 0;
 			ePuck.angle = 0;
+			set_front_led(0);
 			leds_management(0,0,0,0);
 			nouvel_ordre(ARRET, 0);
 			currentStateManagement = MENU_PRINCIPAL;
 			break;
 	}
 }
-
-
 
 void mapping_start(void){
 chThdCreateStatic(waThdMapping, sizeof(waThdMapping), NORMALPRIO, ThdMapping, NULL);

@@ -9,16 +9,9 @@
  */
 _Bool aide_detection_ligne(void);
 
-/* Test d'un obstacle du côté droit de l'e-puck
- *
- * int reflet_obstacle - le niveau de reflet prévu pour l'obstacle
+/* Test d'un obstacle devant de l'e-puck
+ * Renvoie 1 en cas d'obstacle proche et 0 sinon
  */
-_Bool obstacle_droite(int reflet_obstacle);
-
-/* Test d'un obstacle du côté gauche de l'e-puck
- *
- * int reflet_obstacle - le niveau de reflet prévu pour l'obstacle
- */
-_Bool obstacle_gauche(int reflet_obstacle);
+_Bool obstacle_demi_tour (void);
 
 #endif

@@ -7,7 +7,8 @@ LETTRE_M,
 LETTRE_O,
 LETTRE_N,
 LETTRE_D,
-LETTRE_A
+LETTRE_A,
+DECALAGE
 } lettre;
 
 /**
