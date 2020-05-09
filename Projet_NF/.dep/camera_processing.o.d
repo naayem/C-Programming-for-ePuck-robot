@@ -99,15 +99,14 @@ build/obj/camera_processing.o: camera_processing.c \
  ../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/ports/STM32/STM32F4xx/stm32_registry.h \
  ../lib/e-puck2_main-processor/ChibiOS//os/hal/include/mmc_spi.h \
  ../lib/e-puck2_main-processor/ChibiOS//os/hal/include/serial_usb.h \
- ../lib/e-puck2_main-processor/ChibiOS//os/hal/lib/streams/chprintf.h \
- c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\lib\gcc\arm-none-eabi\7.2.1\include\stdarg.h \
- ../lib/e-puck2_main-processor/src/usbcfg.h main.h \
+ ../lib/e-puck2_main-processor/src/camera/po8030.h ir_thread.h main.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\stdio.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\_ansi.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\newlib.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\config.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\ieeefp.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\cdefs.h \
+ c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\lib\gcc\arm-none-eabi\7.2.1\include\stdarg.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\reent.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\_ansi.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\_types.h \
@@ -142,9 +141,9 @@ build/obj/camera_processing.o: camera_processing.c \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\unistd.h \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\unistd.h \
  ../lib/e-puck2_main-processor/src/parameter/parameter.h \
- ../lib/e-puck2_main-processor/src/camera/po8030.h ir_thread.h \
+ ../lib/e-puck2_main-processor/ChibiOS//os/hal/lib/streams/chprintf.h \
  ../lib/e-puck2_main-processor/src/sensors/proximity.h \
- camera_processing.h game_management.h
+ camera_processing.h
 
 ../lib/e-puck2_main-processor/ChibiOS//os/rt/include/ch.h:
 
@@ -348,11 +347,9 @@ mcuconf.h:
 
 ../lib/e-puck2_main-processor/ChibiOS//os/hal/include/serial_usb.h:
 
-../lib/e-puck2_main-processor/ChibiOS//os/hal/lib/streams/chprintf.h:
+../lib/e-puck2_main-processor/src/camera/po8030.h:
 
-c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\lib\gcc\arm-none-eabi\7.2.1\include\stdarg.h:
-
-../lib/e-puck2_main-processor/src/usbcfg.h:
+ir_thread.h:
 
 main.h:
 
@@ -367,6 +364,8 @@ c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-
 c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\ieeefp.h:
 
 c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\cdefs.h:
+
+c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\lib\gcc\arm-none-eabi\7.2.1\include\stdarg.h:
 
 c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\reent.h:
 
@@ -436,12 +435,8 @@ c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-
 
 ../lib/e-puck2_main-processor/src/parameter/parameter.h:
 
-../lib/e-puck2_main-processor/src/camera/po8030.h:
-
-ir_thread.h:
+../lib/e-puck2_main-processor/ChibiOS//os/hal/lib/streams/chprintf.h:
 
 ../lib/e-puck2_main-processor/src/sensors/proximity.h:
 
 camera_processing.h:
-
-game_management.h:

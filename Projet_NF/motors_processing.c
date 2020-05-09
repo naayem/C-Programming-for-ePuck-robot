@@ -1,11 +1,8 @@
 #include <motors_processing.h>
 
-#define NSTEP_ONE_TURN      1000 // number of step for 1 turn of the motor
-#define WHEEL_PERIMETER     13 // [cm]
-#define STEPS_PER_TURN      1000
+#define VITESSE_GENERALE  12
 
 void motors_set_position(float position_l, float position_r, float speed_l, float speed_r){
-
 	position_l = cm_to_steps(position_l);
 	position_r = cm_to_steps(position_r);
 
@@ -23,8 +20,8 @@ void motors_set_position(float position_l, float position_r, float speed_l, floa
 }
 
 void moteurs_avance(void){
-	left_motor_set_speed(cm_to_steps(6));
-	right_motor_set_speed(cm_to_steps(6));
+	left_motor_set_speed(cm_to_steps(VITESSE_GENERALE));
+	right_motor_set_speed(cm_to_steps(VITESSE_GENERALE));
 }
 
 void motors_stop_pos(void){
@@ -33,7 +30,6 @@ void motors_stop_pos(void){
 
 	left_motor_set_pos(0);
 	right_motor_set_pos(0);
-
 }
 
 void motors_stop_speed(void){
@@ -48,7 +44,6 @@ int32_t cm_to_steps(float valeur){
 }
 
 float steps_to_cm(float steps){
-
 	float cm = 0;
 	cm = (WHEEL_PERIMETER * steps / STEPS_PER_TURN);
 	return cm;

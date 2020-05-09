@@ -4,16 +4,15 @@
 #define	SECOND_IR_SENSOR		1
 #define	SEVENTH_IR_SENSOR		6
 #define EIGTH_IR_SENSOR			7
-#define REFLET_FEUILLE			20
+#define REFLET_FEUILLE			50
 #define REFLET_OBSTACLE			200
 
-_Bool aide_detection_ligne(){
-	if (get_calibrated_prox(FIRST_IR_SENSOR)>=REFLET_FEUILLE){
+_Bool aide_detection_ligne(void){
+	if (get_calibrated_prox(FIRST_IR_SENSOR)>=REFLET_FEUILLE)
 		return 1;
-	}
-	if (get_calibrated_prox(EIGTH_IR_SENSOR)>=REFLET_FEUILLE){
+	if (get_calibrated_prox(EIGTH_IR_SENSOR)>=REFLET_FEUILLE)
 		return 1;
-	}else return 0;
+	return 0;
 }
 
 _Bool obstacle_demi_tour (void){

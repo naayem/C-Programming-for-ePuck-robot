@@ -1,28 +1,21 @@
 #include <main.h>
-
 #include "ch.h"
 #include "hal.h"
 #include "memory_protection.h"
 #include <usbcfg.h>
 #include <time.h>
-
 #include <motors.h>
 #include <audio/microphone.h>
-
 #include <audio_processing.h>
 #include <fft.h>
 #include <communications.h>
-
-
-#include<game_management.h>
+#include <game_management.h>
 #include <camera_processing.h>
 #include <sensors/proximity.h>
-
 
 messagebus_t bus;
 MUTEX_DECL(bus_lock);
 CONDVAR_DECL(bus_condvar);
-
 
 static void serial_start(void)
 {
@@ -32,7 +25,6 @@ static void serial_start(void)
 	    0,
 	    0,
 	};
-
 	sdStart(&SD3, &ser_cfg); // UART3.
 }
 
@@ -72,6 +64,9 @@ int main(void)
     {
     	time = chVTGetSystemTime();
     	management();
+/*  	if (chVTGetSystemTime()-time>=100){
+        	chprintf ((BaseSequentialStream *)&SD3,"time after management: %d us\n", chVTGetSystemTime()-time);
+    	}*/
     	chThdSleepUntilWindowed(time, time + MS2ST(10));
     }
 }

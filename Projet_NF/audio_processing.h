@@ -36,4 +36,14 @@ float* get_audio_buffer_ptr(BUFFER_NAME_t name);
 */
 lettre get_letter_state(void);
 
+/*
+*	Returns 1 if a letter is ready to be written
+*/
+_Bool letter_ready (void);
+
+/*
+*	Returns 1 if a next letter is waited for
+*/
+void next_letter (void);
+
 #endif /* AUDIO_PROCESSING_H */

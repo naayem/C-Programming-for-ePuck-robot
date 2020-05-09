@@ -1,13 +1,17 @@
 #ifndef GAME_MANAGEMENT_H_
 #define GAME_MANAGEMENT_H_
 
+#define ERROR_THRESHOLD			0.1f
+
 typedef enum lettre{
 AUCUN=0,
 LETTRE_M,
 LETTRE_O,
 LETTRE_N,
 LETTRE_D,
-LETTRE_A
+LETTRE_A,
+ELIOT,
+ALPHA_INIT
 } lettre;
 
 /**
@@ -27,17 +31,6 @@ typedef enum order{
 	AVANCE,
 	TOURNE
 } order;
-
-
-
-//TO ADJUST IF NECESSARY. NOT ALL THE E-PUCK2 HAVE EXACTLY THE SAME WHEEL DISTANCE
-#define WHEEL_DISTANCE      5.35f    //cm
-#define PERIMETER_EPUCK     (PI * WHEEL_DISTANCE)
-#define VITESSE_ROT 			5
-#define DEUX 			2
-#define ZERO				0
-#define DEG_TO_RAD	PI/180
-
 
 /**
  * @brief Debute le thread qui s'occupe de mettre a jour la position du robot lorsqu'il est en trajectoire droite.

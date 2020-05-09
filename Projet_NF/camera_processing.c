@@ -1,21 +1,20 @@
 #include "ch.h"
 #include "hal.h"
-#include <chprintf.h>
-#include <usbcfg.h>
-#include <main.h>
-
-
 #include <camera/po8030.h>
 #include <ir_thread.h>
 #include <camera_processing.h>
-#include <game_management.h>
 
-#define LINE_WIDTH_MIN		200
-#define CENTER_BOUNDARY		300
-#define TOP_BOUNDARY		600
+#define IMAGE_BUFFER_SIZE		640
+#define WIDTH_SLOPE				5
+#define MIN_LINE_WIDTH			40
+#define PXTOCM					1570.0f
+#define GOAL_DISTANCE 			10.0f
+#define MAX_DISTANCE 			25.0f
+#define LINE_WIDTH_MIN			200
+#define CENTER_BOUNDARY			300
+#define TOP_BOUNDARY			600
 
 static uint16_t lineWidth = 0;
-static float distance_cm = 0;
 static uint16_t line_position = IMAGE_BUFFER_SIZE/2;	//middle
 
 //semaphore
@@ -141,8 +140,6 @@ static THD_FUNCTION(ProcessImage, arg) {
 	uint8_t *img_buff_ptr;
 	uint8_t image[IMAGE_BUFFER_SIZE] = {0};
 
-	bool send_to_computer = true;
-
     while(1){
 
 		time = chVTGetSystemTime();
@@ -162,17 +159,6 @@ static THD_FUNCTION(ProcessImage, arg) {
 		//search for a line in the image and gets its width in pixels
 		lineWidth = extract_line_width(image);
 
-		//converts the width into a distance between the robot and the camera
-		if(lineWidth){
-			distance_cm = PXTOCM/lineWidth;
-		}
-
-		/*if(send_to_computer){
-			//sends to the computer the image
-			SendUint8ToComputer(image, IMAGE_BUFFER_SIZE);
-		}*/
-		//invert the bool
-		send_to_computer = !send_to_computer;
 		chThdSleepUntilWindowed(time, time + MS2ST(100));
 		chBSemSignal(&image_ready_sem);
     }
@@ -190,12 +176,11 @@ void process_image_start(void){
 posLine close_line(void){
 	//waits until an image has been captured
 	chBSemWait(&image_ready_sem);
-	uint16_t linePosition = line_position;
 	if (aide_detection_ligne()&&(lineWidth>=LINE_WIDTH_MIN)){
-		if (linePosition<=CENTER_BOUNDARY){
+		if (line_position<=CENTER_BOUNDARY){
 			return L_GAUCHE;
 		}
-		if ((CENTER_BOUNDARY<linePosition)&&(linePosition<=TOP_BOUNDARY)){
+		if ((CENTER_BOUNDARY<line_position)&&(line_position<=TOP_BOUNDARY)){
 			return L_DROITE;
 		}
 		return L_NULL;

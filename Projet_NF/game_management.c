@@ -12,17 +12,17 @@
 #include <letter_writing.h>
 
 #define TAILLE_BOITE_PONG_X		35
-#define TAILLE_BOITE_PONG_Y		20
+#define TAILLE_BOITE_PONG_Y		22
 #define ROTATION_180_DEGRE		180*DEG_TO_RAD
 #define ROTATION_135_DEGRE		135*DEG_TO_RAD
 #define QUADRANT_SUP_DROIT		1
 #define QUADRANT_SUP_GAUCHE		2
 #define QUADRANT_INF_GAUCHE		3
 #define QUADRANT_INF_DROIT		4
+#define POINTS_POUR_GAGNER	3
 
 static BSEMAPHORE_DECL(image_needed_sem, TRUE);
 
-//Faire comme dans motor.c???
 static mapping ePuck = {0,0,0};
 static etats nextState = MENU_PRINCIPAL;
 static etats currentStateManagement = MENU_PRINCIPAL;
@@ -30,6 +30,7 @@ static order action = ARRET;
 static lettre lettre_state = AUCUN;
 static float counted_current_steps = 0;
 static uint8_t point_joueur_avant = 0, point_joueur_arriere = 0;
+static uint8_t case_init = 1;
 
 /***************************INTERNAL FUNCTIONS************************************/
 
@@ -210,35 +211,35 @@ void go_home(void){
 	if(coord_y < 0 && coord_x >= 0)
 		num_quadrant = QUADRANT_INF_DROIT;
 
-		float norme = sqrt(coord_x*coord_x+coord_y*coord_y);
+	float norme = sqrt(coord_x*coord_x+coord_y*coord_y);
 
-		if(norme == 0){
-			chprintf((BaseSequentialStream *)&SD3,"NORME =0 IL DEVRAIT RIEN FAIRE PR GO HOME \n");
-			return;
-		}
+	if(norme == 0){
+		chprintf((BaseSequentialStream *)&SD3,"NORME =0 IL DEVRAIT RIEN FAIRE PR GO HOME \n");
+		return;
+	}
 
-		switch(num_quadrant)
-		{
-		case QUADRANT_SUP_DROIT:
+	switch(num_quadrant)
+	{
+	case QUADRANT_SUP_DROIT:
 		angle_rotation = acos(coord_x/norme)-PI;
 		break;
-		case QUADRANT_SUP_GAUCHE:
+	case QUADRANT_SUP_GAUCHE:
 		angle_rotation = acos(coord_x/norme)-PI;
 		break;
-		case QUADRANT_INF_GAUCHE:
+	case QUADRANT_INF_GAUCHE:
 		angle_rotation = -acos(coord_x/norme)+PI;
 		break;
-		case QUADRANT_INF_DROIT:
+	case QUADRANT_INF_DROIT:
 		angle_rotation = -acos(coord_x/norme)+PI;
 		break;
-		}
+	}
 
-		angle_rotation -= ePuck.angle;
+	angle_rotation -= ePuck.angle;
 
-		while(angle_rotation > PI)
-				angle_rotation -= (2*PI);
-		while(angle_rotation < (-PI))
-				angle_rotation += (2*PI);
+	while(angle_rotation > PI)
+		angle_rotation -= (2*PI);
+	while(angle_rotation < (-PI))
+		angle_rotation += (2*PI);
 
 
 	if (norme<ERROR_THRESHOLD && ePuck.angle==0)
@@ -254,7 +255,6 @@ void go_home(void){
 
 /**
  * @brief Fixe les contours d'un terrain virtuelle et decide les interactions avec ces contours
- *
  */
 void boite_virtuelle(void){
 	if(ePuck.y>TAILLE_BOITE_PONG_Y){
@@ -282,45 +282,64 @@ void boite_virtuelle(void){
  * 1 point pour l'autre et retour dans la direction initiale
  */
 void sortie_gagnant(void){
-	if((ePuck.x<-TAILLE_BOITE_PONG_X)||(ePuck.x>TAILLE_BOITE_PONG_X)){
-		uint8_t point_temp_avant = point_joueur_avant, point_temp_arriere = point_joueur_arriere;
-		if (ePuck.x<-TAILLE_BOITE_PONG_X){
+	if((ePuck.x<(-TAILLE_BOITE_PONG_X))||(ePuck.x>TAILLE_BOITE_PONG_X)){
+		//ajoutez point à celui qui marque
+		if (ePuck.x<=(-TAILLE_BOITE_PONG_X)){
 			point_joueur_avant++;
 		}
-		if (ePuck.x>TAILLE_BOITE_PONG_X){
+		if (ePuck.x>=TAILLE_BOITE_PONG_X){
 			point_joueur_arriere++;
 		}
+
+		//si un des joueurs possèdent 3 points la partie se termine
+		if (point_joueur_avant >= POINTS_POUR_GAGNER){
+			nouvel_ordre(ARRET, 0);
+			set_led(LED3, 1);
+			set_body_led(1);
+			chThdSleepMilliseconds(500);
+			nextState = ENDGAME;
+			return;
+		}
+		if (point_joueur_arriere >= POINTS_POUR_GAGNER){
+			nouvel_ordre(ARRET, 0);
+			set_led(LED7, 1);
+			set_body_led(1);
+			chThdSleepMilliseconds(500);
+			nextState = ENDGAME;
+			return;
+		}
+
+		//sinon repartir vers le point initial
 		go_home();
-		if (point_temp_avant != point_joueur_avant || point_temp_arriere != point_joueur_arriere){
-			for (int i = 0; i < point_joueur_avant; i++){
-				set_led(LED3, 1);
-				chThdSleepMilliseconds(500);
-				set_led(LED3, 0);
-				chThdSleepMilliseconds(500);
-			}
-			for (int j = 0; j < point_joueur_arriere; j++){
-				set_led(LED7, 1);
-				chThdSleepMilliseconds(500);
-				set_led(LED7, 0);
-				chThdSleepMilliseconds(500);
-			}
+
+		//en affichant les points de chaque joueur
+		for (int i = 0; i < point_joueur_avant; i++){
+			set_led(LED3, 1);
+			chThdSleepMilliseconds(100);
+			set_led(LED3, 0);
+			chThdSleepMilliseconds(100);
+		}
+		for (int j = 0; j < point_joueur_arriere; j++){
+			set_led(LED7, 1);
+			chThdSleepMilliseconds(100);
+			set_led(LED7, 0);
+			chThdSleepMilliseconds(100);
 		}
 	}
 }
 
 static THD_WORKING_AREA(waThdMapping, 628);
 static THD_FUNCTION(ThdMapping, arg) {
-
     chRegSetThreadName(__FUNCTION__);
     (void)arg;
     volatile systime_t time;
     while(1){
-    			time = chVTGetSystemTime();
-    			if(action==AVANCE){
-    				update_map_position();
-    			}
-    			//chprintf((BaseSequentialStream *)&SD3,"update x=%f .... y=%f .... angle=%f  \n", ePuck.x, ePuck.y, ePuck.angle);
-			chThdSleepUntilWindowed(time, time + MS2ST(10));
+		time = chVTGetSystemTime();
+		if(action==AVANCE){
+			update_map_position();
+		}
+		//chprintf((BaseSequentialStream *)&SD3,"update x=%f .... y=%f .... angle=%f  \n", ePuck.x, ePuck.y, ePuck.angle);
+		chThdSleepUntilWindowed(time, time + MS2ST(10));
     }
 }
 
@@ -329,18 +348,6 @@ static THD_FUNCTION(ThdMapping, arg) {
 
 /****************************PUBLIC FUNCTIONS*************************************/
 
-/*
-static const uint8_t step_table[8][4] = {
-    {1, 0, 1, 0},
-	{0, 0, 1, 0},
-    {0, 1, 1, 0},
-	{0, 1, 0, 0},
-    {0, 1, 0, 1},
-	{0, 0, 0, 1},
-    {1, 0, 0, 1},
-	{1, 0, 0, 0},
-};
-*/
 void leds_update(const uint8_t *out)  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 {
 
@@ -353,81 +360,91 @@ void leds_update(const uint8_t *out)  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 void management(){
 	//we create variables for the led in order to turn them off at each loop and to
 	//select which one to turn on
-	posLine pong;
-
 	switch (currentStateManagement) {
 	   case MENU_PRINCIPAL:
-		    leds_management(0,0,0,0);
-		    currentStateManagement = nextState;
-		    break;
+		   if (case_init){
+			   leds_management(1,0,0,0);
+		   }
+		   case_init=0;
+		   currentStateManagement = nextState;
+		   break;
 
 		case PONG_INIT:
-			//initialization of variables
-			//activate threads
 			calibrate_ir();
-			leds_management(0,1,0,1);
-			nouvel_ordre( AVANCE,  0);
+			leds_management(1,0,1,0);
+			nouvel_ordre(AVANCE, 0);
+			case_init = 1;
 			currentStateManagement = PONG;
 			nextState = PONG;
 			break;
 
 		case PONG:
-			leds_management(0,0,0,0);
-			set_front_led(1);
+			if (case_init){
+			   leds_management(0,0,1,0);
+			}
+			case_init=0;
+
+			sortie_gagnant();
+			boite_virtuelle();
 
 			if (obstacle_demi_tour()){
-				nouvel_ordre( TOURNE,  ROTATION_180_DEGRE);
-				nouvel_ordre( AVANCE,  0);
+				nouvel_ordre(TOURNE, ROTATION_180_DEGRE);
+				nouvel_ordre(AVANCE, 0);
 			}
 
-			pong = close_line();
-
-			switch(pong){
+			switch(close_line()){
 				case L_NULL:
 					break;
 				case L_DROITE:
-					nouvel_ordre( TOURNE,  ROTATION_135_DEGRE);
-					nouvel_ordre( AVANCE,  0);
+					nouvel_ordre(TOURNE, ROTATION_135_DEGRE);
+					nouvel_ordre(AVANCE, 0);
 					break;
 				case L_GAUCHE:
-					nouvel_ordre( TOURNE,  -ROTATION_135_DEGRE);
-					nouvel_ordre( AVANCE,  0);
+					nouvel_ordre(TOURNE, -ROTATION_135_DEGRE);
+					nouvel_ordre(AVANCE, 0);
 					break;
 				default:
 					break;
 			}
-			pong=L_NULL;
-			boite_virtuelle();
-			sortie_gagnant();
 			currentStateManagement = nextState;
 			break;
 
 		case ALPHABET:
-			leds_management(0,1,1,1);
-			lettre_state = get_letter_state();
-			switch (lettre_state){
-				case LETTRE_M:
-					lettre_M();
-					decalage_interlettre();
-					break;
-				case LETTRE_O:
-					lettre_O();
-					decalage_interlettre();
-					break;
-				case LETTRE_N:
-					lettre_N();
-					decalage_interlettre();
-					break;
-				case LETTRE_D:
-					lettre_D();
-					decalage_interlettre();
-					break;
-				case LETTRE_A:
-					lettre_A();
-					decalage_interlettre();
-					break;
-				case AUCUN:
-					break;
+			if (lettre_state == AUCUN){
+			   leds_management(0,0,0,1);
+			   lettre_state = ALPHA_INIT;
+			}
+
+			if (letter_ready()){
+				lettre_state = get_letter_state();
+				switch (lettre_state){
+					case LETTRE_M:
+						lettre_M();
+						decalage_interlettre();
+						break;
+					case LETTRE_O:
+						lettre_O();
+						decalage_interlettre();
+						break;
+					case LETTRE_N:
+						lettre_N();
+						decalage_interlettre();
+						break;
+					case LETTRE_D:
+						lettre_D();
+						decalage_interlettre();
+						break;
+					case LETTRE_A:
+						lettre_A();
+						decalage_interlettre();
+						break;
+					case ELIOT:
+						ecriture_eliot();
+						break;
+					default:
+						break;
+				}
+				next_letter();
 			}
 			currentStateManagement = nextState;
 			break;
@@ -435,23 +452,33 @@ void management(){
 		case BILLARD_INIT:
 			//initialization of variables
 			//activate threads
+			case_init = 1;
 			leds_management(0,0,0,1);
 			currentStateManagement = BILLARD;
 			nextState = BILLARD;
 			break;
 
 		case BILLARD:
-			leds_management(0,0,1,1);
+			if (case_init){
+			   set_body_led(1);
+			   leds_management(0,1,0,0);
+			}
+			case_init = 0;
 			currentStateManagement = nextState;
-		   break;
+			break;
 
 		case ENDGAME:
+			nouvel_ordre(ARRET, 0);
 			ePuck.x = 0;
 			ePuck.y = 0;
 			ePuck.angle = 0;
+			point_joueur_arriere=0;
+			point_joueur_avant=0;
 			set_front_led(0);
+			set_body_led(0);
 			leds_management(0,0,0,0);
-			nouvel_ordre(ARRET, 0);
+			lettre_state = AUCUN;
+			case_init = 1;
 			currentStateManagement = MENU_PRINCIPAL;
 			break;
 	}
@@ -466,22 +493,22 @@ void state_compare(etats changeState){
 	switch(currentStateManagement){
 		case MENU_PRINCIPAL:
 			switch(changeState){
-					case MENU_PRINCIPAL:
-						break;
-					case PONG_INIT:
-						nextState = changeState;
-						break;
-					case ALPHABET:
-						nextState = changeState;
-						break;
-					case BILLARD_INIT:
-						nextState = changeState;
-						break;
-					case ENDGAME:
-						nextState = changeState;
-						break;
-					default:
-						break;
+				case MENU_PRINCIPAL:
+					break;
+				case PONG_INIT:
+					nextState = changeState;
+					break;
+				case ALPHABET:
+					nextState = changeState;
+					break;
+				case BILLARD_INIT:
+					nextState = changeState;
+					break;
+				case ENDGAME:
+					nextState = changeState;
+					break;
+				default:
+					break;
 			}
 			break;
 

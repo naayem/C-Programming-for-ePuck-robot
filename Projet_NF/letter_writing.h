@@ -10,6 +10,7 @@ void lettre_O (void);
 void lettre_N (void);
 void lettre_D (void);
 void lettre_A (void);
+void ecriture_eliot(void);
 
 /* fonction qui s'occupe de décaler le robot
  * pour ne pas écrire les lettres les unes sur les autres

@@ -23,7 +23,8 @@
 #define FREQ_LETTER_D	 	38  //re
 #define FREQ_LETTER_A	 	41  //re diese
 #define FREQ_END_GAME		43	//mi
-#define MAX_FREQ			44	//we don't analyze after this index to not use resources for nothing
+#define FREQ_ELIOT			45
+#define MAX_FREQ			46	//we don't analyze after this index to not use resources for nothing
 
 #define FREQ_END_GAME_L				(FREQ_END_GAME-1)//2984Hz
 #define FREQ_END_GAME_H				(FREQ_END_GAME+1)//3028Hz
@@ -43,6 +44,8 @@
 #define FREQ_LETTER_D_H				(FREQ_LETTER_D+1)
 #define FREQ_LETTER_A_L				(FREQ_LETTER_A-1)
 #define FREQ_LETTER_A_H				(FREQ_LETTER_A+1)
+#define FREQ_ELIOT_L				(FREQ_ELIOT-1)
+#define FREQ_ELIOT_H				(FREQ_ELIOT+1)
 
 //semaphore
 static BSEMAPHORE_DECL(sendToComputer_sem, TRUE);
@@ -55,6 +58,8 @@ static float micLeft_output[FFT_SIZE];
 static int16_t max_norm_index = -1;
 //contains the new letter to be written, to pass it on to game management
 static lettre letter_state_new = AUCUN;
+//use to make sure we are in the alphabet mode
+static bool mode_alphabet_on = 0;
 
 /*
 *	Simple function used to detect the highest value in a buffer
@@ -89,6 +94,7 @@ void sound_remote(float* data){
 
 	if(max_norm_index >= FREQ_END_GAME_L && max_norm_index <= FREQ_END_GAME_H){
 		max_norm_index = -1;
+		mode_alphabet_on = 0;
 		state_compare(changeState = ENDGAME);
 	}
 	else if(max_norm_index >= FREQ_PONG_INIT_L && max_norm_index <= FREQ_PONG_INIT_H){
@@ -97,6 +103,8 @@ void sound_remote(float* data){
 	}
 	else if(max_norm_index >= FREQ_ALPHABET_L && max_norm_index <= FREQ_ALPHABET_H){
 		max_norm_index = -1;
+		mode_alphabet_on = 1;
+		letter_state_new = AUCUN;
 		state_compare(changeState = ALPHABET);
 	}
 	else if(max_norm_index >= FREQ_BILLARD_INIT_L && max_norm_index <= FREQ_BILLARD_INIT_H){
@@ -105,26 +113,44 @@ void sound_remote(float* data){
 	}
 	else if(max_norm_index >= FREQ_LETTER_M_L && max_norm_index <= FREQ_LETTER_M_H){
 		max_norm_index = -1;
-		letter_state_new = LETTRE_M;
+		if (mode_alphabet_on && letter_state_new==AUCUN){
+			letter_state_new = LETTRE_M;
+		}
 	}
 	else if(max_norm_index >= FREQ_LETTER_O_L && max_norm_index <= FREQ_LETTER_O_H){
 		max_norm_index = -1;
-		letter_state_new = LETTRE_O;
+		if (mode_alphabet_on && letter_state_new==AUCUN){
+			letter_state_new = LETTRE_O;
+		}
 	}
 	else if(max_norm_index >= FREQ_LETTER_N_L && max_norm_index <= FREQ_LETTER_N_H){
 		max_norm_index = -1;
-		letter_state_new = LETTRE_N;
+		mode_alphabet_on = 1;
+		if (mode_alphabet_on && letter_state_new==AUCUN){
+			letter_state_new = LETTRE_N;
+		}
 	}
 	else if(max_norm_index >= FREQ_LETTER_D_L && max_norm_index <= FREQ_LETTER_D_H){
 		max_norm_index = -1;
-		letter_state_new = LETTRE_D;
+		if (mode_alphabet_on && letter_state_new==AUCUN){
+			letter_state_new = LETTRE_D;
+		}
 	}
 	else if(max_norm_index >= FREQ_LETTER_A_L && max_norm_index <= FREQ_LETTER_A_H){
 		max_norm_index = -1;
-		letter_state_new = LETTRE_A;
-	}else {
-	max_norm_index = -1;
-	letter_state_new = AUCUN;
+		if (mode_alphabet_on){
+			letter_state_new = LETTRE_A;
+		}
+	}
+	else if(max_norm_index >= FREQ_ELIOT_L && max_norm_index <= FREQ_ELIOT_H){
+		max_norm_index = -1;
+		if (mode_alphabet_on){
+			letter_state_new = ELIOT;
+		}
+	}
+	else {
+		max_norm_index = -1;
+		letter_state_new = AUCUN;
 	}
 }
 
@@ -217,4 +243,16 @@ lettre get_letter_state(void){
 	lettre letter_state_management = letter_state_new;
 	letter_state_new = AUCUN;
 	return letter_state_management;
+}
+
+_Bool letter_ready (void){
+	if (letter_state_new != AUCUN){
+		mode_alphabet_on = 0;
+		return 1;
+	} else return 0;
+}
+
+void next_letter (void){
+	mode_alphabet_on = 1;
+	letter_state_new = AUCUN;
 }
