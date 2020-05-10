@@ -1,15 +1,13 @@
 #include "ch.h"
 #include "hal.h"
 #include <main.h>
-#include <usbcfg.h>
 #include <chprintf.h>
-
-#include <motors.h>
 #include <audio/microphone.h>
 #include <audio_processing.h>
 #include <communications.h>
 #include <fft.h>
 #include <arm_math.h>
+#include <game_management.h>
 
 #define MIN_VALUE_THRESHOLD	100000
 
@@ -23,7 +21,7 @@
 #define FREQ_LETTER_D	 	38  //re
 #define FREQ_LETTER_A	 	41  //re diese
 #define FREQ_END_GAME		43	//mi
-#define FREQ_ELIOT			45
+#define FREQ_ELIOT			45	//fa
 #define MAX_FREQ			46	//we don't analyze after this index to not use resources for nothing
 
 #define FREQ_END_GAME_L				(FREQ_END_GAME-1)//2984Hz
@@ -47,9 +45,6 @@
 #define FREQ_ELIOT_L				(FREQ_ELIOT-1)
 #define FREQ_ELIOT_H				(FREQ_ELIOT+1)
 
-//semaphore
-static BSEMAPHORE_DECL(sendToComputer_sem, TRUE);
-
 //2 times FFT_SIZE because these arrays contain complex numbers (real + imaginary)
 static float micLeft_cmplx_input[2 * FFT_SIZE];
 //Arrays containing the computed magnitude of the complex numbers
@@ -69,8 +64,6 @@ void sound_remote(float* data){
 	float max_norm = MIN_VALUE_THRESHOLD;
 	int16_t max_norm_index_verify = -1;
 
-	etats changeState = 0; // doit etre =get_currentState!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 	//search for the highest peak
 	if (max_norm_index==-1){
 		for(uint16_t i = MIN_FREQ ; i <= MAX_FREQ ; i++){
@@ -81,6 +74,7 @@ void sound_remote(float* data){
 		}
 		return;
 	}
+	//double verification
 	for(uint16_t j = MIN_FREQ ; j <= MAX_FREQ ; j++){
 		if(data[j] > max_norm){
 			max_norm = data[j];
@@ -95,21 +89,21 @@ void sound_remote(float* data){
 	if(max_norm_index >= FREQ_END_GAME_L && max_norm_index <= FREQ_END_GAME_H){
 		max_norm_index = -1;
 		mode_alphabet_on = 0;
-		state_compare(changeState = ENDGAME);
+		state_compare(ENDGAME);
 	}
 	else if(max_norm_index >= FREQ_PONG_INIT_L && max_norm_index <= FREQ_PONG_INIT_H){
 		max_norm_index = -1;
-		state_compare(changeState = PONG_INIT);
+		state_compare(PONG_INIT);
 	}
 	else if(max_norm_index >= FREQ_ALPHABET_L && max_norm_index <= FREQ_ALPHABET_H){
 		max_norm_index = -1;
 		mode_alphabet_on = 1;
 		letter_state_new = AUCUN;
-		state_compare(changeState = ALPHABET);
+		state_compare(ALPHABET);
 	}
 	else if(max_norm_index >= FREQ_BILLARD_INIT_L && max_norm_index <= FREQ_BILLARD_INIT_H){
 		max_norm_index = -1;
-		state_compare(changeState = BILLARD_INIT);
+		state_compare(BILLARD_INIT);
 	}
 	else if(max_norm_index >= FREQ_LETTER_M_L && max_norm_index <= FREQ_LETTER_M_H){
 		max_norm_index = -1;
@@ -138,13 +132,13 @@ void sound_remote(float* data){
 	}
 	else if(max_norm_index >= FREQ_LETTER_A_L && max_norm_index <= FREQ_LETTER_A_H){
 		max_norm_index = -1;
-		if (mode_alphabet_on){
+		if (mode_alphabet_on && letter_state_new==AUCUN){
 			letter_state_new = LETTRE_A;
 		}
 	}
 	else if(max_norm_index >= FREQ_ELIOT_L && max_norm_index <= FREQ_ELIOT_H){
 		max_norm_index = -1;
-		if (mode_alphabet_on){
+		if (mode_alphabet_on && letter_state_new==AUCUN){
 			letter_state_new = ELIOT;
 		}
 	}
@@ -164,7 +158,6 @@ void sound_remote(float* data){
 *	uint16_t num_samples	Tells how many data we get in total (should always be 640)
 */
 void processAudioData(int16_t *data, uint16_t num_samples){
-
 	/*
 	*
 	*	We get 160 samples per mic every 10ms
@@ -172,9 +165,7 @@ void processAudioData(int16_t *data, uint16_t num_samples){
 	*	1024 samples, then we compute the FFTs.
 	*
 	*/
-
 	static uint16_t nb_samples = 0;
-	static uint8_t mustSend = 0;
 
 	//loop to fill the buffers
 	for(uint16_t i = 0 ; i < num_samples ; i+=4){
@@ -199,7 +190,6 @@ void processAudioData(int16_t *data, uint16_t num_samples){
 		*	This FFT function stores the results in the input buffer given.
 		*	This is an "In Place" function. 
 		*/
-
 		doFFT_optimized(FFT_SIZE, micLeft_cmplx_input);
 
 		/*	Magnitude processing
@@ -211,23 +201,9 @@ void processAudioData(int16_t *data, uint16_t num_samples){
 		*/
 		arm_cmplx_mag_f32(micLeft_cmplx_input, micLeft_output, FFT_SIZE);
 
-		//sends only one FFT result over 10 for 1 mic to not flood the computer
-		//sends to UART3
-		if(mustSend > 8){
-			//signals to send the result to the computer
-			chBSemSignal(&sendToComputer_sem);
-			mustSend = 0;
-		}
 		nb_samples = 0;
-		mustSend++;
-
 		sound_remote(micLeft_output);
 	}
-}
-
-
-void wait_send_to_computer(void){
-	chBSemWait(&sendToComputer_sem);
 }
 
 float* get_audio_buffer_ptr(BUFFER_NAME_t name){
@@ -249,7 +225,7 @@ _Bool letter_ready (void){
 	if (letter_state_new != AUCUN){
 		mode_alphabet_on = 0;
 		return 1;
-	} else return 0;
+	}else return 0;
 }
 
 void next_letter (void){

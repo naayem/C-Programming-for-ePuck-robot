@@ -146,7 +146,7 @@ build/obj/letter_writing.o: letter_writing.c \
  c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\math.h \
  ../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/arm_math.h \
  ../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/core_cm4.h \
- game_management.h letter_writing.h
+ letter_writing.h
 
 ../lib/e-puck2_main-processor/ChibiOS//os/rt/include/ch.h:
 
@@ -445,7 +445,5 @@ c:\users\marc\documents\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-
 ../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/arm_math.h:
 
 ../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/core_cm4.h:
-
-game_management.h:
 
 letter_writing.h:

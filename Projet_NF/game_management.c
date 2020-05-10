@@ -12,16 +12,14 @@
 #include <letter_writing.h>
 
 #define TAILLE_BOITE_PONG_X		35
-#define TAILLE_BOITE_PONG_Y		22
+#define TAILLE_BOITE_PONG_Y		20
 #define ROTATION_180_DEGRE		180*DEG_TO_RAD
 #define ROTATION_135_DEGRE		135*DEG_TO_RAD
 #define QUADRANT_SUP_DROIT		1
 #define QUADRANT_SUP_GAUCHE		2
 #define QUADRANT_INF_GAUCHE		3
 #define QUADRANT_INF_DROIT		4
-#define POINTS_POUR_GAGNER	3
-
-static BSEMAPHORE_DECL(image_needed_sem, TRUE);
+#define POINTS_POUR_GAGNER		3
 
 static mapping ePuck = {0,0,0};
 static etats nextState = MENU_PRINCIPAL;
@@ -36,19 +34,18 @@ static uint8_t case_init = 1;
 
 /**
  * @brief Update la position de mapping du ePuck selon les pas effectués par les moteurs
- *
  */
 void update_map_position(void)
 {
-	float left_steps= (float)left_motor_get_pos();
-	float right_steps= (float)right_motor_get_pos();
+	float left_steps = (float)left_motor_get_pos();
+	float right_steps = (float)right_motor_get_pos();
 
-	float total_current_steps= (left_steps+right_steps)/DEUX;
+	float total_current_steps = (left_steps+right_steps)/2;
 	float steps_difference= (total_current_steps-counted_current_steps);
 
-	counted_current_steps=total_current_steps;
+	counted_current_steps = total_current_steps;
 
-	float dist =steps_to_cm(steps_difference);
+	float dist = steps_to_cm(steps_difference);
 
 	ePuck.x += dist * (float)arm_cos_f32(ePuck.angle);
 	ePuck.y += dist * (float)arm_sin_f32(ePuck.angle);
@@ -59,134 +56,129 @@ void update_map_position(void)
 /**
  * @brief update l'angle de mapping du ePuck selon l'angle de rotation qu'on lui a demandé d'effectuer
  *
- * @param angle_rotation			Angle de rotation a effectué par l'ePuck
- *
+ * @param angle_rotation			Angle de rotation a effectu� par l'ePuck
  */
 void update_map_angle(float angle_rotation)
 {
 	ePuck.angle += angle_rotation;
 
-	while(ePuck.angle > PI)
+	while(ePuck.angle > PI){
 		ePuck.angle -= ( 2*PI );
+		chThdSleepMilliseconds(2);
+	}
 
-	while(ePuck.angle < (-PI))
+	while(ePuck.angle <= (-PI)){
 		ePuck.angle += ( 2*PI );
-
-	angle_rotation = 0;
+		chThdSleepMilliseconds(2);
+	}
 }
 
 /**
  * @brief Effectue des étapes nécessaire au mapping de l'ePuck apres l'interruption d'une trajectoire droite.
- *
  */
 void postAvance_init(void){
 	//chSysLock();
 	update_map_position();
-	counted_current_steps = ZERO;
-	motors_stop_pos();
+	counted_current_steps = 0;
 	//chSysUnlock();
+	motors_stop_pos();
 }
-
 
 /**
  * @brief Execute un des trois ordres possibles qui sont ARRET, TOURNE et AVANCE. Gere l'execution de l'ordre et le mapping en fonction.
  *
  * @param next_order			Ordres de déplacement.
  * @param angle_rotation	 	Angle de rotation a effectuer, evalué cas de rotation TOURNE. Non evalué en mode ARRET ou AVANCE.
- *
- *
  */
 void nouvel_ordre(order next_order, float angle_rotation){
-
-	order previous_order = action;
-	switch(previous_order){
-			case ARRET:
-				switch(next_order){
-					case AVANCE:
-						if(right_motor_get_pos() || left_motor_get_pos()){
-							chprintf((BaseSequentialStream *)&SD3,"error arret positon non nulle\n previous=%d , next=%d\n", previous_order, next_order);
-							motors_stop_pos();
-						}
-						action=AVANCE;
-						moteurs_avance();
-						break;
-
-					case TOURNE:
-						action = TOURNE;
-						if(right_motor_get_pos() || left_motor_get_pos()){
-							chprintf((BaseSequentialStream *)&SD3,"error arret positon non nulle\n previous=%d , next=%d\n", previous_order, next_order);
-						}
-						moteurs_tourne(angle_rotation);
-						action = ARRET;
-						break;
-
-					case ARRET:
-						if(right_motor_get_pos() || left_motor_get_pos()){
-							chprintf((BaseSequentialStream *)&SD3,"error arret positon non nulle\n previous=%d , next=%d\n", previous_order, next_order);
-						}
-						action = next_order;
+	switch(action){
+		case ARRET:
+			switch(next_order){
+				case AVANCE:
+					if(right_motor_get_pos() || left_motor_get_pos()){
+						chprintf((BaseSequentialStream *)&SD3,"error arret positon non nulle\n previous=%d , next=%d\n", action, next_order);
 						motors_stop_pos();
-						break;
+					}
+					action=AVANCE;
+					moteurs_avance();
+					break;
 
-					default:
-						chprintf((BaseSequentialStream *)&SD3,"ERROR operators not coorect \n!!! previous=%d , next=%d\n", previous_order, next_order);
-				}
-				break;
+				case TOURNE:
+					if(right_motor_get_pos() || left_motor_get_pos()){
+						chprintf((BaseSequentialStream *)&SD3,"error arret positon non nulle\n previous=%d , next=%d\n", action, next_order);
+					}
+					action = TOURNE;
+					moteurs_tourne(angle_rotation);
+					action = ARRET;
+					break;
 
-			case AVANCE:
-				motors_stop_speed();
-				switch(next_order){
-					case AVANCE:
-						action=next_order;
-						postAvance_init();
-						moteurs_avance();
-						break;
+				case ARRET:
+					if(right_motor_get_pos() || left_motor_get_pos()){
+						chprintf((BaseSequentialStream *)&SD3,"error arret positon non nulle\n previous=%d , next=%d\n", action, next_order);
+					}
+					action = ARRET;
+					motors_stop_pos();
+					break;
 
-					case TOURNE:
-						motors_stop_speed();
-						action=next_order;
-						postAvance_init();
-						moteurs_tourne(angle_rotation);
-						action = ARRET;
-						break;
-
-					case ARRET:
-						motors_stop_speed();
-						action=next_order;
-						postAvance_init();
-						break;
-					default:
-						chprintf((BaseSequentialStream *)&SD3,"ERROR operators not coorect \n!!! previous=%d , next=%d\n", previous_order, next_order);
-				}
-				break;
-
-			case TOURNE:
-				switch(next_order){
-					case AVANCE:
-						break;
-					case TOURNE:
-						break;
-					case ARRET:
-						break;
-					default:
-						chprintf((BaseSequentialStream *)&SD3,"ERROR operators not coorect \n!!! previous=%d , next=%d\n", previous_order, next_order);
-				}
-				break;
 				default:
-					chprintf((BaseSequentialStream *)&SD3,"ERROR operators not coorect \n!!! previous=%d , next=%d\n", previous_order, next_order);
-		}
+					chprintf((BaseSequentialStream *)&SD3,"ERROR operators not coorect \n!!! previous=%d , next=%d\n", action, next_order);
+					break;
+			}
+			break;
+
+		case AVANCE:
+			motors_stop_speed();
+			switch(next_order){
+				case AVANCE:
+					action=next_order;
+					postAvance_init();
+					moteurs_avance();
+					break;
+
+				case TOURNE:
+					postAvance_init();
+					action=next_order;
+					moteurs_tourne(angle_rotation);
+					action = ARRET;
+					break;
+
+				case ARRET:
+					postAvance_init();
+					action=next_order;
+					break;
+
+				default:
+					chprintf((BaseSequentialStream *)&SD3,"ERROR operators not coorect \n!!! previous=%d , next=%d\n", action, next_order);
+					break;
+			}
+			break;
+
+		case TOURNE:
+			switch(next_order){
+				case AVANCE:
+					break;
+				case TOURNE:
+					break;
+				case ARRET:
+					break;
+				default:
+					chprintf((BaseSequentialStream *)&SD3,"ERROR operators not coorect \n!!! previous=%d , next=%d\n", action, next_order);
+					break;
+			}
+			break;
+
+		default:
+			chprintf((BaseSequentialStream *)&SD3,"ERROR operators not coorect \n!!! previous=%d , next=%d\n", action, next_order);
+			break;
+	}
 }
 
-
-
 void leds_management(uint8_t led1,uint8_t led3,uint8_t led5 ,uint8_t led7){
-
 					palWritePad(GPIOD, GPIOD_LED1, led1 ? 0 : 1);
 					palWritePad(GPIOD, GPIOD_LED3, led3 ? 0 : 1);
 					palWritePad(GPIOD, GPIOD_LED5, led5 ? 0 : 1);
 					palWritePad(GPIOD, GPIOD_LED7, led7 ? 0 : 1);
 }
-
 
 /**
  * @brief Envoi l'ePuck en direction de sa position initial en mode PONG et envoi l'ePuck a sa position initial en mode BILLARD et ALPHABET.
@@ -218,28 +210,33 @@ void go_home(void){
 		return;
 	}
 
-	switch(num_quadrant)
-	{
-	case QUADRANT_SUP_DROIT:
-		angle_rotation = acos(coord_x/norme)-PI;
-		break;
-	case QUADRANT_SUP_GAUCHE:
-		angle_rotation = acos(coord_x/norme)-PI;
-		break;
-	case QUADRANT_INF_GAUCHE:
-		angle_rotation = -acos(coord_x/norme)+PI;
-		break;
-	case QUADRANT_INF_DROIT:
-		angle_rotation = -acos(coord_x/norme)+PI;
-		break;
+	switch(num_quadrant){
+		case QUADRANT_SUP_DROIT:
+			angle_rotation = acos(coord_x/norme)-PI;
+			break;
+		case QUADRANT_SUP_GAUCHE:
+			angle_rotation = acos(coord_x/norme)-PI;
+			break;
+		case QUADRANT_INF_GAUCHE:
+			angle_rotation = -acos(coord_x/norme)+PI;
+			break;
+		case QUADRANT_INF_DROIT:
+			angle_rotation = -acos(coord_x/norme)+PI;
+			break;
+		default:
+			break;
 	}
 
 	angle_rotation -= ePuck.angle;
 
-	while(angle_rotation > PI)
+	while(angle_rotation > PI){
 		angle_rotation -= (2*PI);
-	while(angle_rotation < (-PI))
+		chThdSleepMilliseconds(2);
+	}
+	while(angle_rotation < (-PI)){
 		angle_rotation += (2*PI);
+		chThdSleepMilliseconds(2);
+	}
 
 
 	if (norme<ERROR_THRESHOLD && ePuck.angle==0)
@@ -248,8 +245,12 @@ void go_home(void){
 	nouvel_ordre(TOURNE, angle_rotation);
 	nouvel_ordre(AVANCE, 0);
 
-	norme = cm_to_steps(norme);
-	return;
+	if ((point_joueur_avant >= POINTS_POUR_GAGNER) || (point_joueur_arriere >= POINTS_POUR_GAGNER)){
+		nouvel_ordre(ARRET, 0);
+		action = AVANCE;
+		motors_set_position(norme, norme, VITESSE_GENERALE, VITESSE_GENERALE);
+		nouvel_ordre(TOURNE, -ePuck.angle);
+	}
 }
 
 
@@ -261,7 +262,7 @@ void boite_virtuelle(void){
 		if(ePuck.angle>0 && ePuck.angle<=PI/2){
 			nouvel_ordre(TOURNE, -2*ePuck.angle);
 			nouvel_ordre(AVANCE, 0);
-		}else if(ePuck.angle>PI/2 && ePuck.angle<PI){
+		}else if(ePuck.angle>PI/2 && ePuck.angle<=PI){
 			nouvel_ordre(TOURNE, 2*(PI-ePuck.angle));
 			nouvel_ordre(AVANCE, 0);
 		}
@@ -293,18 +294,18 @@ void sortie_gagnant(void){
 
 		//si un des joueurs poss�dent 3 points la partie se termine
 		if (point_joueur_avant >= POINTS_POUR_GAGNER){
-			nouvel_ordre(ARRET, 0);
 			set_led(LED3, 1);
 			set_body_led(1);
-			chThdSleepMilliseconds(500);
+			go_home();
+			chThdSleepMilliseconds(1000);
 			nextState = ENDGAME;
 			return;
 		}
 		if (point_joueur_arriere >= POINTS_POUR_GAGNER){
-			nouvel_ordre(ARRET, 0);
 			set_led(LED7, 1);
 			set_body_led(1);
-			chThdSleepMilliseconds(500);
+			go_home();
+			chThdSleepMilliseconds(1000);
 			nextState = ENDGAME;
 			return;
 		}
@@ -339,7 +340,7 @@ static THD_FUNCTION(ThdMapping, arg) {
 			update_map_position();
 		}
 		//chprintf((BaseSequentialStream *)&SD3,"update x=%f .... y=%f .... angle=%f  \n", ePuck.x, ePuck.y, ePuck.angle);
-		chThdSleepUntilWindowed(time, time + MS2ST(10));
+		chThdSleepUntilWindowed(time, time + MS2ST(2));
     }
 }
 
@@ -453,6 +454,7 @@ void management(){
 			//initialization of variables
 			//activate threads
 			case_init = 1;
+			set_body_led(1);
 			leds_management(0,0,0,1);
 			currentStateManagement = BILLARD;
 			nextState = BILLARD;
@@ -460,7 +462,6 @@ void management(){
 
 		case BILLARD:
 			if (case_init){
-			   set_body_led(1);
 			   leds_management(0,1,0,0);
 			}
 			case_init = 0;
@@ -479,6 +480,8 @@ void management(){
 			leds_management(0,0,0,0);
 			lettre_state = AUCUN;
 			case_init = 1;
+
+			nextState = MENU_PRINCIPAL;
 			currentStateManagement = MENU_PRINCIPAL;
 			break;
 	}
@@ -493,8 +496,6 @@ void state_compare(etats changeState){
 	switch(currentStateManagement){
 		case MENU_PRINCIPAL:
 			switch(changeState){
-				case MENU_PRINCIPAL:
-					break;
 				case PONG_INIT:
 					nextState = changeState;
 					break;
@@ -540,10 +541,6 @@ void state_compare(etats changeState){
 				default:
 					break;
 			}
-			break;
-
-		case ENDGAME:
-			nextState = changeState;
 			break;
 
 		default:

@@ -1,6 +1,7 @@
 #include <motors_processing.h>
 
-#define VITESSE_GENERALE  12
+#include <main.h>
+#include <game_management.h>
 
 void motors_set_position(float position_l, float position_r, float speed_l, float speed_r){
 	position_l = cm_to_steps(position_l);
@@ -59,6 +60,5 @@ void moteurs_tourne(float angle_rotation )
 	else v_rot = -VITESSE_ROT;
 
 	motors_set_position(p_rotation, p_rotation, -v_rot, v_rot);
-	//motors_stop_pos();
 	update_map_angle(angle_rotation);
 }
