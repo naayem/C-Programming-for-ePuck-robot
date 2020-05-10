@@ -11,8 +11,7 @@
 
 #define MIN_VALUE_THRESHOLD	100000
 
-#define MIN_FREQ			25	//we don't analyze before this index to not use resources for nothing
-#define FREQ_BILLARD_INIT	26	//sol
+#define MIN_FREQ			26	//we don't analyze before this index to not use resources for nothing
 #define FREQ_PONG_INIT		28	//sol diese, la
 #define FREQ_ALPHABET		30	//la diese
 #define FREQ_LETTER_M		32	//si
@@ -22,7 +21,7 @@
 #define FREQ_LETTER_A	 	41  //re diese
 #define FREQ_END_GAME		43	//mi
 #define FREQ_ELIOT			45	//fa
-#define MAX_FREQ			46	//we don't analyze after this index to not use resources for nothing
+#define MAX_FREQ			47	//we don't analyze after this index to not use resources for nothing
 
 #define FREQ_END_GAME_L				(FREQ_END_GAME-1)//2984Hz
 #define FREQ_END_GAME_H				(FREQ_END_GAME+1)//3028Hz
@@ -30,8 +29,6 @@
 #define FREQ_PONG_INIT_H			(FREQ_PONG_INIT+1)
 #define FREQ_ALPHABET_L				(FREQ_ALPHABET-1)
 #define FREQ_ALPHABET_H				(FREQ_ALPHABET+1)
-#define FREQ_BILLARD_INIT_L			(FREQ_BILLARD_INIT-1)
-#define FREQ_BILLARD_INIT_H			(FREQ_BILLARD_INIT+1)
 #define FREQ_LETTER_M_L				(FREQ_LETTER_M-1)
 #define FREQ_LETTER_M_H				(FREQ_LETTER_M+1)
 #define FREQ_LETTER_O_L				(FREQ_LETTER_O-1)
@@ -101,10 +98,6 @@ void sound_remote(float* data){
 		letter_state_new = AUCUN;
 		state_compare(ALPHABET);
 	}
-	else if(max_norm_index >= FREQ_BILLARD_INIT_L && max_norm_index <= FREQ_BILLARD_INIT_H){
-		max_norm_index = -1;
-		state_compare(BILLARD_INIT);
-	}
 	else if(max_norm_index >= FREQ_LETTER_M_L && max_norm_index <= FREQ_LETTER_M_H){
 		max_norm_index = -1;
 		if (mode_alphabet_on && letter_state_new==AUCUN){
@@ -119,7 +112,6 @@ void sound_remote(float* data){
 	}
 	else if(max_norm_index >= FREQ_LETTER_N_L && max_norm_index <= FREQ_LETTER_N_H){
 		max_norm_index = -1;
-		mode_alphabet_on = 1;
 		if (mode_alphabet_on && letter_state_new==AUCUN){
 			letter_state_new = LETTRE_N;
 		}

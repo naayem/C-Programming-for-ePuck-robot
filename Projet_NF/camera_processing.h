@@ -10,7 +10,10 @@ typedef enum posLine{
 	L_GAUCHE
 } posLine;
 
+//redonne la position de la ligne en Pixel sur une échelle de 0 - 600
 uint16_t get_line_position(void);
+
+//fonction qui capture et traite une image
 void process_image_start(void);
 
 /* fonction qui renvoie l'emplacement (droite/gauche) de la ligne noire

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -28,7 +28,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
   25              	CaptureImage:
   26              	.LFB261:
   27              		.file 1 "camera_processing.c"
-  28              		.loc 1 109 0
+  28              		.loc 1 108 0
   29              		.cfi_startproc
   30              		@ Volatile: function does not return.
   31              		@ args = 0, pretend = 0, frame = 8
@@ -45,7 +45,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
   42 0002 234C     		ldr	r4, .L8
   43              	.LBE63:
   44              	.LBE62:
-  45              		.loc 1 109 0
+  45              		.loc 1 108 0
   46 0004 234A     		ldr	r2, .L8+4
   47              	.LBB66:
   48              	.LBB64:
@@ -54,29 +54,29 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
   51 0008 2349     		ldr	r1, .L8+8
   52              	.LBE64:
   53              	.LBE66:
-  54              		.loc 1 109 0
+  54              		.loc 1 108 0
   55 000a 1668     		ldr	r6, [r2]
   56              	.LBB67:
   57              	.LBB65:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 2
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 2
 
 
   58              		.loc 2 135 0
   59 000c 9961     		str	r1, [r3, #24]
   60              	.LBE65:
   61              	.LBE67:
-  62              		.loc 1 109 0
+  62              		.loc 1 108 0
   63 000e 86B0     		sub	sp, sp, #24
   64              		.cfi_def_cfa_offset 32
-  65              		.loc 1 115 0
+  65              		.loc 1 114 0
   66 0010 0223     		movs	r3, #2
   67 0012 2025     		movs	r5, #32
   68 0014 0A22     		movs	r2, #10
   69 0016 0021     		movs	r1, #0
   70 0018 0093     		str	r3, [sp]
-  71              		.loc 1 109 0
+  71              		.loc 1 108 0
   72 001a 0596     		str	r6, [sp, #20]
-  73              		.loc 1 115 0
+  73              		.loc 1 114 0
   74 001c 4FF42073 		mov	r3, #640
   75 0020 CDE90155 		strd	r5, r5, [sp, #4]
   76 0024 3020     		movs	r0, #48
@@ -93,13 +93,13 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
   87              	.LBE70:
   88              	.LBE69:
   89              	.LBE68:
-  90              		.loc 1 115 0
+  90              		.loc 1 114 0
   91 002a FFF7FEFF 		bl	po8030_advanced_config
   92              	.LVL2:
-  93              		.loc 1 116 0
+  93              		.loc 1 115 0
   94 002e FFF7FEFF 		bl	dcmi_enable_double_buffering
   95              	.LVL3:
-  96              		.loc 1 117 0
+  96              		.loc 1 116 0
   97 0032 0020     		movs	r0, #0
   98 0034 FFF7FEFF 		bl	dcmi_set_capture_mode
   99              	.LVL4:
@@ -114,11 +114,11 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  108              	.LBE76:
  109              	.LBE86:
  110              	.LBE89:
- 111              		.loc 1 118 0
+ 111              		.loc 1 117 0
  112 003a FFF7FEFF 		bl	dcmi_prepare
  113              	.LVL5:
  114 003e 13E0     		b	.L4
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 3
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 3
 
 
  115              	.LVL6:
@@ -170,15 +170,15 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  161              	.LBE79:
  162              	.LBE87:
  163              	.LBE90:
- 164              		.loc 1 122 0 discriminator 1
+ 164              		.loc 1 121 0 discriminator 1
  165 0068 FFF7FEFF 		bl	dcmi_capture_start
  166              	.LVL12:
- 167              		.loc 1 124 0 discriminator 1
+ 167              		.loc 1 123 0 discriminator 1
  168 006c FFF7FEFF 		bl	wait_image_ready
  169              	.LVL13:
  170              	.LBB91:
  171              	.LBB88:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 4
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 4
 
 
  172              	.LBB80:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  226              		.align	1
  227              		.p2align 4,,15
  228              		.global	extract_line_width
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 5
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 5
 
 
  229              		.syntax unified
@@ -248,7 +248,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  233              		.type	extract_line_width, %function
  234              	extract_line_width:
  235              	.LFB260:
- 236              		.loc 1 28 0
+ 236              		.loc 1 27 0
  237              		.cfi_startproc
  238              		@ args = 0, pretend = 0, frame = 8
  239              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -263,132 +263,132 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  248 0002 344C     		ldr	r4, .L39
  249 0004 83B0     		sub	sp, sp, #12
  250              		.cfi_def_cfa_offset 32
- 251              		.loc 1 28 0
+ 251              		.loc 1 27 0
  252 0006 2368     		ldr	r3, [r4]
  253 0008 0193     		str	r3, [sp, #4]
  254              	.LVL20:
  255 000a 00F27F25 		addw	r5, r0, #639
  256 000e 431E     		subs	r3, r0, #1
- 257              		.loc 1 32 0
+ 257              		.loc 1 31 0
  258 0010 0022     		movs	r2, #0
  259              	.LVL21:
  260              	.L11:
  261              	.LBB92:
- 262              		.loc 1 38 0 discriminator 3
+ 262              		.loc 1 37 0 discriminator 3
  263 0012 13F8011F 		ldrb	r1, [r3, #1]!	@ zero_extendqisi2
- 264              		.loc 1 37 0 discriminator 3
+ 264              		.loc 1 36 0 discriminator 3
  265 0016 9D42     		cmp	r5, r3
- 266              		.loc 1 38 0 discriminator 3
+ 266              		.loc 1 37 0 discriminator 3
  267 0018 0A44     		add	r2, r2, r1
  268              	.LVL22:
- 269              		.loc 1 37 0 discriminator 3
+ 269              		.loc 1 36 0 discriminator 3
  270 001a FAD1     		bne	.L11
  271              	.LBE92:
- 272              		.loc 1 40 0
+ 272              		.loc 1 39 0
  273 001c 2E4B     		ldr	r3, .L39+4
  274 001e 0578     		ldrb	r5, [r0]	@ zero_extendqisi2
  275 0020 A3FB0232 		umull	r3, r2, r3, r2
  276              	.LVL23:
  277 0024 520A     		lsrs	r2, r2, #9
  278              	.LVL24:
- 279              		.loc 1 30 0
+ 279              		.loc 1 29 0
  280 0026 0021     		movs	r1, #0
- 281              		.loc 1 45 0
+ 281              		.loc 1 44 0
  282 0028 40F27A26 		movw	r6, #634
  283              	.LVL25:
  284              	.L12:
  285 002c 4B1C     		adds	r3, r1, #1
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 6
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 6
 
 
- 286              		.loc 1 49 0
+ 286              		.loc 1 48 0
  287 002e 9542     		cmp	r5, r2
  288 0030 9BB2     		uxth	r3, r3
  289 0032 1FD9     		bls	.L14
  290              	.L37:
- 291              		.loc 1 49 0 is_stmt 0 discriminator 1
+ 291              		.loc 1 48 0 is_stmt 0 discriminator 1
  292 0034 4518     		adds	r5, r0, r1
  293 0036 6D79     		ldrb	r5, [r5, #5]	@ zero_extendqisi2
  294 0038 9542     		cmp	r5, r2
  295 003a 1BD2     		bcs	.L14
  296              	.LVL26:
- 297              		.loc 1 57 0 is_stmt 1
+ 297              		.loc 1 56 0 is_stmt 1
  298 003c B342     		cmp	r3, r6
  299 003e 25D8     		bhi	.L13
- 300              		.loc 1 57 0 is_stmt 0 discriminator 1
+ 300              		.loc 1 56 0 is_stmt 0 discriminator 1
  301 0040 21B3     		cbz	r1, .L13
  302 0042 03F1FF3C 		add	ip, r3, #-1
  303 0046 8444     		add	ip, ip, r0
  304              	.LVL27:
  305              	.L22:
- 306              		.loc 1 63 0 is_stmt 1
+ 306              		.loc 1 62 0 is_stmt 1
  307 0048 1CF8015F 		ldrb	r5, [ip, #1]!	@ zero_extendqisi2
  308 004c 9542     		cmp	r5, r2
  309 004e 9FB2     		uxth	r7, r3
  310 0050 15D9     		bls	.L17
- 311              		.loc 1 63 0 is_stmt 0 discriminator 1
+ 311              		.loc 1 62 0 is_stmt 0 discriminator 1
  312 0052 1CF805EC 		ldrb	lr, [ip, #-5]	@ zero_extendqisi2
  313 0056 9645     		cmp	lr, r2
  314 0058 11D2     		bcs	.L17
  315              	.LVL28:
- 316              		.loc 1 82 0 is_stmt 1
+ 316              		.loc 1 81 0 is_stmt 1
  317 005a A7EB010C 		sub	ip, r7, r1
  318 005e BCF1270F 		cmp	ip, #39
  319 0062 3B46     		mov	r3, r7
  320 0064 2ADC     		bgt	.L36
  321              	.LVL29:
- 322              		.loc 1 45 0
+ 322              		.loc 1 44 0
  323 0066 B742     		cmp	r7, r6
  324 0068 10D8     		bhi	.L13
  325 006a 3946     		mov	r1, r7
  326 006c 4B1C     		adds	r3, r1, #1
- 327              		.loc 1 49 0
+ 327              		.loc 1 48 0
  328 006e 9542     		cmp	r5, r2
  329 0070 9BB2     		uxth	r3, r3
  330 0072 DFD8     		bhi	.L37
  331              	.LVL30:
  332              	.L14:
- 333              		.loc 1 45 0 discriminator 1
+ 333              		.loc 1 44 0 discriminator 1
  334 0074 B342     		cmp	r3, r6
  335 0076 09D8     		bhi	.L13
  336 0078 C55C     		ldrb	r5, [r0, r3]	@ zero_extendqisi2
  337              	.LVL31:
- 338              		.loc 1 45 0 is_stmt 0
+ 338              		.loc 1 44 0 is_stmt 0
  339 007a 1946     		mov	r1, r3
  340 007c D6E7     		b	.L12
  341              	.LVL32:
  342              	.L17:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 7
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 7
 
 
  343 007e 0137     		adds	r7, r7, #1
  344 0080 BFB2     		uxth	r7, r7
  345              	.LVL33:
- 346              		.loc 1 61 0 is_stmt 1
+ 346              		.loc 1 60 0 is_stmt 1
  347 0082 B7F5207F 		cmp	r7, #640
  348 0086 03F10103 		add	r3, r3, #1
  349 008a DDD1     		bne	.L22
  350              	.LVL34:
  351              	.L13:
- 352              		.loc 1 94 0
+ 352              		.loc 1 93 0
  353 008c 134B     		ldr	r3, .L39+8
  354 008e 1888     		ldrh	r0, [r3]
  355              	.LVL35:
  356              	.L25:
- 357              		.loc 1 101 0
+ 357              		.loc 1 100 0
  358 0090 DFED136A 		vldr.32	s13, .L39+12
- 359              		.loc 1 106 0
+ 359              		.loc 1 105 0
  360 0094 019A     		ldr	r2, [sp, #4]
  361 0096 2368     		ldr	r3, [r4]
- 362              		.loc 1 101 0
+ 362              		.loc 1 100 0
  363 0098 07EE900A 		vmov	s15, r0	@ int
  364 009c F8EEE77A 		vcvt.f32.s32	s15, s15
  365 00a0 86EEA77A 		vdiv.f32	s14, s13, s15
  366 00a4 F3EE097A 		vmov.f32	s15, #2.5e+1
- 367              		.loc 1 102 0
+ 367              		.loc 1 101 0
  368 00a8 B4EE677A 		vcmp.f32	s14, s15
  369 00ac F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 370              		.loc 1 106 0
+ 370              		.loc 1 105 0
  371 00b0 C8BF     		it	gt
  372 00b2 3E20     		movgt	r0, #62
  373              	.LVL36:
@@ -402,30 +402,30 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  381              	.LVL37:
  382              	.L36:
  383              		.cfi_restore_state
- 384              		.loc 1 96 0
+ 384              		.loc 1 95 0
  385 00bc 781A     		subs	r0, r7, r1
  386              	.LVL38:
- 387              		.loc 1 97 0
+ 387              		.loc 1 96 0
  388 00be 0B44     		add	r3, r3, r1
  389 00c0 084A     		ldr	r2, .L39+16
  390              	.LVL39:
- 391              		.loc 1 96 0
+ 391              		.loc 1 95 0
  392 00c2 0649     		ldr	r1, .L39+8
  393 00c4 80B2     		uxth	r0, r0
  394              	.LVL40:
- 395              		.loc 1 97 0
+ 395              		.loc 1 96 0
  396 00c6 5B10     		asrs	r3, r3, #1
- 397              		.loc 1 96 0
+ 397              		.loc 1 95 0
  398 00c8 0880     		strh	r0, [r1]	@ movhi
- 399              		.loc 1 97 0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 8
+ 399              		.loc 1 96 0
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 8
 
 
  400 00ca 1380     		strh	r3, [r2]	@ movhi
  401 00cc E0E7     		b	.L25
  402              	.LVL41:
  403              	.L38:
- 404              		.loc 1 106 0
+ 404              		.loc 1 105 0
  405 00ce FFF7FEFF 		bl	__stack_chk_fail
  406              	.LVL42:
  407              	.L40:
@@ -449,7 +449,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  425              		.type	ProcessImage, %function
  426              	ProcessImage:
  427              	.LFB262:
- 428              		.loc 1 132 0
+ 428              		.loc 1 131 0
  429              		.cfi_startproc
  430              		@ args = 0, pretend = 0, frame = 648
  431              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -471,28 +471,28 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  447 0004 384C     		ldr	r4, .L51
  448              	.LBE127:
  449              	.LBE126:
- 450              		.loc 1 132 0
+ 450              		.loc 1 131 0
  451 0006 394B     		ldr	r3, .L51+4
  452              	.LBB129:
  453              	.LBB128:
  454              		.loc 2 135 0
  455 0008 A269     		ldr	r2, [r4, #24]
  456 000a 3949     		ldr	r1, .L51+8
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 9
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 9
 
 
  457 000c 9161     		str	r1, [r2, #24]
  458              	.LBE128:
  459              	.LBE129:
- 460              		.loc 1 132 0
+ 460              		.loc 1 131 0
  461 000e ADF5237D 		sub	sp, sp, #652
  462              		.cfi_def_cfa_offset 688
- 463              		.loc 1 141 0
+ 463              		.loc 1 140 0
  464 0012 0DF1040A 		add	r10, sp, #4
- 465              		.loc 1 132 0
+ 465              		.loc 1 131 0
  466 0016 1B68     		ldr	r3, [r3]
  467 0018 A193     		str	r3, [sp, #644]
- 468              		.loc 1 141 0
+ 468              		.loc 1 140 0
  469 001a 5046     		mov	r0, r10
  470              	.LVL44:
  471 001c 4FF42072 		mov	r2, #640
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  511              	.LBB150:
  512              	.LBB149:
  513              	.LBB148:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 10
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 10
 
 
  514              	.LBB147:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  568              	@ 0 "" 2
  569              	.LVL53:
  570              		.thumb
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 11
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 11
 
 
  571              		.syntax unified
@@ -615,7 +615,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  582 0066 2448     		ldr	r0, .L51+16
  583              	.LBE157:
  584              	.LBE156:
- 585              		.loc 1 145 0
+ 585              		.loc 1 144 0
  586 0068 CDF800B0 		str	fp, [sp]
  587              	.LVL54:
  588              	.LBB159:
@@ -625,40 +625,40 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  592              	.LVL55:
  593              	.LBE158:
  594              	.LBE159:
- 595              		.loc 1 150 0
+ 595              		.loc 1 149 0
  596 0070 FFF7FEFF 		bl	dcmi_get_last_image_ptr
  597              	.LVL56:
  598 0074 0023     		movs	r3, #0
  599              	.LVL57:
  600              	.L43:
  601              	.LBB160:
- 602              		.loc 1 156 0 discriminator 3
+ 602              		.loc 1 155 0 discriminator 3
  603 0076 C25C     		ldrb	r2, [r0, r3]	@ zero_extendqisi2
  604 0078 C3F34E01 		ubfx	r1, r3, #1, #15
  605 007c 0233     		adds	r3, r3, #2
  606              	.LVL58:
  607 007e 22F00702 		bic	r2, r2, #7
- 608              		.loc 1 153 0 discriminator 3
+ 608              		.loc 1 152 0 discriminator 3
  609 0082 B3F5A06F 		cmp	r3, #1280
- 610              		.loc 1 156 0 discriminator 3
+ 610              		.loc 1 155 0 discriminator 3
  611 0086 0AF80120 		strb	r2, [r10, r1]
- 612              		.loc 1 153 0 discriminator 3
+ 612              		.loc 1 152 0 discriminator 3
  613 008a F4D1     		bne	.L43
  614              	.LBE160:
- 615              		.loc 1 160 0
+ 615              		.loc 1 159 0
  616 008c 5046     		mov	r0, r10
  617              	.LVL59:
  618 008e FFF7FEFF 		bl	extract_line_width
  619              	.LVL60:
- 620              		.loc 1 162 0
+ 620              		.loc 1 161 0
  621 0092 009B     		ldr	r3, [sp]
  622 0094 0099     		ldr	r1, [sp]
- 623              		.loc 1 160 0
+ 623              		.loc 1 159 0
  624 0096 A8F80000 		strh	r0, [r8]	@ movhi
- 625              		.loc 1 162 0
+ 625              		.loc 1 161 0
  626 009a 6431     		adds	r1, r1, #100
  627 009c 1846     		mov	r0, r3
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 12
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 12
 
 
  628 009e FFF7FEFF 		bl	chThdSleepUntilWindowed
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  682 00c6 A342     		cmp	r3, r4
  683 00c8 07D0     		beq	.L45
  684 00ca A269     		ldr	r2, [r4, #24]
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 13
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 13
 
 
  685 00cc 9B68     		ldr	r3, [r3, #8]
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  739              		.global	get_line_position
  740              		.syntax unified
  741              		.thumb
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 14
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 14
 
 
  742              		.thumb_func
@@ -786,7 +786,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  744              		.type	get_line_position, %function
  745              	get_line_position:
  746              	.LFB263:
- 747              		.loc 1 167 0
+ 747              		.loc 1 166 0
  748              		.cfi_startproc
  749              		@ args = 0, pretend = 0, frame = 8
  750              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -794,18 +794,18 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  752              		.cfi_def_cfa_offset 4
  753              		.cfi_offset 14, -4
  754 0002 074B     		ldr	r3, .L57
- 755              		.loc 1 168 0
+ 755              		.loc 1 167 0
  756 0004 0749     		ldr	r1, .L57+4
- 757              		.loc 1 167 0
+ 757              		.loc 1 166 0
  758 0006 1A68     		ldr	r2, [r3]
- 759              		.loc 1 169 0
+ 759              		.loc 1 168 0
  760 0008 0888     		ldrh	r0, [r1]
- 761              		.loc 1 167 0
+ 761              		.loc 1 166 0
  762 000a 83B0     		sub	sp, sp, #12
  763              		.cfi_def_cfa_offset 16
- 764              		.loc 1 167 0
+ 764              		.loc 1 166 0
  765 000c 0192     		str	r2, [sp, #4]
- 766              		.loc 1 169 0
+ 766              		.loc 1 168 0
  767 000e 019A     		ldr	r2, [sp, #4]
  768 0010 1B68     		ldr	r3, [r3]
  769 0012 9A42     		cmp	r2, r3
@@ -838,10 +838,10 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  796              		.type	process_image_start, %function
  797              	process_image_start:
  798              	.LFB264:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 15
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 15
 
 
- 799              		.loc 1 171 0
+ 799              		.loc 1 170 0
  800              		.cfi_startproc
  801              		@ args = 0, pretend = 0, frame = 8
  802              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -851,26 +851,26 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  806              		.cfi_offset 5, -8
  807              		.cfi_offset 14, -4
  808 0002 0E4C     		ldr	r4, .L63
- 809              		.loc 1 172 0
+ 809              		.loc 1 171 0
  810 0004 0E4B     		ldr	r3, .L63+4
- 811              		.loc 1 171 0
+ 811              		.loc 1 170 0
  812 0006 2268     		ldr	r2, [r4]
- 813              		.loc 1 172 0
+ 813              		.loc 1 171 0
  814 0008 0E48     		ldr	r0, .L63+8
- 815              		.loc 1 171 0
+ 815              		.loc 1 170 0
  816 000a 85B0     		sub	sp, sp, #20
  817              		.cfi_def_cfa_offset 32
- 818              		.loc 1 172 0
+ 818              		.loc 1 171 0
  819 000c 0025     		movs	r5, #0
- 820              		.loc 1 171 0
+ 820              		.loc 1 170 0
  821 000e 0392     		str	r2, [sp, #12]
- 822              		.loc 1 172 0
+ 822              		.loc 1 171 0
  823 0010 4FF4AF61 		mov	r1, #1400
  824 0014 4022     		movs	r2, #64
  825 0016 0095     		str	r5, [sp]
  826 0018 FFF7FEFF 		bl	chThdCreateStatic
  827              	.LVL75:
- 828              		.loc 1 173 0
+ 828              		.loc 1 172 0
  829 001c 0A4B     		ldr	r3, .L63+12
  830 001e 0095     		str	r5, [sp]
  831 0020 4022     		movs	r2, #64
@@ -878,7 +878,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  833 0024 4FF45071 		mov	r1, #832
  834 0028 FFF7FEFF 		bl	chThdCreateStatic
  835              	.LVL76:
- 836              		.loc 1 174 0
+ 836              		.loc 1 173 0
  837 002c 039A     		ldr	r2, [sp, #12]
  838 002e 2368     		ldr	r3, [r4]
  839 0030 9A42     		cmp	r2, r3
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  853 003c 00000000 		.word	__stack_chk_guard
  854 0040 00000000 		.word	ProcessImage
  855 0044 00000000 		.word	.LANCHOR8
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 16
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 16
 
 
  856 0048 00000000 		.word	CaptureImage
@@ -917,7 +917,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  869              		.type	close_line, %function
  870              	close_line:
  871              	.LFB265:
- 872              		.loc 1 176 0
+ 872              		.loc 1 175 0
  873              		.cfi_startproc
  874              		@ args = 0, pretend = 0, frame = 8
  875              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -932,11 +932,11 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  884 0004 1348     		ldr	r0, .L73+4
  885              	.LBE178:
  886              	.LBE177:
- 887              		.loc 1 176 0
+ 887              		.loc 1 175 0
  888 0006 2368     		ldr	r3, [r4]
  889 0008 82B0     		sub	sp, sp, #8
  890              		.cfi_def_cfa_offset 16
- 891              		.loc 1 176 0
+ 891              		.loc 1 175 0
  892 000a 0193     		str	r3, [sp, #4]
  893              	.LVL78:
  894              	.LBB180:
@@ -946,33 +946,33 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  898              	.LVL79:
  899              	.LBE179:
  900              	.LBE180:
- 901              		.loc 1 179 0
+ 901              		.loc 1 178 0
  902 0010 FFF7FEFF 		bl	aide_detection_ligne
  903              	.LVL80:
  904 0014 80B1     		cbz	r0, .L66
- 905              		.loc 1 179 0 is_stmt 0 discriminator 1
+ 905              		.loc 1 178 0 is_stmt 0 discriminator 1
  906 0016 104B     		ldr	r3, .L73+8
  907 0018 1B88     		ldrh	r3, [r3]
  908 001a C72B     		cmp	r3, #199
  909 001c 12D9     		bls	.L69
- 910              		.loc 1 180 0 is_stmt 1
+ 910              		.loc 1 179 0 is_stmt 1
  911 001e 0F4B     		ldr	r3, .L73+12
  912 0020 1888     		ldrh	r0, [r3]
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 17
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 17
 
 
  913 0022 B0F5967F 		cmp	r0, #300
  914 0026 0FD9     		bls	.L70
- 915              		.loc 1 183 0
+ 915              		.loc 1 182 0
  916 0028 6FF49673 		mvn	r3, #300
  917 002c 1844     		add	r0, r0, r3
- 918              		.loc 1 181 0
+ 918              		.loc 1 180 0
  919 002e B0F5967F 		cmp	r0, #300
  920 0032 2CBF     		ite	cs
  921 0034 0020     		movcs	r0, #0
  922 0036 0120     		movcc	r0, #1
  923              	.L66:
- 924              		.loc 1 188 0
+ 924              		.loc 1 187 0
  925 0038 019A     		ldr	r2, [sp, #4]
  926 003a 2368     		ldr	r3, [r4]
  927 003c 9A42     		cmp	r2, r3
@@ -984,15 +984,15 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  933 0042 10BD     		pop	{r4, pc}
  934              	.L69:
  935              		.cfi_restore_state
- 936              		.loc 1 187 0
+ 936              		.loc 1 186 0
  937 0044 0020     		movs	r0, #0
  938 0046 F7E7     		b	.L66
  939              	.L70:
- 940              		.loc 1 181 0
+ 940              		.loc 1 180 0
  941 0048 0220     		movs	r0, #2
  942 004a F5E7     		b	.L66
  943              	.L72:
- 944              		.loc 1 188 0
+ 944              		.loc 1 187 0
  945 004c FFF7FEFF 		bl	__stack_chk_fail
  946              	.LVL81:
  947              	.L74:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  967              		.type	waCaptureImage, %object
  968              		.size	waCaptureImage, 832
  969              	waCaptureImage:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 18
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 18
 
 
  970 0000 00000000 		.space	832
@@ -1055,12 +1055,12 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  993 0000 00000000 		.word	image_ready_sem
  994 0004 00000000 		.word	image_ready_sem
  995 0008 00000000 		.word	0
- 996              		.section	.data.last_width.12294,"aw",%progbits
+ 996              		.section	.data.last_width.12288,"aw",%progbits
  997              		.align	1
  998              		.set	.LANCHOR3,. + 0
- 999              		.type	last_width.12294, %object
- 1000              		.size	last_width.12294, 2
- 1001              	last_width.12294:
+ 999              		.type	last_width.12288, %object
+ 1000              		.size	last_width.12288, 2
+ 1001              	last_width.12288:
  1002 0000 9D00     		.short	157
  1003              		.section	.data.line_position,"aw",%progbits
  1004              		.align	1
@@ -1069,25 +1069,25 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  1007              		.size	line_position, 2
  1008              	line_position:
  1009 0000 4001     		.short	320
- 1010              		.section	.rodata.__FUNCTION__.12311,"a",%progbits
+ 1010              		.section	.rodata.__FUNCTION__.12305,"a",%progbits
  1011              		.align	2
  1012              		.set	.LANCHOR0,. + 0
- 1013              		.type	__FUNCTION__.12311, %object
- 1014              		.size	__FUNCTION__.12311, 13
- 1015              	__FUNCTION__.12311:
+ 1013              		.type	__FUNCTION__.12305, %object
+ 1014              		.size	__FUNCTION__.12305, 13
+ 1015              	__FUNCTION__.12305:
  1016 0000 43617074 		.ascii	"CaptureImage\000"
  1016      75726549 
  1016      6D616765 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 19
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 19
 
 
  1016      00
- 1017              		.section	.rodata.__FUNCTION__.12317,"a",%progbits
+ 1017              		.section	.rodata.__FUNCTION__.12311,"a",%progbits
  1018              		.align	2
  1019              		.set	.LANCHOR5,. + 0
- 1020              		.type	__FUNCTION__.12317, %object
- 1021              		.size	__FUNCTION__.12317, 13
- 1022              	__FUNCTION__.12317:
+ 1020              		.type	__FUNCTION__.12311, %object
+ 1021              		.size	__FUNCTION__.12311, 13
+ 1022              	__FUNCTION__.12311:
  1023 0000 50726F63 		.ascii	"ProcessImage\000"
  1023      65737349 
  1023      6D616765 
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  1065              		.file 39 "../lib/e-puck2_main-processor/ChibiOS//os/hal/include/i2c.h"
  1066              		.file 40 "../lib/e-puck2_main-processor/ChibiOS//os/hal/ports/STM32/LLD/I2Cv1/i2c_lld.h"
  1067              		.file 41 "../lib/e-puck2_main-processor/ChibiOS//os/hal/include/i2s.h"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 20
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 20
 
 
  1068              		.file 42 "../lib/e-puck2_main-processor/ChibiOS//os/hal/ports/STM32/LLD/SPIv1/i2s_lld.h"
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  1122 003e 04       		.uleb128 0x4
  1123 003f 08       		.byte	0x8
  1124 0040 05       		.byte	0x5
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 21
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 21
 
 
  1125 0041 82240000 		.4byte	.LASF1
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  1179 00ad 03       		.uleb128 0x3
  1180 00ae ED110000 		.4byte	.LASF15
  1181 00b2 08       		.byte	0x8
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 22
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 22
 
 
  1182 00b3 69       		.byte	0x69
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  1236 012b 03       		.uleb128 0x3
  1237 012c 93130000 		.4byte	.LASF25
  1238 0130 0A       		.byte	0xa
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 23
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 23
 
 
  1239 0131 48       		.byte	0x48
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  1293 01a9 03       		.uleb128 0x3
  1294 01aa 8A030000 		.4byte	.LASF36
  1295 01ae 0B       		.byte	0xb
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 24
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 24
 
 
  1296 01af 3F       		.byte	0x3f
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  1350 021b 16110000 		.4byte	0x1116
  1351 021f 1C       		.byte	0x1c
  1352 0220 08       		.uleb128 0x8
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 25
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 25
 
 
  1353 0221 77280000 		.4byte	.LASF45
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  1407 0291 34200000 		.4byte	.LASF53
  1408 0295 0C       		.byte	0xc
  1409 0296 4601     		.2byte	0x146
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 26
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 26
 
 
  1410 0298 6D010000 		.4byte	0x16d
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  1464 0308 54180000 		.4byte	.LASF62
  1465 030c 0B       		.byte	0xb
  1466 030d 50       		.byte	0x50
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 27
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 27
 
 
  1467 030e 12030000 		.4byte	0x312
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  1521 0382 10       		.byte	0x10
  1522 0383 0A       		.uleb128 0xa
  1523 0384 940D0000 		.4byte	.LASF70
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 28
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 28
 
 
  1524 0388 0C       		.byte	0xc
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  1578 03fa 08       		.byte	0x8
  1579 03fb 0A       		.uleb128 0xa
  1580 03fc 69220000 		.4byte	.LASF78
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 29
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 29
 
 
  1581 0400 0C       		.byte	0xc
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  1635 0473 1404     		.2byte	0x414
  1636 0475 0C       		.byte	0xc
  1637 0476 A201     		.2byte	0x1a2
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 30
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 30
 
 
  1638 0478 B1040000 		.4byte	0x4b1
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  1692 04f0 2C       		.byte	0x2c
  1693 04f1 11       		.uleb128 0x11
  1694 04f2 B6180000 		.4byte	.LASF93
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 31
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 31
 
 
  1695 04f6 0C       		.byte	0xc
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  1749 056c 0F       		.byte	0xf
  1750 056d C6       		.byte	0xc6
  1751 056e 00010000 		.4byte	0x100
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 32
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 32
 
 
  1752 0572 00       		.byte	0
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  1806 05de 24       		.byte	0x24
  1807 05df 18       		.uleb128 0x18
  1808 05e0 4C545200 		.ascii	"LTR\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 33
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 33
 
 
  1809 05e4 0F       		.byte	0xf
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  1863 064f 0F       		.byte	0xf
  1864 0650 D9       		.byte	0xd9
  1865 0651 00010000 		.4byte	0x100
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 34
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 34
 
 
  1866 0655 4C       		.byte	0x4c
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  1920 06bb 281F0000 		.4byte	.LASF117
  1921 06bf 0F       		.byte	0xf
  1922 06c0 F8       		.byte	0xf8
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 35
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 35
 
 
  1923 06c1 00010000 		.4byte	0x100
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  1977 0731 09       		.uleb128 0x9
  1978 0732 4D535200 		.ascii	"MSR\000"
  1979 0736 0F       		.byte	0xf
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 36
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 36
 
 
  1980 0737 0E01     		.2byte	0x10e
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  2034 07ad 1701     		.2byte	0x117
  2035 07af 70080000 		.4byte	0x870
  2036 07b3 B001     		.2byte	0x1b0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 37
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 37
 
 
  2037 07b5 11       		.uleb128 0x11
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  2091 0833 11       		.uleb128 0x11
  2092 0834 BC200000 		.4byte	.LASF135
  2093 0838 0F       		.byte	0xf
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 38
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 38
 
 
  2094 0839 2101     		.2byte	0x121
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  2148 08b1 6A090000 		.4byte	0x96a
  2149 08b5 09       		.uleb128 0x9
  2150 08b6 435200   		.ascii	"CR\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 39
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 39
 
 
  2151 08b9 0F       		.byte	0xf
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  2205 092e 0F       		.byte	0xf
  2206 092f 4101     		.2byte	0x141
  2207 0931 00010000 		.4byte	0x100
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 40
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 40
 
 
  2208 0935 24       		.byte	0x24
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  2262 09a4 09       		.uleb128 0x9
  2263 09a5 49455200 		.ascii	"IER\000"
  2264 09a9 0F       		.byte	0xf
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 41
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 41
 
 
  2265 09aa 5D01     		.2byte	0x15d
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  2319 0a1b 6B01     		.2byte	0x16b
  2320 0a1d 6F0A0000 		.4byte	0xa6f
  2321 0a21 09       		.uleb128 0x9
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 42
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 42
 
 
  2322 0a22 435200   		.ascii	"CR\000"
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  2376 0a9a 37000000 		.4byte	0x37
  2377 0a9e 03       		.byte	0x3
  2378 0a9f 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 43
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 43
 
 
  2379 0aa0 06       		.uleb128 0x6
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  2433 0b14 1C       		.byte	0x1c
  2434 0b15 0A       		.uleb128 0xa
  2435 0b16 63050000 		.4byte	.LASF164
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 44
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 44
 
 
  2436 0b1a 0F       		.byte	0xf
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  2490 0b8c C602     		.2byte	0x2c6
  2491 0b8e 05010000 		.4byte	0x105
  2492 0b92 14       		.byte	0x14
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 45
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 45
 
 
  2493 0b93 0A       		.uleb128 0xa
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  2547 0c08 0A       		.uleb128 0xa
  2548 0c09 C6010000 		.4byte	.LASF178
  2549 0c0d 0F       		.byte	0xf
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 46
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 46
 
 
  2550 0c0e D002     		.2byte	0x2d0
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  2604 0c82 DE02     		.2byte	0x2de
  2605 0c84 00010000 		.4byte	0x100
  2606 0c88 04       		.byte	0x4
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 47
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 47
 
 
  2607 0c89 09       		.uleb128 0x9
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  2661 0cf9 535200   		.ascii	"SR\000"
  2662 0cfc 0F       		.byte	0xf
  2663 0cfd 0B03     		.2byte	0x30b
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 48
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 48
 
 
  2664 0cff 00010000 		.4byte	0x100
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  2718 0d74 2B1A0000 		.4byte	.LASF190
  2719 0d78 10       		.byte	0x10
  2720 0d79 65       		.byte	0x65
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 49
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 49
 
 
  2721 0d7a BA030000 		.4byte	0x3ba
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  2775 0de9 10       		.byte	0x10
  2776 0dea 18       		.uleb128 0x18
  2777 0deb 73323100 		.ascii	"s21\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 50
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 50
 
 
  2778 0def 11       		.byte	0x11
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  2832 0e5f 11       		.byte	0x11
  2833 0e60 0401     		.2byte	0x104
  2834 0e62 730D0000 		.4byte	0xd73
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 51
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 51
 
 
  2835 0e66 38       		.byte	0x38
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  2889 0ed5 5C       		.byte	0x5c
  2890 0ed6 09       		.uleb128 0x9
  2891 0ed7 6C7200   		.ascii	"lr\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 52
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 52
 
 
  2892 0eda 11       		.byte	0x11
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  2946 0f42 08       		.uleb128 0x8
  2947 0f43 7C150000 		.4byte	.LASF200
  2948 0f47 12       		.byte	0x12
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 53
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 53
 
 
  2949 0f48 6F       		.byte	0x6f
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  3003 0fb1 77010000 		.4byte	.LASF206
  3004 0fb5 13       		.byte	0x13
  3005 0fb6 4A       		.byte	0x4a
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 54
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 54
 
 
  3006 0fb7 15010000 		.4byte	0x115
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  3060 1021 20       		.byte	0x20
  3061 1022 00       		.byte	0
  3062 1023 03       		.uleb128 0x3
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 55
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 55
 
 
  3063 1024 7C050000 		.4byte	.LASF214
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  3117 109d 08       		.uleb128 0x8
  3118 109e 2E240000 		.4byte	.LASF223
  3119 10a2 15       		.byte	0x15
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 56
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 56
 
 
  3120 10a3 35       		.byte	0x35
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  3174 110c 08       		.byte	0x8
  3175 110d 151B0000 		.4byte	.LASF230
  3176 1111 05       		.uleb128 0x5
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 57
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 57
 
 
  3177 1112 0A110000 		.4byte	0x110a
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  3231 1181 08       		.uleb128 0x8
  3232 1182 39150000 		.4byte	.LASF236
  3233 1186 02       		.byte	0x2
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 58
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 58
 
 
  3234 1187 3A       		.byte	0x3a
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  3288 11f3 44       		.byte	0x44
  3289 11f4 BF000000 		.4byte	0xbf
  3290 11f8 12       		.byte	0x12
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 59
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 59
 
 
  3291 11f9 08       		.uleb128 0x8
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  3345 1268 00       		.byte	0
  3346 1269 03       		.uleb128 0x3
  3347 126a D9230000 		.4byte	.LASF253
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 60
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 60
 
 
  3348 126e 04       		.byte	0x4
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  3402 12da 04       		.byte	0x4
  3403 12db 85120000 		.4byte	0x1285
  3404 12df 07       		.uleb128 0x7
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 61
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 61
 
 
  3405 12e0 CB220000 		.4byte	.LASF262
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  3459 134f 18       		.byte	0x18
  3460 1350 53       		.byte	0x53
  3461 1351 9D130000 		.4byte	0x139d
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 62
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 62
 
 
  3462 1355 14       		.byte	0x14
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  3516 13c7 0E       		.uleb128 0xe
  3517 13c8 D2130000 		.4byte	0x13d2
  3518 13cc 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 63
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 63
 
 
  3519 13cd 2C000000 		.4byte	0x2c
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  3573 1445 19       		.byte	0x19
  3574 1446 DC       		.byte	0xdc
  3575 1447 77140000 		.4byte	0x1477
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 64
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 64
 
 
  3576 144b 04       		.byte	0x4
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  3630 14c1 0E       		.uleb128 0xe
  3631 14c2 99010000 		.4byte	0x199
  3632 14c6 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 65
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 65
 
 
  3633 14c7 0B       		.uleb128 0xb
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  3687 1542 22       		.uleb128 0x22
  3688 1543 160F0000 		.4byte	.LASF286
  3689 1547 01       		.byte	0x1
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 66
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 66
 
 
  3690 1548 22       		.uleb128 0x22
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  3744 15b4 BA030000 		.4byte	0x3ba
  3745 15b8 00       		.byte	0
  3746 15b9 04       		.uleb128 0x4
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 67
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 67
 
 
  3747 15ba 01       		.byte	0x1
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  3801 1638 37000000 		.4byte	0x37
  3802 163c 03       		.byte	0x3
  3803 163d 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 68
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 68
 
 
  3804 163e 17       		.uleb128 0x17
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  3858 16a0 D80E0000 		.4byte	.LASF302
  3859 16a4 1B       		.byte	0x1b
  3860 16a5 AD       		.byte	0xad
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 69
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 69
 
 
  3861 16a6 00010000 		.4byte	0x100
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  3915 1712 BC       		.byte	0xbc
  3916 1713 7F160000 		.4byte	0x167f
  3917 1717 17       		.uleb128 0x17
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 70
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 70
 
 
  3918 1718 1C       		.byte	0x1c
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  3972 1781 1B       		.byte	0x1b
  3973 1782 D9       		.byte	0xd9
  3974 1783 F4170000 		.4byte	0x17f4
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 71
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 71
 
 
  3975 1787 08       		.uleb128 0x8
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  4029 17f3 00       		.byte	0
  4030 17f4 03       		.uleb128 0x3
  4031 17f5 3B0B0000 		.4byte	.LASF325
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 72
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 72
 
 
  4032 17f9 1B       		.byte	0x1b
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  4086 186b 1A       		.uleb128 0x1a
  4087 186c 261E0000 		.4byte	.LASF336
  4088 1870 1D       		.byte	0x1d
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 73
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 73
 
 
  4089 1871 2C01     		.2byte	0x12c
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  4143 18e6 2C000000 		.4byte	0x2c
  4144 18ea 0C       		.byte	0xc
  4145 18eb 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 74
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 74
 
 
  4146 18ec 35210000 		.4byte	.LASF345
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  4200 1962 04       		.byte	0x4
  4201 1963 9E180000 		.4byte	0x189e
  4202 1967 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 75
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 75
 
 
  4203 1968 04       		.byte	0x4
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  4257 19de 1D       		.byte	0x1d
  4258 19df 7601     		.2byte	0x176
  4259 19e1 F5000000 		.4byte	0xf5
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 76
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 76
 
 
  4260 19e5 10       		.byte	0x10
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  4314 1a56 9A01     		.2byte	0x19a
  4315 1a58 391A0000 		.4byte	0x1a39
  4316 1a5c 05       		.uleb128 0x5
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 77
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 77
 
 
  4317 1a5d 501A0000 		.4byte	0x1a50
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  4371 1acf 65       		.byte	0x65
  4372 1ad0 9D1A0000 		.4byte	0x1a9d
  4373 1ad4 13       		.uleb128 0x13
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 78
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 78
 
 
  4374 1ad5 BF000000 		.4byte	0xbf
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  4428 1b47 0A       		.uleb128 0xa
  4429 1b48 F6200000 		.4byte	.LASF375
  4430 1b4c 1F       		.byte	0x1f
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 79
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 79
 
 
  4431 1b4d 1601     		.2byte	0x116
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  4485 1bc1 4B01     		.2byte	0x14b
  4486 1bc3 AF1B0000 		.4byte	0x1baf
  4487 1bc7 21       		.uleb128 0x21
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 80
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 80
 
 
  4488 1bc8 07       		.byte	0x7
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  4542 1c33 DE010000 		.4byte	.LASF392
  4543 1c37 21       		.byte	0x21
  4544 1c38 0901     		.2byte	0x109
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 81
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 81
 
 
  4545 1c3a F5000000 		.4byte	0xf5
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  4599 1cb1 0A       		.uleb128 0xa
  4600 1cb2 CB010000 		.4byte	.LASF343
  4601 1cb6 21       		.byte	0x21
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 82
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 82
 
 
  4602 1cb7 8701     		.2byte	0x187
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  4656 1d2b 00       		.byte	0
  4657 1d2c 1A       		.uleb128 0x1a
  4658 1d2d 6A120000 		.4byte	.LASF400
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 83
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 83
 
 
  4659 1d31 21       		.byte	0x21
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  4713 1da7 22       		.uleb128 0x22
  4714 1da8 CB170000 		.4byte	.LASF405
  4715 1dac 02       		.byte	0x2
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 84
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 84
 
 
  4716 1dad 00       		.byte	0
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  4770 1e1f 0A       		.uleb128 0xa
  4771 1e20 FD000000 		.4byte	.LASF410
  4772 1e24 21       		.byte	0x21
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 85
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 85
 
 
  4773 1e25 7501     		.2byte	0x175
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  4827 1e97 08       		.byte	0x8
  4828 1e98 23       		.byte	0x23
  4829 1e99 71       		.byte	0x71
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 86
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 86
 
 
  4830 1e9a B71E0000 		.4byte	0x1eb7
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  4884 1f08 00       		.byte	0
  4885 1f09 03       		.uleb128 0x3
  4886 1f0a C70E0000 		.4byte	.LASF421
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 87
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 87
 
 
  4887 1f0e 23       		.byte	0x23
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  4941 1f7a 12080000 		.4byte	.LASF428
  4942 1f7e 03       		.byte	0x3
  4943 1f7f 22       		.uleb128 0x22
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 88
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 88
 
 
  4944 1f80 BB040000 		.4byte	.LASF429
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  4998 1ff4 0E       		.uleb128 0xe
  4999 1ff5 FA1F0000 		.4byte	0x1ffa
  5000 1ff9 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 89
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 89
 
 
  5001 1ffa 0B       		.uleb128 0xb
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  5055 206b 00010000 		.4byte	0x100
  5056 206f 1C       		.byte	0x1c
  5057 2070 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 90
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 90
 
 
  5058 2071 A1070000 		.4byte	.LASF438
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  5112 20e6 4F5200   		.ascii	"OR\000"
  5113 20e9 26       		.byte	0x26
  5114 20ea B001     		.2byte	0x1b0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 91
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 91
 
 
  5115 20ec 00010000 		.4byte	0x100
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  5169 2161 00       		.byte	0
  5170 2162 1A       		.uleb128 0x1a
  5171 2163 DA060000 		.4byte	.LASF448
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 92
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 92
 
 
  5172 2167 25       		.byte	0x25
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  5226 21da 27       		.byte	0x27
  5227 21db 53       		.byte	0x53
  5228 21dc A3210000 		.4byte	0x21a3
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 93
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 93
 
 
  5229 21e0 1A       		.uleb128 0x1a
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  5283 2252 19       		.uleb128 0x19
  5284 2253 0C       		.byte	0xc
  5285 2254 28       		.byte	0x28
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 94
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 94
 
 
  5286 2255 8601     		.2byte	0x186
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  5340 22cd A401     		.2byte	0x1a4
  5341 22cf EC210000 		.4byte	0x21ec
  5342 22d3 08       		.byte	0x8
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 95
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 95
 
 
  5343 22d4 0A       		.uleb128 0xa
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  5397 2345 300B0000 		.4byte	0xb30
  5398 2349 15       		.uleb128 0x15
  5399 234a AA120000 		.4byte	.LASF480
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 96
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 96
 
 
  5400 234e 28       		.byte	0x28
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  5454 23be 09       		.uleb128 0x9
  5455 23bf 73706900 		.ascii	"spi\000"
  5456 23c3 2A       		.byte	0x2a
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 97
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 97
 
 
  5457 23c4 2801     		.2byte	0x128
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  5511 2439 17       		.uleb128 0x17
  5512 243a 14       		.byte	0x14
  5513 243b 2A       		.byte	0x2a
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 98
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 98
 
 
  5514 243c F1       		.byte	0xf1
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  5568 24ac 04       		.byte	0x4
  5569 24ad E30C0000 		.4byte	0xce3
  5570 24b1 15       		.uleb128 0x15
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 99
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 99
 
 
  5571 24b2 7F280000 		.4byte	.LASF495
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  5625 2526 08       		.byte	0x8
  5626 2527 0A       		.uleb128 0xa
  5627 2528 681B0000 		.4byte	.LASF502
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 100
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 100
 
 
  5628 252c 2C       		.byte	0x2c
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  5682 25a2 1A       		.uleb128 0x1a
  5683 25a3 C00D0000 		.4byte	.LASF507
  5684 25a7 2C       		.byte	0x2c
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 101
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 101
 
 
  5685 25a8 3401     		.2byte	0x134
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  5739 261b 09       		.uleb128 0x9
  5740 261c 63723200 		.ascii	"cr2\000"
  5741 2620 2C       		.byte	0x2c
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 102
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 102
 
 
  5742 2621 6601     		.2byte	0x166
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  5796 269a 22       		.uleb128 0x22
  5797 269b E4060000 		.4byte	.LASF514
  5798 269f 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 103
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 103
 
 
  5799 26a0 22       		.uleb128 0x22
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  5853 270c 696200   		.ascii	"ib\000"
  5854 270f 2D       		.byte	0x2d
  5855 2710 7B       		.byte	0x7b
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 104
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 104
 
 
  5856 2711 B2270000 		.4byte	0x27b2
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  5910 277d C7140000 		.4byte	0x14c7
  5911 2781 10       		.byte	0x10
  5912 2782 08       		.uleb128 0x8
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 105
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 105
 
 
  5913 2783 5D190000 		.4byte	.LASF527
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  5967 27ef C8270000 		.4byte	0x27c8
  5968 27f3 03       		.uleb128 0x3
  5969 27f4 BB1B0000 		.4byte	.LASF534
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 106
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 106
 
 
  5970 27f8 30       		.byte	0x30
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  6024 2867 2C       		.byte	0x2c
  6025 2868 08       		.uleb128 0x8
  6026 2869 F3150000 		.4byte	.LASF538
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 107
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 107
 
 
  6027 286d 30       		.byte	0x30
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  6081 28dc 30       		.byte	0x30
  6082 28dd DC       		.byte	0xdc
  6083 28de E8270000 		.4byte	0x27e8
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 108
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 108
 
 
  6084 28e2 04       		.byte	0x4
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  6138 294e EC       		.byte	0xec
  6139 294f C0150000 		.4byte	0x15c0
  6140 2953 18       		.byte	0x18
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 109
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 109
 
 
  6141 2954 08       		.uleb128 0x8
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  6195 29c1 9601     		.2byte	0x196
  6196 29c3 C7290000 		.4byte	0x29c7
  6197 29c7 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 110
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 110
 
 
  6198 29c8 03230000 		.4byte	.LASF557
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  6252 2a3d 1C090000 		.4byte	.LASF477
  6253 2a41 32       		.byte	0x32
  6254 2a42 E601     		.2byte	0x1e6
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 111
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 111
 
 
  6255 2a44 F5000000 		.4byte	0xf5
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  6309 2ab7 05       		.uleb128 0x5
  6310 2ab8 AB2A0000 		.4byte	0x2aab
  6311 2abc 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 112
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 112
 
 
  6312 2abd 04       		.byte	0x4
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  6366 2b35 0A       		.uleb128 0xa
  6367 2b36 4E0C0000 		.4byte	.LASF567
  6368 2b3a 34       		.byte	0x34
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 113
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 113
 
 
  6369 2b3b 9901     		.2byte	0x199
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  6423 2bb0 C101     		.2byte	0x1c1
  6424 2bb2 8C350000 		.4byte	0x358c
  6425 2bb6 50       		.byte	0x50
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 114
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 114
 
 
  6426 2bb7 0A       		.uleb128 0xa
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  6480 2c29 01       		.byte	0x1
  6481 2c2a 22       		.uleb128 0x22
  6482 2c2b 60140000 		.4byte	.LASF584
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 115
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 115
 
 
  6483 2c2f 02       		.byte	0x2
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  6537 2c9c 22       		.uleb128 0x22
  6538 2c9d 3E1F0000 		.4byte	.LASF596
  6539 2ca1 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 116
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 116
 
 
  6540 2ca2 22       		.uleb128 0x22
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  6594 2d14 0D       		.uleb128 0xd
  6595 2d15 1F2D0000 		.4byte	0x2d1f
  6596 2d19 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 117
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 117
 
 
  6597 2d1a 1F2D0000 		.4byte	0x2d1f
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  6651 2d96 0B       		.uleb128 0xb
  6652 2d97 04       		.byte	0x4
  6653 2d98 9C2D0000 		.4byte	0x2d9c
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 118
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 118
 
 
  6654 2d9c 20       		.uleb128 0x20
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  6708 2e0b 00010000 		.4byte	0x100
  6709 2e0f 14       		.byte	0x14
  6710 2e10 08       		.uleb128 0x8
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 119
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 119
 
 
  6711 2e11 8C0D0000 		.4byte	.LASF617
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  6765 2e7d 35       		.byte	0x35
  6766 2e7e 4F       		.byte	0x4f
  6767 2e7f 00010000 		.4byte	0x100
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 120
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 120
 
 
  6768 2e83 14       		.byte	0x14
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  6822 2eec 08       		.uleb128 0x8
  6823 2eed 840D0000 		.4byte	.LASF616
  6824 2ef1 35       		.byte	0x35
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 121
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 121
 
 
  6825 2ef2 61       		.byte	0x61
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  6879 2f5e 00010000 		.4byte	0x100
  6880 2f62 10       		.byte	0x10
  6881 2f63 08       		.uleb128 0x8
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 122
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 122
 
 
  6882 2f64 C70B0000 		.4byte	.LASF637
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  6936 2fd0 D3010000 		.4byte	.LASF646
  6937 2fd4 35       		.byte	0x35
  6938 2fd5 7C       		.byte	0x7c
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 123
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 123
 
 
  6939 2fd6 00010000 		.4byte	0x100
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  6993 3048 00010000 		.4byte	0x100
  6994 304c 0C04     		.2byte	0x40c
  6995 304e 27       		.uleb128 0x27
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 124
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 124
 
 
  6996 304f 24030000 		.4byte	.LASF655
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  7050 30c3 6A250000 		.4byte	.LASF663
  7051 30c7 35       		.byte	0x35
  7052 30c8 96       		.byte	0x96
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 125
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 125
 
 
  7053 30c9 00010000 		.4byte	0x100
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  7107 313e 00010000 		.4byte	0x100
  7108 3142 2808     		.2byte	0x828
  7109 3144 27       		.uleb128 0x27
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 126
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 126
 
 
  7110 3145 010F0000 		.4byte	.LASF673
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  7164 31b9 6F6500   		.ascii	"oe\000"
  7165 31bc 35       		.byte	0x35
  7166 31bd B0       		.byte	0xb0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 127
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 127
 
 
  7167 31be 97320000 		.4byte	0x3297
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  7221 3238 13       		.uleb128 0x13
  7222 3239 00010000 		.4byte	0x100
  7223 323d 48320000 		.4byte	0x3248
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 128
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 128
 
 
  7224 3241 14       		.uleb128 0x14
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  7278 32bc 13       		.uleb128 0x13
  7279 32bd 00010000 		.4byte	0x100
  7280 32c1 D3320000 		.4byte	0x32d3
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 129
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 129
 
 
  7281 32c5 14       		.uleb128 0x14
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  7335 332f D2130000 		.4byte	0x13d2
  7336 3333 00       		.byte	0
  7337 3334 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 130
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 130
 
 
  7338 3335 17       		.uleb128 0x17
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  7392 339b 08       		.uleb128 0x8
  7393 339c D6080000 		.4byte	.LASF420
  7394 33a0 34       		.byte	0x34
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 131
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 131
 
 
  7395 33a1 E9       		.byte	0xe9
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  7449 340d 34       		.byte	0x34
  7450 340e 0C01     		.2byte	0x10c
  7451 3410 D6330000 		.4byte	0x33d6
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 132
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 132
 
 
  7452 3414 00       		.byte	0
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  7506 347f A5090000 		.4byte	.LASF703
  7507 3483 34       		.byte	0x34
  7508 3484 2701     		.2byte	0x127
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 133
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 133
 
 
  7509 3486 252D0000 		.4byte	0x2d25
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  7563 34fa 0B       		.uleb128 0xb
  7564 34fb 04       		.byte	0x4
  7565 34fc 5C340000 		.4byte	0x345c
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 134
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 134
 
 
  7566 3500 1A       		.uleb128 0x1a
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  7620 3576 0B       		.uleb128 0xb
  7621 3577 04       		.byte	0x4
  7622 3578 0C350000 		.4byte	0x350c
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 135
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 135
 
 
  7623 357c 13       		.uleb128 0x13
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  7677 35ec 390C0000 		.4byte	.LASF726
  7678 35f0 13       		.byte	0x13
  7679 35f1 22       		.uleb128 0x22
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 136
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 136
 
 
  7680 35f2 041C0000 		.4byte	.LASF727
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  7734 365e 2C       		.byte	0x2c
  7735 365f 94000000 		.4byte	0x94
  7736 3663 03       		.uleb128 0x3
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 137
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 137
 
 
  7737 3664 6D1E0000 		.4byte	.LASF740
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  7791 36d1 A9360000 		.4byte	0x36a9
  7792 36d5 03       		.uleb128 0x3
  7793 36d6 EC230000 		.4byte	.LASF747
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 138
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 138
 
 
  7794 36da 38       		.byte	0x38
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  7848 3744 13       		.uleb128 0x13
  7849 3745 E0360000 		.4byte	0x36e0
  7850 3749 54370000 		.4byte	0x3754
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 139
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 139
 
 
  7851 374d 14       		.uleb128 0x14
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  7905 37b9 39       		.byte	0x39
  7906 37ba 40       		.byte	0x40
  7907 37bb 25000000 		.4byte	0x25
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 140
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 140
 
 
  7908 37bf 1C       		.byte	0x1c
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  7962 382f 39       		.byte	0x39
  7963 3830 5E       		.byte	0x5e
  7964 3831 5B380000 		.4byte	0x385b
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 141
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 141
 
 
  7965 3835 00       		.byte	0
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  8019 389e 04       		.byte	0x4
  8020 389f 5E000000 		.4byte	0x5e
  8021 38a3 07       		.uleb128 0x7
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 142
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 142
 
 
  8022 38a4 C21E0000 		.4byte	.LASF775
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  8076 390d E8270000 		.4byte	.LASF780
  8077 3911 39       		.byte	0x39
  8078 3912 C5       		.byte	0xc5
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 143
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 143
 
 
  8079 3913 2E3B0000 		.4byte	0x3b2e
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  8133 397f 78380000 		.4byte	0x3878
  8134 3983 44       		.byte	0x44
  8135 3984 08       		.uleb128 0x8
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 144
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 144
 
 
  8136 3985 880B0000 		.4byte	.LASF786
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  8190 39f7 A0170000 		.4byte	.LASF792
  8191 39fb 2804     		.2byte	0x428
  8192 39fd 39       		.byte	0x39
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 145
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 145
 
 
  8193 39fe 3902     		.2byte	0x239
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  8247 3a74 25000000 		.4byte	0x25
  8248 3a78 38       		.byte	0x38
  8249 3a79 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 146
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 146
 
 
  8250 3a7a 111E0000 		.4byte	.LASF802
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  8304 3af0 3D1C0000 		.4byte	.LASF810
  8305 3af4 39       		.byte	0x39
  8306 3af5 7D02     		.2byte	0x27d
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 147
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 147
 
 
  8307 3af7 1D380000 		.4byte	0x381d
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  8361 3b76 0B       		.uleb128 0xb
  8362 3b77 04       		.byte	0x4
  8363 3b78 583B0000 		.4byte	0x3b58
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 148
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 148
 
 
  8364 3b7c 20       		.uleb128 0x20
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  8418 3bf6 00       		.byte	0
  8419 3bf7 0B       		.uleb128 0xb
  8420 3bf8 04       		.byte	0x4
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 149
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 149
 
 
  8421 3bf9 C23B0000 		.4byte	0x3bc2
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  8475 3c6c BE170000 		.4byte	.LASF824
  8476 3c70 39       		.byte	0x39
  8477 3c71 5D02     		.2byte	0x25d
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 150
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 150
 
 
  8478 3c73 493D0000 		.4byte	0x3d49
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  8532 3ce8 693D0000 		.4byte	0x3d69
  8533 3cec 88       		.byte	0x88
  8534 3ced 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 151
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 151
 
 
  8535 3cee 8D1C0000 		.4byte	.LASF834
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  8589 3d67 07       		.byte	0x7
  8590 3d68 00       		.byte	0
  8591 3d69 13       		.uleb128 0x13
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 152
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 152
 
 
  8592 3d6a 0A110000 		.4byte	0x110a
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  8646 3ddf 13       		.uleb128 0x13
  8647 3de0 0A110000 		.4byte	0x110a
  8648 3de4 EF3D0000 		.4byte	0x3def
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 153
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 153
 
 
  8649 3de8 14       		.uleb128 0x14
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  8703 3e5c 07       		.byte	0x7
  8704 3e5d 01       		.byte	0x1
  8705 3e5e 5E000000 		.4byte	0x5e
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 154
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 154
 
 
  8706 3e62 3B       		.byte	0x3b
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  8760 3ece 3B       		.byte	0x3b
  8761 3ecf 99       		.byte	0x99
  8762 3ed0 D43E0000 		.4byte	0x3ed4
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 155
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 155
 
 
  8763 3ed4 07       		.uleb128 0x7
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  8817 3f40 DA1B0000 		.4byte	.LASF864
  8818 3f44 3B       		.byte	0x3b
  8819 3f45 A8       		.byte	0xa8
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 156
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 156
 
 
  8820 3f46 4A3F0000 		.4byte	0x3f4a
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  8874 3fb4 16       		.uleb128 0x16
  8875 3fb5 AE040000 		.4byte	.LASF868
  8876 3fb9 3B       		.byte	0x3b
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 157
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 157
 
 
  8877 3fba E3       		.byte	0xe3
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  8931 4029 8E400000 		.4byte	0x408e
  8932 402d 08       		.uleb128 0x8
  8933 402e 3F1D0000 		.4byte	.LASF878
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 158
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 158
 
 
  8934 4032 3E       		.byte	0x3e
@@ -9478,7 +9478,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  8988 409e 07       		.uleb128 0x7
  8989 409f 32000000 		.4byte	.LASF886
  8990 40a3 08       		.byte	0x8
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 159
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 159
 
 
  8991 40a4 3E       		.byte	0x3e
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9045 410a F30A0000 		.4byte	.LASF880
  9046 410e 3E       		.byte	0x3e
  9047 410f 1B       		.byte	0x1b
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 160
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 160
 
 
  9048 4110 BA030000 		.4byte	0x3ba
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9102 417f 18       		.byte	0x18
  9103 4180 3F       		.byte	0x3f
  9104 4181 0B       		.byte	0xb
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 161
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 161
 
 
  9105 4182 CE410000 		.4byte	0x41ce
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9159 41ef 00       		.byte	0
  9160 41f0 18       		.uleb128 0x18
  9161 41f1 6E7300   		.ascii	"ns\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 162
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 162
 
 
  9162 41f4 3F       		.byte	0x3f
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9216 425d 32260000 		.4byte	.LASF908
  9217 4261 3F       		.byte	0x3f
  9218 4262 16       		.byte	0x16
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 163
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 163
 
 
  9219 4263 DA000000 		.4byte	0xda
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9273 42cc 6E00     		.ascii	"n\000"
  9274 42ce 3F       		.byte	0x3f
  9275 42cf 22       		.byte	0x22
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 164
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 164
 
 
  9276 42d0 DA000000 		.4byte	0xda
@@ -9829,16 +9829,16 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9321 4325 16       		.uleb128 0x16
  9322 4326 650D0000 		.4byte	.LASF914
  9323 432a 40       		.byte	0x40
- 9324 432b 11       		.byte	0x11
+ 9324 432b 10       		.byte	0x10
  9325 432c 6F410000 		.4byte	0x416f
  9326 4330 2F       		.uleb128 0x2f
  9327 4331 62757300 		.ascii	"bus\000"
  9328 4335 40       		.byte	0x40
- 9329 4336 16       		.byte	0x16
+ 9329 4336 13       		.byte	0x13
  9330 4337 22410000 		.4byte	0x4122
  9331 433b 30       		.uleb128 0x30
  9332 433c D50C0000 		.4byte	.LASF918
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 165
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 165
 
 
  9333 4340 07       		.byte	0x7
@@ -9873,7 +9873,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9362 437b 31       		.uleb128 0x31
  9363 437c 04280000 		.4byte	.LASF920
  9364 4380 01       		.byte	0x1
- 9365 4381 12       		.byte	0x12
+ 9365 4381 11       		.byte	0x11
  9366 4382 DA000000 		.4byte	0xda
  9367 4386 05       		.uleb128 0x5
  9368 4387 03       		.byte	0x3
@@ -9881,7 +9881,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9370 438c 31       		.uleb128 0x31
  9371 438d 0A1D0000 		.4byte	.LASF921
  9372 4391 01       		.byte	0x1
- 9373 4392 15       		.byte	0x15
+ 9373 4392 14       		.byte	0x14
  9374 4393 69120000 		.4byte	0x1269
  9375 4397 05       		.uleb128 0x5
  9376 4398 03       		.byte	0x3
@@ -9889,7 +9889,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9378 439d 31       		.uleb128 0x31
  9379 439e 13050000 		.4byte	.LASF922
  9380 43a2 01       		.byte	0x1
- 9381 43a3 16       		.byte	0x16
+ 9381 43a3 15       		.byte	0x15
  9382 43a4 69120000 		.4byte	0x1269
  9383 43a8 05       		.uleb128 0x5
  9384 43a9 03       		.byte	0x3
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9387 43af 7E0D0000 		.4byte	0xd7e
  9388 43b3 BE430000 		.4byte	0x43be
  9389 43b7 14       		.uleb128 0x14
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 166
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 166
 
 
  9390 43b8 37000000 		.4byte	0x37
@@ -9907,7 +9907,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9393 43be 31       		.uleb128 0x31
  9394 43bf D9270000 		.4byte	.LASF923
  9395 43c3 01       		.byte	0x1
- 9396 43c4 6C       		.byte	0x6c
+ 9396 43c4 6B       		.byte	0x6b
  9397 43c5 AE430000 		.4byte	0x43ae
  9398 43c9 05       		.uleb128 0x5
  9399 43ca 03       		.byte	0x3
@@ -9922,7 +9922,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9408 43df 31       		.uleb128 0x31
  9409 43e0 5F060000 		.4byte	.LASF924
  9410 43e4 01       		.byte	0x1
- 9411 43e5 83       		.byte	0x83
+ 9411 43e5 82       		.byte	0x82
  9412 43e6 CF430000 		.4byte	0x43cf
  9413 43ea 05       		.uleb128 0x5
  9414 43eb 03       		.byte	0x3
@@ -9930,7 +9930,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9416 43f0 32       		.uleb128 0x32
  9417 43f1 86210000 		.4byte	.LASF925
  9418 43f5 01       		.byte	0x1
- 9419 43f6 B0       		.byte	0xb0
+ 9419 43f6 AF       		.byte	0xaf
  9420 43f7 5F430000 		.4byte	0x435f
  9421 43fb 00000000 		.4byte	.LFB265
  9422 43ff 60000000 		.4byte	.LFE265-.LFB265
@@ -9942,7 +9942,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9428 440e 04000000 		.4byte	.LBB177
  9429 4412 28010000 		.4byte	.Ldebug_ranges0+0x128
  9430 4416 01       		.byte	0x1
- 9431 4417 B2       		.byte	0xb2
+ 9431 4417 B1       		.byte	0xb1
  9432 4418 39440000 		.4byte	0x4439
  9433 441c 34       		.uleb128 0x34
  9434 441d 424B0000 		.4byte	0x4b42
@@ -9958,7 +9958,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9444 4433 00000000 		.4byte	.LANCHOR7
  9445 4437 00       		.byte	0
  9446 4438 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 167
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 167
 
 
  9447 4439 37       		.uleb128 0x37
@@ -9971,7 +9971,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9454 444c 38       		.uleb128 0x38
  9455 444d B31D0000 		.4byte	.LASF975
  9456 4451 01       		.byte	0x1
- 9457 4452 AB       		.byte	0xab
+ 9457 4452 AA       		.byte	0xaa
  9458 4453 00000000 		.4byte	.LFB264
  9459 4457 50000000 		.4byte	.LFE264-.LFB264
  9460 445b 01       		.uleb128 0x1
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9501 449a 124C0000 		.4byte	0x4c12
  9502 449e C9440000 		.4byte	0x44c9
  9503 44a2 36       		.uleb128 0x36
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 168
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 168
 
 
  9504 44a3 01       		.uleb128 0x1
@@ -10059,7 +10059,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9539 44d3 32       		.uleb128 0x32
  9540 44d4 06020000 		.4byte	.LASF926
  9541 44d8 01       		.byte	0x1
- 9542 44d9 A7       		.byte	0xa7
+ 9542 44d9 A6       		.byte	0xa6
  9543 44da DA000000 		.4byte	0xda
  9544 44de 00000000 		.4byte	.LFB263
  9545 44e2 28000000 		.4byte	.LFE263-.LFB263
@@ -10073,19 +10073,19 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9553 44f6 3A       		.uleb128 0x3a
  9554 44f7 C2240000 		.4byte	.LASF930
  9555 44fb 01       		.byte	0x1
- 9556 44fc 84       		.byte	0x84
+ 9556 44fc 83       		.byte	0x83
  9557 44fd 00000000 		.4byte	.LFB262
  9558 4501 04010000 		.4byte	.LFE262-.LFB262
  9559 4505 01       		.uleb128 0x1
  9560 4506 9C       		.byte	0x9c
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 169
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 169
 
 
  9561 4507 23480000 		.4byte	0x4823
  9562 450b 3B       		.uleb128 0x3b
  9563 450c 61726700 		.ascii	"arg\000"
  9564 4510 01       		.byte	0x1
- 9565 4511 84       		.byte	0x84
+ 9565 4511 83       		.byte	0x83
  9566 4512 BA030000 		.4byte	0x3ba
  9567 4516 18000000 		.4byte	.LLST13
  9568 451a 3C       		.uleb128 0x3c
@@ -10093,11 +10093,11 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9570 451f 33480000 		.4byte	0x4833
  9571 4523 05       		.uleb128 0x5
  9572 4524 03       		.byte	0x3
- 9573 4525 00000000 		.4byte	__FUNCTION__.12317
+ 9573 4525 00000000 		.4byte	__FUNCTION__.12311
  9574 4529 31       		.uleb128 0x31
  9575 452a 6F180000 		.4byte	.LASF927
  9576 452e 01       		.byte	0x1
- 9577 452f 89       		.byte	0x89
+ 9577 452f 88       		.byte	0x88
  9578 4530 A4010000 		.4byte	0x1a4
  9579 4534 03       		.uleb128 0x3
  9580 4535 91       		.byte	0x91
@@ -10105,13 +10105,13 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9582 4538 3D       		.uleb128 0x3d
  9583 4539 0C260000 		.4byte	.LASF928
  9584 453d 01       		.byte	0x1
- 9585 453e 8C       		.byte	0x8c
+ 9585 453e 8B       		.byte	0x8b
  9586 453f 9D130000 		.4byte	0x139d
  9587 4543 39000000 		.4byte	.LLST14
  9588 4547 31       		.uleb128 0x31
  9589 4548 4E110000 		.4byte	.LASF929
  9590 454c 01       		.byte	0x1
- 9591 454d 8D       		.byte	0x8d
+ 9591 454d 8C       		.byte	0x8c
  9592 454e 38480000 		.4byte	0x4838
  9593 4552 03       		.uleb128 0x3
  9594 4553 91       		.byte	0x91
@@ -10123,7 +10123,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9600 4563 3F       		.uleb128 0x3f
  9601 4564 6900     		.ascii	"i\000"
  9602 4566 01       		.byte	0x1
- 9603 4567 99       		.byte	0x99
+ 9603 4567 98       		.byte	0x98
  9604 4568 DA000000 		.4byte	0xda
  9605 456c 4C000000 		.4byte	.LLST18
  9606 4570 00       		.byte	0
@@ -10132,20 +10132,20 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9609 4576 04000000 		.4byte	.LBB126
  9610 457a 78000000 		.4byte	.Ldebug_ranges0+0x78
  9611 457e 01       		.byte	0x1
- 9612 457f 86       		.byte	0x86
+ 9612 457f 85       		.byte	0x85
  9613 4580 8A450000 		.4byte	0x458a
  9614 4584 40       		.uleb128 0x40
  9615 4585 5A4B0000 		.4byte	0x4b5a
  9616 4589 00       		.byte	0
  9617 458a 41       		.uleb128 0x41
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 170
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 170
 
 
  9618 458b 664B0000 		.4byte	0x4b66
  9619 458f 2C000000 		.4byte	.LBB130
  9620 4593 3A000000 		.4byte	.LBE130-.LBB130
  9621 4597 01       		.byte	0x1
- 9622 4598 91       		.byte	0x91
+ 9622 4598 90       		.byte	0x90
  9623 4599 81460000 		.4byte	0x4681
  9624 459d 42       		.uleb128 0x42
  9625 459e 2C000000 		.4byte	.LBB131
@@ -10198,7 +10198,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9672 4617 00       		.sleb128 0
  9673 4618 00       		.byte	0
  9674 4619 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 171
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 171
 
 
  9675 461a 00       		.byte	0
@@ -10247,7 +10247,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9718 4686 66000000 		.4byte	.LBB156
  9719 468a F8000000 		.4byte	.Ldebug_ranges0+0xf8
  9720 468e 01       		.byte	0x1
- 9721 468f 94       		.byte	0x94
+ 9721 468f 93       		.byte	0x93
  9722 4690 B1460000 		.4byte	0x46b1
  9723 4694 34       		.uleb128 0x34
  9724 4695 424B0000 		.4byte	0x4b42
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9729 46a6 36       		.uleb128 0x36
  9730 46a7 01       		.uleb128 0x1
  9731 46a8 50       		.byte	0x50
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 172
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 172
 
 
  9732 46a9 05       		.uleb128 0x5
@@ -10271,7 +10271,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9739 46b6 A2000000 		.4byte	.LBB161
  9740 46ba 62000000 		.4byte	.LBE161-.LBB161
  9741 46be 01       		.byte	0x1
- 9742 46bf A3       		.byte	0xa3
+ 9742 46bf A2       		.byte	0xa2
  9743 46c0 DC470000 		.4byte	0x47dc
  9744 46c4 48       		.uleb128 0x48
  9745 46c5 054B0000 		.4byte	0x4b05
@@ -10318,7 +10318,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9786 4733 04       		.byte	0x4
  9787 4734 1D01     		.2byte	0x11d
  9788 4736 5D470000 		.4byte	0x475d
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 173
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 173
 
 
  9789 473a 34       		.uleb128 0x34
@@ -10378,7 +10378,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9843 47c1 DA000000 		.4byte	.LVL70
  9844 47c5 334C0000 		.4byte	0x4c33
  9845 47c9 36       		.uleb128 0x36
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 174
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 174
 
 
  9846 47ca 01       		.uleb128 0x1
@@ -10438,7 +10438,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9900 4828 33480000 		.4byte	0x4833
  9901 482c 14       		.uleb128 0x14
  9902 482d 37000000 		.4byte	0x37
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 175
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 175
 
 
  9903 4831 0C       		.byte	0xc
@@ -10455,7 +10455,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9914 4849 3A       		.uleb128 0x3a
  9915 484a D8220000 		.4byte	.LASF931
  9916 484e 01       		.byte	0x1
- 9917 484f 6D       		.byte	0x6d
+ 9917 484f 6C       		.byte	0x6c
  9918 4850 00000000 		.4byte	.LFB261
  9919 4854 A4000000 		.4byte	.LFE261-.LFB261
  9920 4858 01       		.uleb128 0x1
@@ -10464,7 +10464,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9923 485e 3B       		.uleb128 0x3b
  9924 485f 61726700 		.ascii	"arg\000"
  9925 4863 01       		.byte	0x1
- 9926 4864 6D       		.byte	0x6d
+ 9926 4864 6C       		.byte	0x6c
  9927 4865 BA030000 		.4byte	0x3ba
  9928 4869 FD000000 		.4byte	.LLST0
  9929 486d 3C       		.uleb128 0x3c
@@ -10472,13 +10472,13 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9931 4872 33480000 		.4byte	0x4833
  9932 4876 05       		.uleb128 0x5
  9933 4877 03       		.byte	0x3
- 9934 4878 00000000 		.4byte	__FUNCTION__.12311
+ 9934 4878 00000000 		.4byte	__FUNCTION__.12305
  9935 487c 33       		.uleb128 0x33
  9936 487d 4E4B0000 		.4byte	0x4b4e
  9937 4881 02000000 		.4byte	.LBB62
  9938 4885 00000000 		.4byte	.Ldebug_ranges0+0
  9939 4889 01       		.byte	0x1
- 9940 488a 6F       		.byte	0x6f
+ 9940 488a 6E       		.byte	0x6e
  9941 488b 95480000 		.4byte	0x4895
  9942 488f 40       		.uleb128 0x40
  9943 4890 5A4B0000 		.4byte	0x4b5a
@@ -10488,7 +10488,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9947 489a 28000000 		.4byte	.LBB68
  9948 489e 20000000 		.4byte	.Ldebug_ranges0+0x20
  9949 48a2 01       		.byte	0x1
- 9950 48a3 7E       		.byte	0x7e
+ 9950 48a3 7D       		.byte	0x7d
  9951 48a4 B9490000 		.4byte	0x49b9
  9952 48a8 34       		.uleb128 0x34
  9953 48a9 054B0000 		.4byte	0x4b05
@@ -10498,7 +10498,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  9957 48b6 28000000 		.4byte	.LBB70
  9958 48ba 48000000 		.4byte	.Ldebug_ranges0+0x48
  9959 48be 04       		.byte	0x4
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 176
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 176
 
 
  9960 48bf 1F01     		.2byte	0x11f
@@ -10558,7 +10558,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  10014 4944 554C0000 		.4byte	0x4c55
  10015 4948 35       		.uleb128 0x35
  10016 4949 8C000000 		.4byte	.LVL18
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 177
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 177
 
 
  10017 494d 604C0000 		.4byte	0x4c60
@@ -10618,7 +10618,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  10071 49cb 30       		.byte	0x30
  10072 49cc 36       		.uleb128 0x36
  10073 49cd 01       		.uleb128 0x1
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 178
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 178
 
 
  10074 49ce 51       		.byte	0x51
@@ -10678,14 +10678,14 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  10128 4a20 37       		.uleb128 0x37
  10129 4a21 70000000 		.4byte	.LVL13
  10130 4a25 D34C0000 		.4byte	0x4cd3
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 179
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 179
 
 
  10131 4a29 00       		.byte	0
  10132 4a2a 32       		.uleb128 0x32
  10133 4a2b D6250000 		.4byte	.LASF933
  10134 4a2f 01       		.byte	0x1
- 10135 4a30 1C       		.byte	0x1c
+ 10135 4a30 1B       		.byte	0x1b
  10136 4a31 DA000000 		.4byte	0xda
  10137 4a35 00000000 		.4byte	.LFB260
  10138 4a39 E8000000 		.4byte	.LFE260-.LFB260
@@ -10695,50 +10695,50 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  10142 4a43 4B       		.uleb128 0x4b
  10143 4a44 3F1D0000 		.4byte	.LASF878
  10144 4a48 01       		.byte	0x1
- 10145 4a49 1C       		.byte	0x1c
+ 10145 4a49 1B       		.byte	0x1b
  10146 4a4a 9D130000 		.4byte	0x139d
  10147 4a4e 87010000 		.4byte	.LLST5
  10148 4a52 3F       		.uleb128 0x3f
  10149 4a53 6900     		.ascii	"i\000"
  10150 4a55 01       		.byte	0x1
- 10151 4a56 1E       		.byte	0x1e
+ 10151 4a56 1D       		.byte	0x1d
  10152 4a57 DA000000 		.4byte	0xda
  10153 4a5b C1010000 		.4byte	.LLST6
  10154 4a5f 3D       		.uleb128 0x3d
  10155 4a60 C5270000 		.4byte	.LASF934
  10156 4a64 01       		.byte	0x1
- 10157 4a65 1E       		.byte	0x1e
+ 10157 4a65 1D       		.byte	0x1d
  10158 4a66 DA000000 		.4byte	0xda
  10159 4a6a F8010000 		.4byte	.LLST7
  10160 4a6e 3F       		.uleb128 0x3f
  10161 4a6f 656E6400 		.ascii	"end\000"
  10162 4a73 01       		.byte	0x1
- 10163 4a74 1E       		.byte	0x1e
+ 10163 4a74 1D       		.byte	0x1d
  10164 4a75 DA000000 		.4byte	0xda
  10165 4a79 24020000 		.4byte	.LLST8
  10166 4a7d 3D       		.uleb128 0x3d
  10167 4a7e 56200000 		.4byte	.LASF935
  10168 4a82 01       		.byte	0x1
- 10169 4a83 1E       		.byte	0x1e
+ 10169 4a83 1D       		.byte	0x1d
  10170 4a84 DA000000 		.4byte	0xda
  10171 4a88 5A020000 		.4byte	.LLST9
  10172 4a8c 3D       		.uleb128 0x3d
  10173 4a8d 91080000 		.4byte	.LASF936
  10174 4a91 01       		.byte	0x1
- 10175 4a92 1F       		.byte	0x1f
+ 10175 4a92 1E       		.byte	0x1e
  10176 4a93 BF000000 		.4byte	0xbf
  10177 4a97 90020000 		.4byte	.LLST10
  10178 4a9b 4C       		.uleb128 0x4c
  10179 4a9c 0C140000 		.4byte	.LASF937
  10180 4aa0 01       		.byte	0x1
- 10181 4aa1 1F       		.byte	0x1f
+ 10181 4aa1 1E       		.byte	0x1e
  10182 4aa2 BF000000 		.4byte	0xbf
  10183 4aa6 00       		.byte	0
  10184 4aa7 4C       		.uleb128 0x4c
  10185 4aa8 631D0000 		.4byte	.LASF938
  10186 4aac 01       		.byte	0x1
- 10187 4aad 1F       		.byte	0x1f
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 180
+ 10187 4aad 1E       		.byte	0x1e
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 180
 
 
  10188 4aae BF000000 		.4byte	0xbf
@@ -10746,17 +10746,17 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  10190 4ab3 3D       		.uleb128 0x3d
  10191 4ab4 02080000 		.4byte	.LASF939
  10192 4ab8 01       		.byte	0x1
- 10193 4ab9 20       		.byte	0x20
+ 10193 4ab9 1F       		.byte	0x1f
  10194 4aba F5000000 		.4byte	0xf5
  10195 4abe C8020000 		.4byte	.LLST11
  10196 4ac2 31       		.uleb128 0x31
  10197 4ac3 33190000 		.4byte	.LASF940
  10198 4ac7 01       		.byte	0x1
- 10199 4ac8 22       		.byte	0x22
+ 10199 4ac8 21       		.byte	0x21
  10200 4ac9 DA000000 		.4byte	0xda
  10201 4acd 05       		.uleb128 0x5
  10202 4ace 03       		.byte	0x3
- 10203 4acf 00000000 		.4byte	last_width.12294
+ 10203 4acf 00000000 		.4byte	last_width.12288
  10204 4ad3 3E       		.uleb128 0x3e
  10205 4ad4 12000000 		.4byte	.LBB92
  10206 4ad8 0A000000 		.4byte	.LBE92-.LBB92
@@ -10764,7 +10764,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  10208 4ae0 3F       		.uleb128 0x3f
  10209 4ae1 6900     		.ascii	"i\000"
  10210 4ae3 01       		.byte	0x1
- 10211 4ae4 25       		.byte	0x25
+ 10211 4ae4 24       		.byte	0x24
  10212 4ae5 DA000000 		.4byte	0xda
  10213 4ae9 FD020000 		.4byte	.LLST12
  10214 4aed 00       		.byte	0
@@ -10798,7 +10798,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  10242 4b2a 04       		.byte	0x4
  10243 4b2b 0A01     		.2byte	0x10a
  10244 4b2d 124B0000 		.4byte	0x4b12
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 181
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 181
 
 
  10245 4b31 00       		.byte	0
@@ -10858,7 +10858,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  10299 4ba4 09220000 		.4byte	.LASF947
  10300 4ba8 00       		.byte	0
  10301 4ba9 13       		.uleb128 0x13
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 182
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 182
 
 
  10302 4baa 11110000 		.4byte	0x1111
@@ -10918,7 +10918,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  10356 4c1e D6140000 		.4byte	.LASF956
  10357 4c22 D6140000 		.4byte	.LASF956
  10358 4c26 12       		.byte	0x12
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 183
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 183
 
 
  10359 4c27 D9       		.byte	0xd9
@@ -10978,7 +10978,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  10413 4ca1 D7260000 		.4byte	.LASF966
  10414 4ca5 36       		.byte	0x36
  10415 4ca6 59       		.byte	0x59
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 184
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 184
 
 
  10416 4ca7 58       		.uleb128 0x58
@@ -11038,7 +11038,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  10470 001a 03       		.uleb128 0x3
  10471 001b 08       		.uleb128 0x8
  10472 001c 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 185
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 185
 
 
  10473 001d 00       		.byte	0
@@ -11098,7 +11098,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  10527 0053 08       		.uleb128 0x8
  10528 0054 0D       		.uleb128 0xd
  10529 0055 00       		.byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 186
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 186
 
 
  10530 0056 03       		.uleb128 0x3
@@ -11158,7 +11158,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  10584 008c 03       		.uleb128 0x3
  10585 008d 0E       		.uleb128 0xe
  10586 008e 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 187
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 187
 
 
  10587 008f 0B       		.uleb128 0xb
@@ -11218,7 +11218,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  10641 00c5 3B       		.uleb128 0x3b
  10642 00c6 05       		.uleb128 0x5
  10643 00c7 49       		.uleb128 0x49
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 188
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 188
 
 
  10644 00c8 13       		.uleb128 0x13
@@ -11278,7 +11278,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  10698 00fe 00       		.byte	0
  10699 00ff 16       		.uleb128 0x16
  10700 0100 34       		.uleb128 0x34
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 189
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 189
 
 
  10701 0101 00       		.byte	0
@@ -11338,7 +11338,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  10755 0137 00       		.byte	0
  10756 0138 00       		.byte	0
  10757 0139 1A       		.uleb128 0x1a
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 190
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 190
 
 
  10758 013a 16       		.uleb128 0x16
@@ -11398,7 +11398,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  10812 0170 03       		.uleb128 0x3
  10813 0171 0E       		.uleb128 0xe
  10814 0172 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 191
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 191
 
 
  10815 0173 0B       		.uleb128 0xb
@@ -11458,7 +11458,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  10869 01a9 00       		.byte	0
  10870 01aa 03       		.uleb128 0x3
  10871 01ab 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 192
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 192
 
 
  10872 01ac 1C       		.uleb128 0x1c
@@ -11518,7 +11518,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  10926 01e2 00       		.byte	0
  10927 01e3 03       		.uleb128 0x3
  10928 01e4 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 193
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 193
 
 
  10929 01e5 3A       		.uleb128 0x3a
@@ -11578,7 +11578,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  10983 021b 3B       		.uleb128 0x3b
  10984 021c 05       		.uleb128 0x5
  10985 021d 01       		.uleb128 0x1
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 194
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 194
 
 
  10986 021e 13       		.uleb128 0x13
@@ -11638,7 +11638,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  11040 0254 03       		.uleb128 0x3
  11041 0255 0E       		.uleb128 0xe
  11042 0256 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 195
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 195
 
 
  11043 0257 0B       		.uleb128 0xb
@@ -11698,7 +11698,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  11097 028e 00       		.byte	0
  11098 028f 33       		.uleb128 0x33
  11099 0290 1D       		.uleb128 0x1d
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 196
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 196
 
 
  11100 0291 01       		.byte	0x1
@@ -11758,7 +11758,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  11154 02ce 3F       		.uleb128 0x3f
  11155 02cf 19       		.uleb128 0x19
  11156 02d0 03       		.uleb128 0x3
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 197
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 197
 
 
  11157 02d1 0E       		.uleb128 0xe
@@ -11818,7 +11818,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  11211 030b 05       		.uleb128 0x5
  11212 030c 00       		.byte	0
  11213 030d 03       		.uleb128 0x3
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 198
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 198
 
 
  11214 030e 08       		.uleb128 0x8
@@ -11878,7 +11878,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  11268 0344 08       		.uleb128 0x8
  11269 0345 3A       		.uleb128 0x3a
  11270 0346 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 199
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 199
 
 
  11271 0347 3B       		.uleb128 0x3b
@@ -11938,7 +11938,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  11325 037d 00       		.byte	0
  11326 037e 45       		.uleb128 0x45
  11327 037f 1D       		.uleb128 0x1d
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 200
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 200
 
 
  11328 0380 01       		.byte	0x1
@@ -11998,7 +11998,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  11382 03b6 49       		.uleb128 0x49
  11383 03b7 1D       		.uleb128 0x1d
  11384 03b8 01       		.byte	0x1
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 201
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 201
 
 
  11385 03b9 31       		.uleb128 0x31
@@ -12058,7 +12058,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  11439 03ef 13       		.uleb128 0x13
  11440 03f0 1C       		.uleb128 0x1c
  11441 03f1 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 202
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 202
 
 
  11442 03f2 00       		.byte	0
@@ -12118,7 +12118,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  11496 0428 03       		.uleb128 0x3
  11497 0429 08       		.uleb128 0x8
  11498 042a 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 203
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 203
 
 
  11499 042b 0B       		.uleb128 0xb
@@ -12178,7 +12178,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  11553 0461 0E       		.uleb128 0xe
  11554 0462 3A       		.uleb128 0x3a
  11555 0463 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 204
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 204
 
 
  11556 0464 3B       		.uleb128 0x3b
@@ -12238,7 +12238,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  11610 049a 3F       		.uleb128 0x3f
  11611 049b 19       		.uleb128 0x19
  11612 049c 3C       		.uleb128 0x3c
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 205
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 205
 
 
  11613 049d 19       		.uleb128 0x19
@@ -12298,7 +12298,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  11667 04d3 3B       		.uleb128 0x3b
  11668 04d4 0B       		.uleb128 0xb
  11669 04d5 6E       		.uleb128 0x6e
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 206
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 206
 
 
  11670 04d6 0E       		.uleb128 0xe
@@ -12358,7 +12358,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  11724 0077 00000000 		.4byte	0
  11725 007b 00000000 		.4byte	0
  11726              	.LLST16:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 207
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 207
 
 
  11727 007f 34000000 		.4byte	.LVL46
@@ -12418,7 +12418,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  11781 0108 26000000 		.4byte	.LVL1
  11782 010c A4000000 		.4byte	.LFE261
  11783 0110 0400     		.2byte	0x4
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 208
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 208
 
 
  11784 0112 F3       		.byte	0xf3
@@ -12478,7 +12478,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  11838 019a 0400     		.2byte	0x4
  11839 019c F3       		.byte	0xf3
  11840 019d 01       		.uleb128 0x1
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 209
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 209
 
 
  11841 019e 50       		.byte	0x50
@@ -12538,7 +12538,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  11895 0220 00000000 		.4byte	0
  11896              	.LLST8:
  11897 0224 0A000000 		.4byte	.LVL20
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 210
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 210
 
 
  11898 0228 5A000000 		.4byte	.LVL28
@@ -12598,7 +12598,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  11952 02b2 31       		.byte	0x31
  11953 02b3 9F       		.byte	0x9f
  11954 02b4 66000000 		.4byte	.LVL29
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 211
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 211
 
 
  11955 02b8 8C000000 		.4byte	.LVL34
@@ -12658,7 +12658,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12009 0040 00000000 		.4byte	0
  12010 0044 00000000 		.4byte	0
  12011              		.section	.debug_ranges,"",%progbits
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 212
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 212
 
 
  12012              	.Ldebug_ranges0:
@@ -12718,7 +12718,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12066 00d4 40000000 		.4byte	.LBE152
  12067 00d8 00000000 		.4byte	0
  12068 00dc 00000000 		.4byte	0
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 213
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 213
 
 
  12069 00e0 30000000 		.4byte	.LBB144
@@ -12778,7 +12778,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12115 0015 63685F74 		.ascii	"ch_trace_buffer_t\000"
  12115      72616365 
  12115      5F627566 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 214
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 214
 
 
  12115      6665725F 
@@ -12838,7 +12838,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12140              	.LASF642:
  12141 00b6 44494550 		.ascii	"DIEPTXF0\000"
  12141      54584630 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 215
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 215
 
 
  12141      00
@@ -12898,7 +12898,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12170              	.LASF358:
  12171 014c 73717231 		.ascii	"sqr1\000"
  12171      00
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 216
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 216
 
 
  12172              	.LASF883:
@@ -12958,7 +12958,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12203      00
  12204              	.LASF343:
  12205 01cb 73616D70 		.ascii	"samples\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 217
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 217
 
 
  12205      6C657300 
@@ -13018,7 +13018,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12235      65787400 
  12236              	.LASF338:
  12237 0264 4144435F 		.ascii	"ADC_ERR_OVERFLOW\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 218
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 218
 
 
  12237      4552525F 
@@ -13078,7 +13078,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12264              	.LASF785:
  12265 02f0 5F6E6275 		.ascii	"_nbuf\000"
  12265      6600
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 219
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 219
 
 
  12266              	.LASF552:
@@ -13138,7 +13138,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12294              	.LASF36:
  12295 038a 74687265 		.ascii	"thread_t\000"
  12295      61645F74 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 220
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 220
 
 
  12295      00
@@ -13198,7 +13198,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12323 0423 72657376 		.ascii	"resvd1c\000"
  12323      64316300 
  12324              	.LASF970:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 221
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 221
 
 
  12325 042b 64636D69 		.ascii	"dcmi_capture_start\000"
@@ -13258,7 +13258,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12352              	.LASF429:
  12353 04bb 4750545F 		.ascii	"GPT_ONESHOT\000"
  12353      4F4E4553 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 222
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 222
 
 
  12353      484F5400 
@@ -13318,7 +13318,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12381      6C626163 
  12381      6B5F7400 
  12382              	.LASF459:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 223
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 223
 
 
  12383 0552 69326361 		.ascii	"i2caddr_t\000"
@@ -13378,7 +13378,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12407      757000
  12408              	.LASF664:
  12409 05ec 44535453 		.ascii	"DSTS\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 224
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 224
 
 
  12409      00
@@ -13438,7 +13438,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12435      6661696C 
  12435      00
  12436              	.LASF170:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 225
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 225
 
 
  12437 067f 52455350 		.ascii	"RESP1\000"
@@ -13498,7 +13498,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12465 0708 636F6E64 		.ascii	"condvar\000"
  12465      76617200 
  12466              	.LASF493:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 226
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 226
 
 
  12467 0710 69327370 		.ascii	"i2spr\000"
@@ -13558,7 +13558,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12495      7900
  12496              	.LASF566:
  12497 0797 696E5F70 		.ascii	"in_params\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 227
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 227
 
 
  12497      6172616D 
@@ -13618,7 +13618,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12527      494E554F 
  12527      555300
  12528              	.LASF692:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 228
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 228
 
 
  12529 0821 74787175 		.ascii	"txqueued\000"
@@ -13678,7 +13678,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12555      5F65705F 
  12555      7400
  12556              	.LASF700:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 229
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 229
 
 
  12557 08b1 7278636E 		.ascii	"rxcnt\000"
@@ -13738,7 +13738,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12586              	.LASF761:
  12587 0938 5F5F746D 		.ascii	"__tm_wday\000"
  12587      5F776461 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 230
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 230
 
 
  12587      7900
@@ -13798,7 +13798,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12613      75666665 
  12613      7200
  12614              	.LASF374:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 231
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 231
 
 
  12615 09d3 74787175 		.ascii	"txqueue\000"
@@ -13858,7 +13858,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12641      74617465 
  12641      00
  12642              	.LASF367:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 232
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 232
 
 
  12643 0a64 43414E5F 		.ascii	"CAN_UNINIT\000"
@@ -13918,7 +13918,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12676              	.LASF406:
  12677 0adf 64616364 		.ascii	"dacdhrmode_t\000"
  12677      68726D6F 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 233
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 233
 
 
  12677      64655F74 
@@ -13978,7 +13978,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12705      41435449 
  12705      564500
  12706              	.LASF760:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 234
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 234
 
 
  12707 0b6d 5F5F746D 		.ascii	"__tm_year\000"
@@ -14038,7 +14038,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12733 0bf7 50574D43 		.ascii	"PWMConfig\000"
  12733      6F6E6669 
  12733      6700
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 235
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 235
 
 
  12734              	.LASF835:
@@ -14098,7 +14098,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12763      63746564 
  12763      00
  12764              	.LASF73:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 236
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 236
 
 
  12765 0c8a 76697274 		.ascii	"virtual_timer_t\000"
@@ -14158,7 +14158,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12795      7200
  12796              	.LASF442:
  12797 0d12 43435852 		.ascii	"CCXR\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 237
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 237
 
 
  12797      00
@@ -14218,7 +14218,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12828              	.LASF242:
  12829 0da3 63665F6F 		.ascii	"cf_off_name\000"
  12829      66665F6E 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 238
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 238
 
 
  12829      616D6500 
@@ -14278,7 +14278,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12856      6500
  12857              	.LASF265:
  12858 0e5c 696F5F71 		.ascii	"io_queue_t\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 239
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 239
 
 
  12858      75657565 
@@ -14338,7 +14338,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12884      64333000 
  12885              	.LASF743:
  12886 0ef2 5F5F7763 		.ascii	"__wchb\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 240
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 240
 
 
  12886      686200
@@ -14398,7 +14398,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12914      616C5F6D 
  12914      61747269 
  12914      785F7300 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 241
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 241
 
 
  12915              	.LASF816:
@@ -14458,7 +14458,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12932 1100 5F657272 		.ascii	"_errno\000"
  12932      6E6F00
  12933              	.LASF891:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 242
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 242
 
 
  12934 1107 6D657373 		.ascii	"messagebus_t\000"
@@ -14518,7 +14518,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12961              	.LASF378:
  12962 119a 6572726F 		.ascii	"error_event\000"
  12962      725F6576 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 243
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 243
 
 
  12962      656E7400 
@@ -14578,7 +14578,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  12990 1233 69326373 		.ascii	"i2cstate_t\000"
  12990      74617465 
  12990      5F7400
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 244
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 244
 
 
  12991              	.LASF779:
@@ -14638,7 +14638,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13018      64384330 
  13018      00
  13019              	.LASF717:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 245
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 245
 
 
  13020 12d6 55534243 		.ascii	"USBConfig\000"
@@ -14698,7 +14698,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13048      706C6965 
  13048      7200
  13049              	.LASF333:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 246
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 246
 
 
  13050 136c 4144435F 		.ascii	"ADC_ERROR\000"
@@ -14758,7 +14758,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13076      5F737461 
  13076      746500
  13077              	.LASF532:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 247
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 247
 
 
  13078 13fe 5344435F 		.ascii	"SDC_MODE_8BIT\000"
@@ -14818,7 +14818,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13106 148c 5F5F554C 		.ascii	"__ULong\000"
  13106      6F6E6700 
  13107              	.LASF85:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 248
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 248
 
 
  13108 1494 70616E69 		.ascii	"panic_msg\000"
@@ -14878,7 +14878,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13134      6365735F 
  13134      7400
  13135              	.LASF823:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 249
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 249
 
 
  13136 152c 5F737472 		.ascii	"_strtok_last\000"
@@ -14938,7 +14938,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13164      54797065 
  13164      44656600 
  13165              	.LASF10:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 250
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 250
 
 
  13166 15c0 73686F72 		.ascii	"short unsigned int\000"
@@ -14998,7 +14998,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13194 164a 55534244 		.ascii	"USBDescriptor\000"
  13194      65736372 
  13194      6970746F 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 251
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 251
 
 
  13194      7200
@@ -15058,7 +15058,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13220      656D436F 
  13220      7265436C 
  13220      6F636B00 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 252
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 252
 
 
  13221              	.LASF351:
@@ -15118,7 +15118,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13249              	.LASF446:
  13250 1787 63616C6C 		.ascii	"callback\000"
  13250      6261636B 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 253
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 253
 
 
  13250      00
@@ -15178,7 +15178,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13276      73746174 
  13276      655F7400 
  13277              	.LASF624:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 254
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 254
 
 
  13278 1822 44494550 		.ascii	"DIEPTSIZ\000"
@@ -15238,7 +15238,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13306      4C4C00
  13307              	.LASF12:
  13308 18ad 6C6F6E67 		.ascii	"long int\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 255
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 255
 
 
  13308      20696E74 
@@ -15298,7 +15298,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13338 1933 6C617374 		.ascii	"last_width\000"
  13338      5F776964 
  13338      746800
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 256
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 256
 
 
  13339              	.LASF349:
@@ -15358,7 +15358,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13372      5F696D61 
  13372      67655F72 
  13372      65616479 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 257
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 257
 
 
  13372      00
@@ -15418,7 +15418,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13401              	.LASF585:
  13402 1a4c 5553425F 		.ascii	"USB_SELECTED\000"
  13402      53454C45 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 258
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 258
 
 
  13402      43544544 
@@ -15478,7 +15478,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13428 1ae4 6C696E65 		.ascii	"lineWidth\000"
  13428      57696474 
  13428      6800
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 259
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 259
 
 
  13429              	.LASF169:
@@ -15538,7 +15538,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13456      524500
  13457              	.LASF641:
  13458 1b83 47525846 		.ascii	"GRXFSIZ\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 260
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 260
 
 
  13458      53495A00 
@@ -15598,7 +15598,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13486      58535453 
  13486      00
  13487              	.LASF575:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 261
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 261
 
 
  13488 1c23 636F6E66 		.ascii	"configuration\000"
@@ -15658,7 +15658,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13512      616C6C62 
  13512      61636B5F 
  13512      7400
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 262
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 262
 
 
  13513              	.LASF894:
@@ -15718,7 +15718,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13538 1d63 6C696E65 		.ascii	"line_not_found\000"
  13538      5F6E6F74 
  13538      5F666F75 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 263
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 263
 
 
  13538      6E6400
@@ -15778,7 +15778,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13566      5F7400
  13567              	.LASF288:
  13568 1e02 424C4B5F 		.ascii	"BLK_CONNECTING\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 264
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 264
 
 
  13568      434F4E4E 
@@ -15838,7 +15838,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13593              	.LASF942:
  13594 1ea4 63684253 		.ascii	"chBSemSignalI\000"
  13594      656D5369 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 265
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 265
 
 
  13594      676E616C 
@@ -15898,7 +15898,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13621              	.LASF296:
  13622 1f36 626C6B5F 		.ascii	"blk_num\000"
  13622      6E756D00 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 266
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 266
 
 
  13623              	.LASF596:
@@ -15958,7 +15958,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13648 1fd5 715F636F 		.ascii	"q_counter\000"
  13648      756E7465 
  13648      7200
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 267
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 267
 
 
  13649              	.LASF588:
@@ -16018,7 +16018,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13677              	.LASF728:
  13678 2069 464F524D 		.ascii	"FORMAT_RGB565_BYTE_SWAP\000"
  13678      41545F52 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 268
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 268
 
 
  13678      47423536 
@@ -16078,7 +16078,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13705              	.LASF660:
  13706 2106 72657376 		.ascii	"resvd444\000"
  13706      64343434 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 269
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 269
 
 
  13706      00
@@ -16138,7 +16138,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13733              	.LASF877:
  13734 219e 746F7069 		.ascii	"topic_s\000"
  13734      635F7300 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 270
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 270
 
 
  13735              	.LASF297:
@@ -16198,7 +16198,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13760 223e 72657376 		.ascii	"resvd1C\000"
  13760      64314300 
  13761              	.LASF95:
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 271
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 271
 
 
  13762 2246 69646C65 		.ascii	"idle_thread_wa\000"
@@ -16258,7 +16258,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13789              	.LASF931:
  13790 22d8 43617074 		.ascii	"CaptureImage\000"
  13790      75726549 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 272
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 272
 
 
  13790      6D616765 
@@ -16318,7 +16318,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13817              	.LASF168:
  13818 236a 434C4B43 		.ascii	"CLKCR\000"
  13818      5200
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 273
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 273
 
 
  13819              	.LASF973:
@@ -16378,7 +16378,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13846      00
  13847              	.LASF80:
  13848 23f5 76697274 		.ascii	"virtual_timers_list_t\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 274
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 274
 
 
  13848      75616C5F 
@@ -16438,7 +16438,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13876      206C6F6E 
  13876      6720696E 
  13876      7400
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 275
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 275
 
 
  13877              	.LASF648:
@@ -16498,7 +16498,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13901              	.LASF32:
  13902 2529 6576656E 		.ascii	"eventflags_t\000"
  13902      74666C61 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 276
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 276
 
 
  13902      67735F74 
@@ -16558,7 +16558,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13930 25b9 424C4B5F 		.ascii	"BLK_SYNCING\000"
  13930      53594E43 
  13930      494E4700 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 277
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 277
 
 
  13931              	.LASF324:
@@ -16618,7 +16618,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13956 2659 65787063 		.ascii	"expchannel_t\000"
  13956      68616E6E 
  13956      656C5F74 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 278
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 278
 
 
  13956      00
@@ -16678,7 +16678,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  13980      595F4359 
  13980      434C455F 
  13980      3200
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 279
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 279
 
 
  13981              	.LASF176:
@@ -16738,7 +16738,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  14012      7900
  14013              	.LASF464:
  14014 278e 6932636F 		.ascii	"i2copmode_t\000"
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 280
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 280
 
 
  14014      706D6F64 
@@ -16798,7 +16798,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  14041              	.LASF818:
  14042 2821 5F72616E 		.ascii	"_rand48\000"
  14042      64343800 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 281
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 281
 
 
  14043              	.LASF684:
@@ -16858,7 +16858,7 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  14073              	.LASF57:
  14074 28b2 705F7374 		.ascii	"p_stats\000"
  14074      61747300 
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 282
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 282
 
 
  14075              	.LASF587:
@@ -16866,49 +16866,49 @@ ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 1
  14076      74617465 
  14076      5F7400
  14077              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 283
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 283
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 camera_processing.c
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:18     .text.CaptureImage:00000000 $t
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:25     .text.CaptureImage:00000000 CaptureImage
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:213    .text.CaptureImage:00000090 $d
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:226    .text.extract_line_width:00000000 $t
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:234    .text.extract_line_width:00000000 extract_line_width
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:410    .text.extract_line_width:000000d4 $d
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:419    .text.ProcessImage:00000000 $t
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:426    .text.ProcessImage:00000000 ProcessImage
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:722    .text.ProcessImage:000000e8 $d
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:737    .text.get_line_position:00000000 $t
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:745    .text.get_line_position:00000000 get_line_position
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:783    .text.get_line_position:00000020 $d
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:789    .text.process_image_start:00000000 $t
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:797    .text.process_image_start:00000000 process_image_start
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:853    .text.process_image_start:0000003c $d
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:862    .text.close_line:00000000 $t
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:870    .text.close_line:00000000 close_line
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:950    .text.close_line:00000050 $d
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:958    .bss.lineWidth:00000000 $d
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:962    .bss.lineWidth:00000000 lineWidth
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:965    .bss.waCaptureImage:00000000 $d
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:969    .bss.waCaptureImage:00000000 waCaptureImage
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:972    .bss.waProcessImage:00000000 $d
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:976    .bss.waProcessImage:00000000 waProcessImage
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:979    .data.image_captured_sem:00000000 $d
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:983    .data.image_captured_sem:00000000 image_captured_sem
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:988    .data.image_ready_sem:00000000 $d
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:992    .data.image_ready_sem:00000000 image_ready_sem
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:997    .data.last_width.12294:00000000 $d
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:1001   .data.last_width.12294:00000000 last_width.12294
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:1004   .data.line_position:00000000 $d
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:1008   .data.line_position:00000000 line_position
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:1011   .rodata.__FUNCTION__.12311:00000000 $d
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:1015   .rodata.__FUNCTION__.12311:00000000 __FUNCTION__.12311
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:1018   .rodata.__FUNCTION__.12317:00000000 $d
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:1022   .rodata.__FUNCTION__.12317:00000000 __FUNCTION__.12317
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:1025   .rodata.__func__.7153:00000000 $d
-C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s:1029   .rodata.__func__.7153:00000000 __func__.7153
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:18     .text.CaptureImage:00000000 $t
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:25     .text.CaptureImage:00000000 CaptureImage
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:213    .text.CaptureImage:00000090 $d
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:226    .text.extract_line_width:00000000 $t
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:234    .text.extract_line_width:00000000 extract_line_width
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:410    .text.extract_line_width:000000d4 $d
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:419    .text.ProcessImage:00000000 $t
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:426    .text.ProcessImage:00000000 ProcessImage
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:722    .text.ProcessImage:000000e8 $d
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:737    .text.get_line_position:00000000 $t
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:745    .text.get_line_position:00000000 get_line_position
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:783    .text.get_line_position:00000020 $d
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:789    .text.process_image_start:00000000 $t
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:797    .text.process_image_start:00000000 process_image_start
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:853    .text.process_image_start:0000003c $d
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:862    .text.close_line:00000000 $t
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:870    .text.close_line:00000000 close_line
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:950    .text.close_line:00000050 $d
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:958    .bss.lineWidth:00000000 $d
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:962    .bss.lineWidth:00000000 lineWidth
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:965    .bss.waCaptureImage:00000000 $d
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:969    .bss.waCaptureImage:00000000 waCaptureImage
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:972    .bss.waProcessImage:00000000 $d
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:976    .bss.waProcessImage:00000000 waProcessImage
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:979    .data.image_captured_sem:00000000 $d
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:983    .data.image_captured_sem:00000000 image_captured_sem
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:988    .data.image_ready_sem:00000000 $d
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:992    .data.image_ready_sem:00000000 image_ready_sem
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:997    .data.last_width.12288:00000000 $d
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:1001   .data.last_width.12288:00000000 last_width.12288
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:1004   .data.line_position:00000000 $d
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:1008   .data.line_position:00000000 line_position
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:1011   .rodata.__FUNCTION__.12305:00000000 $d
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:1015   .rodata.__FUNCTION__.12305:00000000 __FUNCTION__.12305
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:1018   .rodata.__FUNCTION__.12311:00000000 $d
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:1022   .rodata.__FUNCTION__.12311:00000000 __FUNCTION__.12311
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:1025   .rodata.__func__.7153:00000000 $d
+C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s:1029   .rodata.__func__.7153:00000000 __func__.7153
 
 UNDEFINED SYMBOLS
 po8030_advanced_config
@@ -16926,7 +16926,7 @@ _dbg_check_lock
 chDbgCheckClassI
 chSemSignalI
 ch
-ARM GAS  C:\Users\Marc\AppData\Local\Temp\cc1hAyLF.s 			page 284
+ARM GAS  C:\Users\Marc\AppData\Local\Temp\ccZlf4hi.s 			page 284
 
 
 __stack_chk_guard

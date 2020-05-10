@@ -14,8 +14,7 @@
 #define CENTER_BOUNDARY			300
 #define TOP_BOUNDARY			600
 
-static uint16_t lineWidth = 0;
-static uint16_t line_position = IMAGE_BUFFER_SIZE/2;	//middle
+static uint16_t lineWidth = 0, line_position = IMAGE_BUFFER_SIZE/2;	//middle
 
 //semaphore
 static BSEMAPHORE_DECL(image_captured_sem, TRUE);
@@ -23,8 +22,8 @@ static BSEMAPHORE_DECL(image_ready_sem, TRUE);
 
 /*
  *  Returns the line's width extracted from the image buffer given
- *  Returns 0 if line not found*/
-
+ *  Returns 0 if line not found
+ */
 uint16_t extract_line_width(uint8_t *buffer){
 
 	uint16_t i = 0, begin = 0, end = 0, width = 0;

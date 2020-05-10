@@ -30,7 +30,7 @@
 
 void decalage_interlettre(void){
 	motors_set_position(QUART_DE_TOUR, QUART_DE_TOUR, VITESSE_ECRITURE, -VITESSE_ECRITURE);		//rotation
-	motors_set_position(MOITIE_DISTANCE, MOITIE_DISTANCE, VITESSE_ECRITURE, VITESSE_ECRITURE);	//ligne							//ligne
+	motors_set_position(MOITIE_DISTANCE, MOITIE_DISTANCE, VITESSE_ECRITURE, VITESSE_ECRITURE);	//ligne
 	motors_set_position(QUART_DE_TOUR, QUART_DE_TOUR, -VITESSE_ECRITURE, VITESSE_ECRITURE);
 }
 

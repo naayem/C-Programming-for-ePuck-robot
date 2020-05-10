@@ -1,9 +1,7 @@
 #include <main.h>
 #include <game_management.h>
-
 #include <math.h>
 #include <arm_math.h>
-
 #include <audio_processing.h>
 #include <ir_thread.h>
 #include <motors_processing.h>
@@ -11,7 +9,7 @@
 #include <leds.h>
 #include <letter_writing.h>
 
-#define TAILLE_BOITE_PONG_X		35
+#define TAILLE_BOITE_PONG_X		30
 #define TAILLE_BOITE_PONG_Y		20
 #define ROTATION_180_DEGRE		180*DEG_TO_RAD
 #define ROTATION_135_DEGRE		135*DEG_TO_RAD
@@ -21,14 +19,14 @@
 #define QUADRANT_INF_DROIT		4
 #define POINTS_POUR_GAGNER		3
 
-static mapping ePuck = {0,0,0};
-static etats nextState = MENU_PRINCIPAL;
-static etats currentStateManagement = MENU_PRINCIPAL;
-static order action = ARRET;
-static lettre lettre_state = AUCUN;
-static float counted_current_steps = 0;
-static uint8_t point_joueur_avant = 0, point_joueur_arriere = 0;
-static uint8_t case_init = 1;
+static mapping ePuck = {0,0,0};									//Position du ePuck en mode Pong
+static etats nextState = MENU_PRINCIPAL;						//Prochain etat a evaluer pour mettre a jour la machine d'etat principal
+static etats currentStateManagement = MENU_PRINCIPAL;			//Etat de la machine d'etat principal
+static order action = ARRET;									//Etat de la sous-machine d'etat des mouvement du robot
+static lettre lettre_state = AUCUN;								//Etat de la sous-machine d'etat d'ecriture de lettres
+static float counted_current_steps = 0;							//Compteur des pas moteurs comptabilises dans les fonction de mis a jour de position
+static uint8_t point_joueur_avant = 0, point_joueur_arriere = 0;//Compteur de points pour le jeu Pong
+static uint8_t case_init = 1;									//Variable pour l'initialisation des led afin de modifier leur etat qu'une fois
 
 /***************************INTERNAL FUNCTIONS************************************/
 
@@ -40,23 +38,22 @@ void update_map_position(void)
 	float left_steps = (float)left_motor_get_pos();
 	float right_steps = (float)right_motor_get_pos();
 
-	float total_current_steps = (left_steps+right_steps)/2;
-	float steps_difference= (total_current_steps-counted_current_steps);
+	float moyenne_current_steps = (left_steps+right_steps)/2;
+	float steps_difference= (moyenne_current_steps-counted_current_steps);
 
-	counted_current_steps = total_current_steps;
+	counted_current_steps = moyenne_current_steps;
 
 	float dist = steps_to_cm(steps_difference);
 
 	ePuck.x += dist * (float)arm_cos_f32(ePuck.angle);
 	ePuck.y += dist * (float)arm_sin_f32(ePuck.angle);
-
-	//chprintf((BaseSequentialStream *)&SD3,"map_position  dist=%f !!! d_x=%f !!! d_y=%f Steeeeps=%f \n", dist, ePuck.x, ePuck.y, steps_difference);
 }
 
 /**
  * @brief update l'angle de mapping du ePuck selon l'angle de rotation qu'on lui a demandé d'effectuer
  *
  * @param angle_rotation			Angle de rotation a effectu� par l'ePuck
+ *
  */
 void update_map_angle(float angle_rotation)
 {
@@ -77,10 +74,10 @@ void update_map_angle(float angle_rotation)
  * @brief Effectue des étapes nécessaire au mapping de l'ePuck apres l'interruption d'une trajectoire droite.
  */
 void postAvance_init(void){
-	//chSysLock();
+	chSysLock();
 	update_map_position();
 	counted_current_steps = 0;
-	//chSysUnlock();
+	chSysUnlock();
 	motors_stop_pos();
 }
 
@@ -89,6 +86,7 @@ void postAvance_init(void){
  *
  * @param next_order			Ordres de déplacement.
  * @param angle_rotation	 	Angle de rotation a effectuer, evalué cas de rotation TOURNE. Non evalué en mode ARRET ou AVANCE.
+ *
  */
 void nouvel_ordre(order next_order, float angle_rotation){
 	switch(action){
@@ -128,23 +126,21 @@ void nouvel_ordre(order next_order, float angle_rotation){
 
 		case AVANCE:
 			motors_stop_speed();
+			postAvance_init();
 			switch(next_order){
 				case AVANCE:
-					action=next_order;
-					postAvance_init();
+					action=AVANCE;
 					moteurs_avance();
 					break;
 
 				case TOURNE:
-					postAvance_init();
-					action=next_order;
+					action=TOURNE;
 					moteurs_tourne(angle_rotation);
 					action = ARRET;
 					break;
 
 				case ARRET:
-					postAvance_init();
-					action=next_order;
+					action=ARRET;
 					break;
 
 				default:
@@ -173,26 +169,42 @@ void nouvel_ordre(order next_order, float angle_rotation){
 	}
 }
 
+/**
+ * @brief Gestion des leds 1, 3, 5, 7 de l'ePuck. 0 pour une led eteinte et 1 pour une led allume.
+ *
+ * @param led1			Etat de la led1 a mettre a jour.
+ * @param led3			Etat de la led3 a mettre a jour.
+ * @param led5			Etat de la led5 a mettre a jour.
+ * @param led7			Etat de la led7 a mettre a jour.
+ *
+ */
 void leds_management(uint8_t led1,uint8_t led3,uint8_t led5 ,uint8_t led7){
-					palWritePad(GPIOD, GPIOD_LED1, led1 ? 0 : 1);
-					palWritePad(GPIOD, GPIOD_LED3, led3 ? 0 : 1);
-					palWritePad(GPIOD, GPIOD_LED5, led5 ? 0 : 1);
-					palWritePad(GPIOD, GPIOD_LED7, led7 ? 0 : 1);
+	palWritePad(GPIOD, GPIOD_LED1, led1 ? 0 : 1);
+	palWritePad(GPIOD, GPIOD_LED3, led3 ? 0 : 1);
+	palWritePad(GPIOD, GPIOD_LED5, led5 ? 0 : 1);
+	palWritePad(GPIOD, GPIOD_LED7, led7 ? 0 : 1);
 }
 
 /**
- * @brief Envoi l'ePuck en direction de sa position initial en mode PONG et envoi l'ePuck a sa position initial en mode BILLARD et ALPHABET.
+ * @brief Envoi l'ePuck en direction de sa position initial en mode PONG et envoi l'ePuck a sa position initial en cas de victoire.
  *
  */
 void go_home(void){
 
-	float angle_rotation;
-	float coord_x=ePuck.x;
-	float coord_y=ePuck.y;
+	float angle_rotation=0, coord_x=ePuck.x, coord_y=ePuck.y;
+	uint8_t num_quadrant;
 
 	motors_stop_speed();
 
-	uint8_t num_quadrant;
+	float norme = sqrt(coord_x*coord_x+coord_y*coord_y);
+
+	if(norme == 0){
+		chprintf((BaseSequentialStream *)&SD3,"NORME =0 IL DEVRAIT RIEN FAIRE PR GO HOME \n");
+		return;
+	}
+
+	if (norme<ERROR_THRESHOLD && ePuck.angle==0)
+		return;
 
 	if(coord_y >= 0 && coord_x > 0)
 		num_quadrant = QUADRANT_SUP_DROIT;
@@ -202,13 +214,6 @@ void go_home(void){
 		num_quadrant = QUADRANT_INF_GAUCHE;
 	if(coord_y < 0 && coord_x >= 0)
 		num_quadrant = QUADRANT_INF_DROIT;
-
-	float norme = sqrt(coord_x*coord_x+coord_y*coord_y);
-
-	if(norme == 0){
-		chprintf((BaseSequentialStream *)&SD3,"NORME =0 IL DEVRAIT RIEN FAIRE PR GO HOME \n");
-		return;
-	}
 
 	switch(num_quadrant){
 		case QUADRANT_SUP_DROIT:
@@ -231,24 +236,22 @@ void go_home(void){
 
 	while(angle_rotation > PI){
 		angle_rotation -= (2*PI);
-		chThdSleepMilliseconds(2);
+		chThdSleepMilliseconds(1);
 	}
-	while(angle_rotation < (-PI)){
+	while(angle_rotation <= (-PI)){
 		angle_rotation += (2*PI);
-		chThdSleepMilliseconds(2);
+		chThdSleepMilliseconds(1);
 	}
-
-
-	if (norme<ERROR_THRESHOLD && ePuck.angle==0)
-		return;
 
 	nouvel_ordre(TOURNE, angle_rotation);
 	nouvel_ordre(AVANCE, 0);
+	chThdSleepMilliseconds(100);
+
 
 	if ((point_joueur_avant >= POINTS_POUR_GAGNER) || (point_joueur_arriere >= POINTS_POUR_GAGNER)){
-		nouvel_ordre(ARRET, 0);
-		action = AVANCE;
-		motors_set_position(norme, norme, VITESSE_GENERALE, VITESSE_GENERALE);
+		motors_stop_speed();
+		motors_set_position(norme, norme, VITESSE_GENERALE, VITESSE_GENERALE);	// retourne a la position inital a une distance norme cm
+																				// avec l'etat action AVANCE toujours active
 		nouvel_ordre(TOURNE, -ePuck.angle);
 	}
 }
@@ -297,7 +300,6 @@ void sortie_gagnant(void){
 			set_led(LED3, 1);
 			set_body_led(1);
 			go_home();
-			chThdSleepMilliseconds(1000);
 			nextState = ENDGAME;
 			return;
 		}
@@ -305,7 +307,6 @@ void sortie_gagnant(void){
 			set_led(LED7, 1);
 			set_body_led(1);
 			go_home();
-			chThdSleepMilliseconds(1000);
 			nextState = ENDGAME;
 			return;
 		}
@@ -314,6 +315,8 @@ void sortie_gagnant(void){
 		go_home();
 
 		//en affichant les points de chaque joueur
+		//Remarque: Zone grise aux extremites en x ou tant qu'il compte les points
+		//l'epuck ignore ne reagit pas tant qu'il compte les points.
 		for (int i = 0; i < point_joueur_avant; i++){
 			set_led(LED3, 1);
 			chThdSleepMilliseconds(100);
@@ -329,7 +332,11 @@ void sortie_gagnant(void){
 	}
 }
 
-static THD_WORKING_AREA(waThdMapping, 628);
+/*
+ * Thread pour l'update de la position a une frequence maximale de 100 Hz en etat AVANCE.
+ * Envoie la position de l'ePuck a l'ordinateur.
+ */
+static THD_WORKING_AREA(waThdMapping, 384);
 static THD_FUNCTION(ThdMapping, arg) {
     chRegSetThreadName(__FUNCTION__);
     (void)arg;
@@ -339,8 +346,8 @@ static THD_FUNCTION(ThdMapping, arg) {
 		if(action==AVANCE){
 			update_map_position();
 		}
-		//chprintf((BaseSequentialStream *)&SD3,"update x=%f .... y=%f .... angle=%f  \n", ePuck.x, ePuck.y, ePuck.angle);
-		chThdSleepUntilWindowed(time, time + MS2ST(2));
+		chThdSleepUntilWindowed(time, time + MS2ST(10));
+		chprintf((BaseSequentialStream *)&SD3,"update x=%f .... y=%f .... angle=%f  \n", ePuck.x, ePuck.y, ePuck.angle);
     }
 }
 
@@ -349,28 +356,18 @@ static THD_FUNCTION(ThdMapping, arg) {
 
 /****************************PUBLIC FUNCTIONS*************************************/
 
-void leds_update(const uint8_t *out)  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-{
-
-    out[0] ? palWritePad(GPIOD, GPIOD_LED1, 0) : palWritePad(GPIOD, GPIOD_LED1, 1);
-    out[1] ? palWritePad(GPIOD, GPIOD_LED3, 0) : palWritePad(GPIOD, GPIOD_LED3, 1);
-    out[2] ? palWritePad(GPIOD, GPIOD_LED5, 0) : palWritePad(GPIOD, GPIOD_LED5, 1);
-    out[3] ? palWritePad(GPIOD, GPIOD_LED7, 0) : palWritePad(GPIOD, GPIOD_LED7, 1);
-}
-
 void management(){
-	//we create variables for the led in order to turn them off at each loop and to
-	//select which one to turn on
+	// Switch de la machine d'etat principal
 	switch (currentStateManagement) {
 	   case MENU_PRINCIPAL:
 		   if (case_init){
 			   leds_management(1,0,0,0);
+			   case_init=0;
 		   }
-		   case_init=0;
 		   currentStateManagement = nextState;
 		   break;
 
-		case PONG_INIT:
+		case PONG_INIT: //Lecture unique du case lorsqu'on rentre en mode PONG
 			calibrate_ir();
 			leds_management(1,0,1,0);
 			nouvel_ordre(AVANCE, 0);
@@ -382,20 +379,13 @@ void management(){
 		case PONG:
 			if (case_init){
 			   leds_management(0,0,1,0);
+			   case_init=0;
 			}
-			case_init=0;
 
 			sortie_gagnant();
 			boite_virtuelle();
 
-			if (obstacle_demi_tour()){
-				nouvel_ordre(TOURNE, ROTATION_180_DEGRE);
-				nouvel_ordre(AVANCE, 0);
-			}
-
 			switch(close_line()){
-				case L_NULL:
-					break;
 				case L_DROITE:
 					nouvel_ordre(TOURNE, ROTATION_135_DEGRE);
 					nouvel_ordre(AVANCE, 0);
@@ -407,12 +397,17 @@ void management(){
 				default:
 					break;
 			}
+
+			if (obstacle_demi_tour()){
+				nouvel_ordre(TOURNE, ROTATION_180_DEGRE);
+				nouvel_ordre(AVANCE, 0);
+			}
 			currentStateManagement = nextState;
 			break;
 
 		case ALPHABET:
 			if (lettre_state == AUCUN){
-			   leds_management(0,0,0,1);
+			   leds_management(1,1,0,1);
 			   lettre_state = ALPHA_INIT;
 			}
 
@@ -450,25 +445,7 @@ void management(){
 			currentStateManagement = nextState;
 			break;
 
-		case BILLARD_INIT:
-			//initialization of variables
-			//activate threads
-			case_init = 1;
-			set_body_led(1);
-			leds_management(0,0,0,1);
-			currentStateManagement = BILLARD;
-			nextState = BILLARD;
-			break;
-
-		case BILLARD:
-			if (case_init){
-			   leds_management(0,1,0,0);
-			}
-			case_init = 0;
-			currentStateManagement = nextState;
-			break;
-
-		case ENDGAME:
+		case ENDGAME: //fin des modes Pong et Alphabet une seule lecture pour r�initialiser les variables
 			nouvel_ordre(ARRET, 0);
 			ePuck.x = 0;
 			ePuck.y = 0;
@@ -492,7 +469,6 @@ chThdCreateStatic(waThdMapping, sizeof(waThdMapping), NORMALPRIO, ThdMapping, NU
 }
 
 void state_compare(etats changeState){
-	chprintf((BaseSequentialStream *)&SD3,"current state = %d, change state = %d\n", currentStateManagement, changeState);
 	switch(currentStateManagement){
 		case MENU_PRINCIPAL:
 			switch(changeState){
@@ -500,9 +476,6 @@ void state_compare(etats changeState){
 					nextState = changeState;
 					break;
 				case ALPHABET:
-					nextState = changeState;
-					break;
-				case BILLARD_INIT:
 					nextState = changeState;
 					break;
 				case ENDGAME:
@@ -524,16 +497,6 @@ void state_compare(etats changeState){
 			break;
 
 		case ALPHABET:
-			switch(changeState){
-				case ENDGAME:
-					nextState = changeState;
-					break;
-				default:
-					break;
-			}
-			break;
-
-		case BILLARD:
 			switch(changeState){
 				case ENDGAME:
 					nextState = changeState;

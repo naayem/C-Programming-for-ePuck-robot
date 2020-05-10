@@ -13,6 +13,7 @@
 #include <camera_processing.h>
 #include <sensors/proximity.h>
 
+
 messagebus_t bus;
 MUTEX_DECL(bus_lock);
 CONDVAR_DECL(bus_condvar);
@@ -64,9 +65,6 @@ int main(void)
     {
     	time = chVTGetSystemTime();
     	management();
-/*  	if (chVTGetSystemTime()-time>=100){
-        	chprintf ((BaseSequentialStream *)&SD3,"time after management: %d us\n", chVTGetSystemTime()-time);
-    	}*/
     	chThdSleepUntilWindowed(time, time + MS2ST(10));
     }
 }
