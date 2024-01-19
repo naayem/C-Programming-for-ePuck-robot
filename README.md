@@ -1,0 +1,49 @@
+# Readme for Robotics University Project - ePuck Robot Programming
+
+## Project Overview
+This university project involves programming an ePuck robot, a compact, two-wheeled robot equipped with various sensors. We aim to creatively utilize the robot's features through different modes like Pong game simulation and Alphabet writing.
+
+## Requirements
+- ePuck robot with motors, microphones, camera, proximity sensors, and LEDs.
+- Development environment for ePuck with necessary libraries.
+
+## Features
+1. **Pong Game Simulation:** The robot plays a pong game within virtual boundaries, reacting to virtual walls and keeping score.
+2. **Alphabet Writing Mode:** Moves in patterns to write letters.
+3. **Mapping and Position Tracking:** Tracks its position and orientation.
+4. **Sensor Integration:** Uses proximity sensors, camera, and microphones.
+5. **LED Management:** Uses LEDs for feedback and interaction.
+6. **Serial and USB Communication:** For debugging and commands.
+7. **Error Handling and System Management:** Ensures smooth operation.
+
+## How to Run
+1. **Compile the Code:** Include all libraries and compile for ePuck.
+2. **Upload to ePuck:** Use tools to upload the program to ePuck.
+3. **Operate Modes:** Use commands or button presses on ePuck to switch modes.
+
+## Code Structure
+- **main.h:** Main header with libraries and function prototypes.
+- **game_management.h:** Manages game modes and state transitions.
+- **audio_processing.h, microphone.h:** For audio processing.
+- **camera_processing.h:** Handles camera image processing.
+- **ir_thread.h, proximity.h:** Manages IR sensors for proximity detection.
+- **motors_processing.h:** Controls motor movements.
+- **leds.h:** Manages LED states.
+
+## Development Notes
+- **Testing:** Test each feature thoroughly in a controlled environment.
+- **Modifications:** Code structured for easy modifications and future expansions.
+- **Debugging:** Use serial outputs for debugging and monitoring.
+
+## Contributions
+This project is open for contributions. Fork, improve, and submit pull requests.
+
+## License
+This project is released under the MIT License.
+
+## Contact
+Creators: Vincent Naayem and Marc Favre
+Supervising Professor: Francesco Mondada
+
+## Acknowledgements
+Thanks to the university, professors, and all contributors for their support in this project.
