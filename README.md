@@ -1,4 +1,4 @@
-# Readme for Robotics University Project - ePuck Robot Programming
+# Robotics University Project - ePuck Robot Programming
 
 ## Project Overview
 This university project involves programming an ePuck robot, a compact, two-wheeled robot equipped with various sensors. We aim to creatively utilize the robot's features through different modes like Pong game simulation and Alphabet writing.
