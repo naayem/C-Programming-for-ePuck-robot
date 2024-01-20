@@ -47,3 +47,10 @@ Supervising Professor: Francesco Mondada
 
 ## Acknowledgements
 Thanks to the university, professors, and all contributors for their support in this project.
+
+
+## Galery
+
+** Results of live plotter:**
+<img width="451" alt="Screenshot 2020-05-11 at 00 04 34" src="https://github.com/naayem/MicroInfo_NF/assets/14961905/fd8575ed-1171-4f5d-89d7-f0fd373a7ed0">
+<img width="450" alt="Screenshot 2020-05-11 at 00 04 54" src="https://github.com/naayem/MicroInfo_NF/assets/14961905/53b1f265-9aa0-448b-87ff-d39205692d19">
