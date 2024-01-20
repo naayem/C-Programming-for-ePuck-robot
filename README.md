@@ -1,10 +1,18 @@
+![image](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![image](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![image](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
+
+
 # Robotics University Project - ePuck Robot Programming
 
 ## Project Overview
 This university project involves programming an ePuck robot, a compact, two-wheeled robot equipped with various sensors. We aim to creatively utilize the robot's features through different modes like Pong game simulation and Alphabet writing.
 
 
-https://github.com/naayem/MicroInfo_NF/assets/14961905/7a8a5386-e6e3-42ca-80a2-f77efc2f3d4d
+
+https://github.com/naayem/MicroInfo_NF/assets/14961905/01c4cdb2-31cd-4389-acb9-2084f6530180
+
+
 
 
 ## Requirements
@@ -55,10 +63,10 @@ Thanks to the university, professors, and all contributors for their support in 
 
 ## Galery
 
-https://github.com/naayem/MicroInfo_NF/assets/14961905/16a1d068-6cf4-4b4b-9991-d4468f01ea11
+https://github.com/naayem/MicroInfo_NF/assets/14961905/beea0e97-daf7-4dcf-b214-0f79a72e410b
 
+https://github.com/naayem/MicroInfo_NF/assets/14961905/d6e1c827-82ec-41d5-8781-ff3120081425
 
-https://github.com/naayem/MicroInfo_NF/assets/14961905/3ea1119a-a558-4ee5-8e54-e4c51d4d99d2
 
 
 **Results of live plotter:**
