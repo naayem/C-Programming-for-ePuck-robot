@@ -3,6 +3,10 @@
 ## Project Overview
 This university project involves programming an ePuck robot, a compact, two-wheeled robot equipped with various sensors. We aim to creatively utilize the robot's features through different modes like Pong game simulation and Alphabet writing.
 
+
+https://github.com/naayem/MicroInfo_NF/assets/14961905/7a8a5386-e6e3-42ca-80a2-f77efc2f3d4d
+
+
 ## Requirements
 - ePuck robot with motors, microphones, camera, proximity sensors, and LEDs.
 - Development environment for ePuck with necessary libraries.
@@ -51,6 +55,13 @@ Thanks to the university, professors, and all contributors for their support in 
 
 ## Galery
 
-** Results of live plotter:**
+https://github.com/naayem/MicroInfo_NF/assets/14961905/16a1d068-6cf4-4b4b-9991-d4468f01ea11
+
+
+https://github.com/naayem/MicroInfo_NF/assets/14961905/3ea1119a-a558-4ee5-8e54-e4c51d4d99d2
+
+
+**Results of live plotter:**
+
 <img width="451" alt="Screenshot 2020-05-11 at 00 04 34" src="https://github.com/naayem/MicroInfo_NF/assets/14961905/fd8575ed-1171-4f5d-89d7-f0fd373a7ed0">
 <img width="450" alt="Screenshot 2020-05-11 at 00 04 54" src="https://github.com/naayem/MicroInfo_NF/assets/14961905/53b1f265-9aa0-448b-87ff-d39205692d19">
